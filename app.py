@@ -142,8 +142,8 @@ button[data-baseweb="tab"][aria-selected="true"] {
 .dist-ok    { background: #1a1a1a; color: #888; border: 1px solid #2e2e2e; }
 .dist-over  { background: #0d1f00; color: #6aad00; }
 
-.ticker-name { font-weight: 600; color: #E8E8E8; font-family: 'DM Mono', monospace; letter-spacing: 0.04em; }
-.ticker-code { font-size: 0.7rem; color: #444; margin-left: 6px; font-family: 'DM Mono', monospace; }
+.ticker-name { font-weight: 500; color: #E8E8E8; font-family: 'DM Mono', 'Courier New', monospace !important; letter-spacing: 0.04em; }
+.ticker-code { font-size: 0.7rem; color: #444; margin-left: 6px; font-family: 'DM Mono', 'Courier New', monospace !important; }
 .flag        { font-size: 1rem; }
 
 .chart-link a { color: #444; font-size: 0.75rem; text-decoration: none; letter-spacing: 0.05em; }
@@ -172,26 +172,6 @@ hr { border-color: #242424 !important; margin: 20px 0 !important; }
 ::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
 </style>
 """, unsafe_allow_html=True)
-
-
-# ── 비밀번호 인증 ────────────────────────────────────────────
-def check_password() -> bool:
-    if st.session_state.get("authenticated"):
-        return True
-    st.markdown('<div style="max-width:320px;margin:120px auto;">', unsafe_allow_html=True)
-    st.markdown('<div class="site-title" style="margin-bottom:32px;">SCREENER</div>', unsafe_allow_html=True)
-    pw = st.text_input("", type="password", placeholder="PASSWORD", key="pw_input")
-    if pw:
-        if pw == st.secrets.get("APP_PASSWORD", "changeme"):
-            st.session_state["authenticated"] = True
-            st.rerun()
-        else:
-            st.markdown('<div style="color:#ff4444;font-size:0.8rem;margin-top:8px;">incorrect password</div>', unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
-    return False
-
-if not check_password():
-    st.stop()
 
 
 # ── 데이터 로드 ──────────────────────────────────────────────
