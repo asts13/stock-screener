@@ -1,7 +1,7 @@
 """
 STOCKal — Ichimoku Cloud Breakout Screener
 """
-import json, os, subprocess, sys
+import hashlib, json, os, subprocess, sys
 from datetime import datetime, timezone, timedelta
 
 import yfinance as yf
@@ -11,72 +11,73 @@ import streamlit as st
 # ── 상수 ─────────────────────────────────────────────────────
 DATA_DIR     = os.path.join(os.path.dirname(__file__), "data")
 RESULTS_PATH = os.path.join(DATA_DIR, "results.json")
+USERS_PATH   = os.path.join(DATA_DIR, "users.json")
 KST          = timezone(timedelta(hours=9))
+PAGE_SIZE    = 15
 
 INDICES = [
-    {"label_en": "KOSPI",        "label_ko": "코스피",       "ticker": "^KS11",  "unit": ""},
-    {"label_en": "KOSDAQ",       "label_ko": "코스닥",       "ticker": "^KQ11",  "unit": ""},
-    {"label_en": "NASDAQ",       "label_ko": "나스닥",       "ticker": "^IXIC",  "unit": ""},
-    {"label_en": "NQ100 FUT",    "label_ko": "나스닥100선물", "ticker": "NQ=F",   "unit": ""},
-    {"label_en": "S&P 500",      "label_ko": "S&P 500",      "ticker": "^GSPC",  "unit": ""},
-    {"label_en": "DOW",          "label_ko": "다우존스",     "ticker": "^DJI",   "unit": ""},
-    {"label_en": "WTI",          "label_ko": "WTI유가",      "ticker": "CL=F",   "unit": "$"},
-    {"label_en": "GOLD",         "label_ko": "금",           "ticker": "GC=F",   "unit": "$"},
-    {"label_en": "USD/KRW",      "label_ko": "달러/원",      "ticker": "KRW=X",  "unit": "₩"},
+    {"label_en": "KOSPI",     "label_ko": "코스피",       "ticker": "^KS11", "unit": ""},
+    {"label_en": "KOSDAQ",    "label_ko": "코스닥",       "ticker": "^KQ11", "unit": ""},
+    {"label_en": "NASDAQ",    "label_ko": "나스닥",       "ticker": "^IXIC", "unit": ""},
+    {"label_en": "NQ100 FUT", "label_ko": "나스닥100선물", "ticker": "NQ=F",  "unit": ""},
+    {"label_en": "S&P 500",   "label_ko": "S&P 500",      "ticker": "^GSPC", "unit": ""},
+    {"label_en": "DOW",       "label_ko": "다우존스",     "ticker": "^DJI",  "unit": ""},
+    {"label_en": "WTI",       "label_ko": "WTI유가",      "ticker": "CL=F",  "unit": "$"},
+    {"label_en": "GOLD",      "label_ko": "금",           "ticker": "GC=F",  "unit": "$"},
+    {"label_en": "USD/KRW",   "label_ko": "달러/원",      "ticker": "KRW=X", "unit": "₩"},
 ]
 
 # ── i18n ─────────────────────────────────────────────────────
 T = {
-    "site":        {"en": "STOCKal",              "ko": "STOCKal"},
-    "last_update": {"en": "LAST UPDATE",          "ko": "마지막 갱신"},
-    "no_data":     {"en": "NO DATA",              "ko": "데이터 없음"},
-    "refresh":     {"en": "REFRESH",              "ko": "새로고침"},
-    "all":         {"en": "ALL",                  "ko": "전체"},
-    "kr":          {"en": "KR",                   "ko": "한국"},
-    "us":          {"en": "US",                   "ko": "미국"},
-    "market":      {"en": "MARKET",               "ko": "시장"},
-    "indices":     {"en": "MARKET INDICES",       "ko": "시장 지수"},
-    "tab_a":       {"en": "MA20 · ICHIMOKU",      "ko": "MA20 · 일목"},
-    "tab_b":       {"en": "PRICE BREAKOUT",       "ko": "종가 돌파"},
-    "tab_c":       {"en": "MA200 PROXIMITY",      "ko": "200MA 근접"},
-    "a1":          {"en": "BREAKOUT CONFIRMED",   "ko": "돌파 완료"},
-    "a2":          {"en": "APPROACHING — WITHIN 1%", "ko": "돌파 임박 — 1% 이내"},
-    "b1":          {"en": "BREAKOUT CONFIRMED",   "ko": "돌파 완료"},
-    "b2":          {"en": "APPROACHING — WITHIN 1%", "ko": "돌파 임박 — 1% 이내"},
-    "c1":          {"en": "ABOVE MA200 — WITHIN 2%", "ko": "200MA 위 2% 이내"},
-    "c2":          {"en": "BELOW MA200 — WITHIN 2%", "ko": "200MA 아래 2% 이내"},
-    "ticker":      {"en": "TICKER",               "ko": "종목"},
-    "price":       {"en": "PRICE",                "ko": "현재가"},
-    "mktcap":      {"en": "MKTCAP",               "ko": "시총"},
-    "ma20":        {"en": "MA20",                 "ko": "MA20"},
-    "ma200":       {"en": "MA200",                "ko": "MA200"},
-    "cloud":       {"en": "CLOUD TOP",            "ko": "구름상단"},
-    "dist":        {"en": "DIST%",                "ko": "거리%"},
-    "chg1d":       {"en": "1D%",                  "ko": "1일%"},
-    "chg5d":       {"en": "5D%",                  "ko": "5일%"},
-    "no_signal":   {"en": "No signals found.",    "ko": "해당 종목 없음"},
-    "results":     {"en": "RESULTS",              "ko": "종목"},
-    "my":          {"en": "MY",                   "ko": "MY"},
-    "login":       {"en": "LOG IN",               "ko": "로그인"},
-    "signup":      {"en": "SIGN UP",              "ko": "회원가입"},
-    "logout":      {"en": "LOG OUT",              "ko": "로그아웃"},
-    "username":    {"en": "Username",             "ko": "아이디"},
-    "password":    {"en": "Password",             "ko": "비밀번호"},
-    "watchlist":   {"en": "WATCHLIST",            "ko": "관심종목"},
-    "entry_price": {"en": "ENTRY PRICE",          "ko": "진입가"},
-    "current":     {"en": "CURRENT",              "ko": "현재가"},
-    "return":      {"en": "RETURN%",              "ko": "수익률%"},
-    "add_watch":   {"en": "ADD TO WATCHLIST",     "ko": "관심종목 추가"},
-    "added_at":    {"en": "ADDED",                "ko": "추가일"},
-    "back":        {"en": "← BACK",              "ko": "← 돌아가기"},
-    "main":        {"en": "SCREENER",             "ko": "스크리너"},
-    "welcome":     {"en": "Welcome",              "ko": "환영합니다"},
-    "login_req":   {"en": "Log in to use watchlist", "ko": "관심종목은 로그인 후 이용 가능합니다"},
-    "no_watch":    {"en": "No stocks in your watchlist.", "ko": "관심종목이 없습니다."},
-    "remove":      {"en": "REMOVE",               "ko": "삭제"},
-    "err_pw":      {"en": "Wrong password",       "ko": "비밀번호 오류"},
-    "err_user":    {"en": "Username not found",   "ko": "존재하지 않는 아이디"},
-    "err_dup":     {"en": "Username already taken","ko": "이미 사용 중인 아이디"},
+    "site":        {"en": "STOCKal",                  "ko": "STOCKal"},
+    "last_update": {"en": "LAST UPDATE",              "ko": "마지막 갱신"},
+    "no_data":     {"en": "NO DATA",                  "ko": "데이터 없음"},
+    "refresh":     {"en": "REFRESH",                  "ko": "새로고침"},
+    "all":         {"en": "ALL",                      "ko": "전체"},
+    "kr":          {"en": "KR",                       "ko": "한국"},
+    "us":          {"en": "US",                       "ko": "미국"},
+    "market":      {"en": "MARKET",                   "ko": "시장"},
+    "indices":     {"en": "MARKET INDICES",           "ko": "시장 지수"},
+    "tab_a":       {"en": "MA20 · ICHIMOKU",          "ko": "MA20 · 일목"},
+    "tab_b":       {"en": "PRICE BREAKOUT",           "ko": "종가 돌파"},
+    "tab_c":       {"en": "MA200 PROXIMITY",          "ko": "200MA 근접"},
+    "a1":          {"en": "BREAKOUT",                 "ko": "돌파 완료"},
+    "a2":          {"en": "APPROACHING 1%",           "ko": "돌파 임박 1%"},
+    "b1":          {"en": "BREAKOUT",                 "ko": "돌파 완료"},
+    "b2":          {"en": "APPROACHING 1%",           "ko": "돌파 임박 1%"},
+    "c1":          {"en": "ABOVE MA200 2%",           "ko": "200MA 위 2%"},
+    "c2":          {"en": "BELOW MA200 2%",           "ko": "200MA 아래 2%"},
+    "ticker":      {"en": "TICKER",                   "ko": "종목"},
+    "price":       {"en": "PRICE",                    "ko": "현재가"},
+    "mktcap":      {"en": "MKTCAP",                   "ko": "시총"},
+    "ma20":        {"en": "MA20",                     "ko": "MA20"},
+    "ma200":       {"en": "MA200",                    "ko": "MA200"},
+    "cloud":       {"en": "CLOUD TOP",                "ko": "구름상단"},
+    "dist":        {"en": "DIST%",                    "ko": "거리%"},
+    "chg1d":       {"en": "1D",                       "ko": "1일"},
+    "chg5d":       {"en": "5D",                       "ko": "5일"},
+    "no_signal":   {"en": "No signals found.",        "ko": "해당 종목 없음"},
+    "results":     {"en": "results",                  "ko": "종목"},
+    "my":          {"en": "MY",                       "ko": "MY"},
+    "login":       {"en": "LOG IN",                   "ko": "로그인"},
+    "signup":      {"en": "SIGN UP",                  "ko": "회원가입"},
+    "logout":      {"en": "LOG OUT",                  "ko": "로그아웃"},
+    "username":    {"en": "Username",                 "ko": "아이디"},
+    "password":    {"en": "Password",                 "ko": "비밀번호"},
+    "watchlist":   {"en": "WATCHLIST",                "ko": "관심종목"},
+    "entry_price": {"en": "ENTRY",                    "ko": "진입가"},
+    "current":     {"en": "NOW",                      "ko": "현재가"},
+    "return_pct":  {"en": "RETURN",                   "ko": "수익률"},
+    "add_watch":   {"en": "ADD TO WATCHLIST",         "ko": "관심종목 추가"},
+    "added_at":    {"en": "ADDED",                    "ko": "추가일"},
+    "back":        {"en": "← BACK",                  "ko": "← 돌아가기"},
+    "welcome":     {"en": "Welcome",                  "ko": "환영합니다"},
+    "login_req":   {"en": "Log in to use watchlist.", "ko": "로그인 후 이용 가능합니다."},
+    "no_watch":    {"en": "No stocks in watchlist.",  "ko": "관심종목이 없습니다."},
+    "remove":      {"en": "✕",                        "ko": "✕"},
+    "err_pw":      {"en": "Wrong password",           "ko": "비밀번호 오류"},
+    "err_user":    {"en": "Username not found",       "ko": "존재하지 않는 아이디"},
+    "err_dup":     {"en": "Username already taken",   "ko": "이미 사용 중인 아이디"},
     "ok_signup":   {"en": "Account created! Please log in.", "ko": "가입 완료! 로그인해주세요."},
 }
 
@@ -95,34 +96,17 @@ st.markdown("""
 html, body, [class*="css"] { font-family: 'Space Grotesk', sans-serif; }
 .stApp { background-color: #1A1A1A; }
 
-/* 최상단 바 */
-.topbar {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 18px 0 14px 0;
-    border-bottom: 1px solid #2A2A2A;
-    margin-bottom: 20px;
-}
 .site-logo { font-size: 1.4rem; font-weight: 700; letter-spacing: 0.2em; color: #D1FF00; }
-.topbar-right { display: flex; align-items: center; gap: 16px; }
-.lang-btn {
-    font-size: 0.7rem; letter-spacing: 0.12em; color: #555; cursor: pointer;
-    background: none; border: none; padding: 4px 8px;
-}
-.lang-btn:hover { color: #D1FF00; }
-.my-btn {
-    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em;
-    color: #1A1A1A; background: #D1FF00; border: none;
-    padding: 6px 16px; border-radius: 2px; cursor: pointer;
-}
 .updated-txt { font-size: 0.68rem; color: #3a3a3a; letter-spacing: 0.06em; }
 
 /* 버튼 공통 */
 div[data-testid="stButton"] > button {
-    background: transparent; border: 1px solid #D1FF00; color: #D1FF00;
+    background: transparent; border: 1px solid #2a2a2a; color: #666;
     font-weight: 600; letter-spacing: 0.1em; font-size: 0.76rem;
-    padding: 7px 18px; border-radius: 2px; transition: all 0.18s;
+    padding: 6px 10px; border-radius: 2px; transition: all 0.18s;
+    width: 100%;
 }
-div[data-testid="stButton"] > button:hover { background: #D1FF00; color: #1A1A1A; }
+div[data-testid="stButton"] > button:hover { border-color: #D1FF00; color: #D1FF00; }
 
 /* 시장 필터 라디오 */
 div[data-testid="stRadio"] > div { gap: 6px; }
@@ -145,29 +129,13 @@ div[data-testid="stRadio"] label:has(input:checked) {
 .hdr-idx {
     display: flex; flex-direction: column; align-items: flex-start;
     padding: 2px 14px 2px 0; margin-right: 14px;
-    border-right: 1px solid #2a2a2a;
-    white-space: nowrap;
+    border-right: 1px solid #2a2a2a; white-space: nowrap;
 }
 .hdr-idx:last-child { border-right: none; }
-.hdr-idx-name { font-size: 0.62rem; letter-spacing: 0.08em; color: #777; text-transform: uppercase; }
-.hdr-idx-val  { font-size: 0.80rem; font-family: 'DM Mono', monospace; color: #C8C8C8; }
-.hdr-chg-pos  { font-size: 0.65rem; font-family: 'DM Mono', monospace; color: #D1FF00; }
-.hdr-chg-neg  { font-size: 0.65rem; font-family: 'DM Mono', monospace; color: #ff5555; }
-
-/* 지수 위젯 (메인 그리드용) */
-.indices-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
-    background: #242424; border: 1px solid #242424; border-radius: 3px;
-    margin-bottom: 4px;
-}
-.idx-cell {
-    background: #1A1A1A; padding: 10px 14px;
-    display: flex; justify-content: space-between; align-items: center;
-}
-.idx-name { font-size: 0.72rem; letter-spacing: 0.08em; color: #777; }
-.idx-val  { font-size: 0.82rem; font-family: 'DM Mono', monospace; color: #C8C8C8; }
-.idx-chg-pos { font-size: 0.72rem; font-family: 'DM Mono', monospace; color: #D1FF00; }
-.idx-chg-neg { font-size: 0.72rem; font-family: 'DM Mono', monospace; color: #ff5555; }
+.hdr-idx-name { font-size: 0.62rem; letter-spacing: 0.08em; color: #888; text-transform: uppercase; }
+.hdr-idx-val  { font-size: 0.82rem; font-family: 'DM Mono', monospace; color: #D0D0D0; font-weight: 500; }
+.hdr-chg-pos  { font-size: 0.66rem; font-family: 'DM Mono', monospace; color: #D1FF00; }
+.hdr-chg-neg  { font-size: 0.66rem; font-family: 'DM Mono', monospace; color: #ff5555; }
 
 /* 섹션 레이블 */
 .section-label {
@@ -208,11 +176,12 @@ button[data-baseweb="tab"][aria-selected="true"] {
 
 /* MY 페이지 */
 .my-header { font-size:1.1rem; font-weight:700; letter-spacing:0.18em; color:#D1FF00; margin-bottom:24px; }
-.auth-box { max-width:360px; margin:0 auto; }
-.watch-row { display:flex; align-items:center; justify-content:space-between; padding:12px 0; border-bottom:1px solid #1f1f1f; }
-.watch-name { font-family:'DM Mono',monospace; font-size:0.82rem; color:#E0E0E0; }
+
+/* 관심종목 (우하단) */
 .ret-pos { color:#D1FF00; font-family:'DM Mono',monospace; font-size:0.8rem; }
 .ret-neg { color:#ff5555; font-family:'DM Mono',monospace; font-size:0.8rem; }
+.watch-name { font-family:'DM Mono',monospace; font-size:0.82rem; color:#E0E0E0; }
+.watch-sub  { font-size:0.68rem; color:#383838; letter-spacing:0.04em; margin-top:2px; }
 
 hr { border-color:#1f1f1f !important; margin:14px 0 !important; }
 .stAlert { background:#1e1e1e !important; border:1px solid #2a2a2a !important; border-radius:2px !important; }
@@ -222,16 +191,20 @@ hr { border-color:#1f1f1f !important; margin:14px 0 !important; }
 """, unsafe_allow_html=True)
 
 # ── 세션 초기화 ───────────────────────────────────────────────
-if "lang"     not in st.session_state: st.session_state.lang     = "en"
-if "page"     not in st.session_state: st.session_state.page     = "main"
-if "user"     not in st.session_state: st.session_state.user     = None
-if "watchlist" not in st.session_state: st.session_state.watchlist = []
-if "auth_tab" not in st.session_state: st.session_state.auth_tab = "login"
+_defaults = {
+    "lang": "en", "page": "main", "user": None, "watchlist": [],
+    "auth_tab": "login",
+    "page_a1": 0, "page_a2": 0,
+    "page_b1": 0, "page_b2": 0,
+    "page_c1": 0, "page_c2": 0,
+    "page_watch": 0, "_prev_mf": "INIT",
+}
+for _k, _v in _defaults.items():
+    if _k not in st.session_state:
+        st.session_state[_k] = _v
 
 
-# ── 간이 유저 DB (로컬 JSON) ─────────────────────────────────
-USERS_PATH = os.path.join(DATA_DIR, "users.json")
-
+# ── 간이 유저 DB ─────────────────────────────────────────────
 def load_users() -> dict:
     if os.path.exists(USERS_PATH):
         with open(USERS_PATH, encoding="utf-8") as f:
@@ -244,8 +217,7 @@ def save_users(users: dict):
         json.dump(users, f, ensure_ascii=False, indent=2)
 
 def load_watchlist(username: str) -> list:
-    users = load_users()
-    return users.get(username, {}).get("watchlist", [])
+    return load_users().get(username, {}).get("watchlist", [])
 
 def save_watchlist(username: str, wl: list):
     users = load_users()
@@ -278,7 +250,7 @@ def fetch_indices() -> list:
                 else:
                     close = raw["Close"].dropna()
                 if len(close) < 2:
-                    raise ValueError("data short")
+                    raise ValueError("short")
                 val  = float(close.iloc[-1])
                 prev = float(close.iloc[-2])
                 chg  = (val - prev) / prev * 100
@@ -289,8 +261,32 @@ def fetch_indices() -> list:
         out = [{**i, "val": None, "chg": None} for i in INDICES]
     return out
 
-def _pill(val: float, mode: str = "dist") -> str:
-    if val is None: return '<span class="pill pill-neu">—</span>'
+@st.cache_data(ttl=300)
+def fetch_current_prices(yf_syms: tuple) -> dict:
+    if not yf_syms:
+        return {}
+    try:
+        raw = yf.download(list(yf_syms), period="2d", auto_adjust=True,
+                          progress=False, threads=True)
+        result = {}
+        for sym in yf_syms:
+            try:
+                if isinstance(raw.columns, pd.MultiIndex):
+                    cp = float(raw["Close"][sym].dropna().iloc[-1])
+                else:
+                    cp = float(raw["Close"].dropna().iloc[-1])
+                result[sym] = cp
+            except Exception:
+                result[sym] = None
+        return result
+    except Exception:
+        return {}
+
+
+# ── UI 헬퍼 ──────────────────────────────────────────────────
+def _pill(val, mode: str = "dist") -> str:
+    if val is None:
+        return '<span class="pill pill-neu">—</span>'
     sign = "+" if val > 0 else ""
     if mode == "chg":
         cls = "pill-near" if val > 0 else "pill-neg"
@@ -298,20 +294,15 @@ def _pill(val: float, mode: str = "dist") -> str:
         cls = "pill-near" if 0 <= val <= 2 else ("pill-over" if val < 0 else "pill-neu")
     return f'<span class="pill {cls}">{sign}{val:.2f}%</span>'
 
-def _render_table(rows: list, dist_key: str, ref_key: str,
-                  ref_label: str, mf_code, tab_id: str):
-    if mf_code:
-        rows = [r for r in rows if r["market"] == mf_code]
-    if not rows:
-        st.markdown(f'<div style="color:#2e2e2e;font-size:0.8rem;padding:12px 0">{t("no_signal")}</div>',
-                    unsafe_allow_html=True)
-        return
 
-    cur_prices = {}
-    if st.session_state.user:
-        wl_tickers = {w["ticker"] for w in st.session_state.watchlist}
-    else:
-        wl_tickers = set()
+def _render_table(rows: list, dist_key: str, ref_key: str,
+                  ref_label: str, tab_id: str, total: int = None):
+    """이미 필터·페이지네이션된 rows 렌더링."""
+    if not rows:
+        st.markdown(
+            f'<div style="color:#2e2e2e;font-size:0.8rem;padding:12px 0">{t("no_signal")}</div>',
+            unsafe_allow_html=True)
+        return
 
     tbody = ""
     for r in rows:
@@ -320,21 +311,18 @@ def _render_table(rows: list, dist_key: str, ref_key: str,
         tk    = r["ticker"]
         name  = r.get("name", tk)
         is_kr = mkt == "KR"
-        price_fmt = lambda v: f"{v:,.0f}" if is_kr else f"{v:,.2f}"
-        cur   = price_fmt(r["close"])
-        ref   = price_fmt(r.get(ref_key, r["close"]))
-        cloud = price_fmt(r["cloud_top"]) if r.get("cloud_top") else "—"
+        fmt   = (lambda v: f"{v:,.0f}") if is_kr else (lambda v: f"{v:,.2f}")
+        cur   = fmt(r["close"])
+        ref_v = r.get(ref_key)
+        ref   = fmt(ref_v) if ref_v is not None else "—"
         dist  = _pill(r.get(dist_key))
         c1d   = _pill(r.get("chg1d"), "chg")
         c5d   = _pill(r.get("chg5d"), "chg")
-        cap   = f"{r['market_cap_krw']//100_000_000:,}억" if is_kr and r.get("market_cap_krw") else (f"${r['market_cap_usd']//1_000_000:,}M" if r.get("market_cap_usd") else "—")
+        cap   = (f"{r['market_cap_krw']//100_000_000:,}억"
+                 if is_kr and r.get("market_cap_krw")
+                 else (f"${r['market_cap_usd']//1_000_000:,}M"
+                       if r.get("market_cap_usd") else "—"))
         url   = f"https://tossinvest.com/stocks/{tk}"
-
-        # 관심종목 추가 버튼 (로그인 시)
-        watch_col = ""
-        if st.session_state.user and tk not in wl_tickers:
-            watch_col = f'<a href="#" onclick="return false" style="color:#2a2a2a;font-size:0.68rem;letter-spacing:0.06em">＋</a>'
-
         tbody += f"""
         <tr>
           <td>{flag}</td>
@@ -348,7 +336,8 @@ def _render_table(rows: list, dist_key: str, ref_key: str,
           <td class="toss-link"><a href="{url}" target="_blank">TOSS ↗</a></td>
         </tr>"""
 
-    html = f"""
+    count_label = f"{total if total is not None else len(rows)} {t('results')}"
+    st.markdown(f"""
     <table class="stock-table">
       <thead><tr>
         <th></th><th>{t('ticker')}</th><th>{t('price')}</th><th>{t('mktcap')}</th>
@@ -356,9 +345,42 @@ def _render_table(rows: list, dist_key: str, ref_key: str,
       </tr></thead>
       <tbody>{tbody}</tbody>
     </table>
-    <div class="count-txt">{len(rows)} {t('results')}</div>
-    """
-    st.markdown(html, unsafe_allow_html=True)
+    <div class="count-txt">{count_label}</div>
+    """, unsafe_allow_html=True)
+
+
+def _page_nav(page: int, n_pages: int, page_key: str):
+    """이전/다음 페이지 네비게이션 버튼."""
+    if n_pages <= 1:
+        return
+    c_prev, c_info, c_next = st.columns([1, 4, 1])
+    with c_prev:
+        if st.button("‹", key=f"{page_key}_prev", disabled=(page == 0)):
+            st.session_state[page_key] = page - 1
+            st.rerun()
+    with c_info:
+        st.markdown(
+            f'<div style="text-align:center;color:#383838;font-size:0.7rem;'
+            f'padding-top:8px;letter-spacing:0.1em">{page + 1} / {n_pages}</div>',
+            unsafe_allow_html=True)
+    with c_next:
+        if st.button("›", key=f"{page_key}_next", disabled=(page == n_pages - 1)):
+            st.session_state[page_key] = page + 1
+            st.rerun()
+
+
+def _get_page(signal_key: str, page_key: str, mf: str):
+    """시그널 rows 필터 + 페이지 슬라이스 반환 → (display, page, n_pages, total)."""
+    rows = signals.get(signal_key, [])
+    if mf:
+        rows = [r for r in rows if r["market"] == mf]
+    total   = len(rows)
+    n_pages = max(1, (total + PAGE_SIZE - 1) // PAGE_SIZE)
+    page    = min(st.session_state.get(page_key, 0), n_pages - 1)
+    st.session_state[page_key] = page
+    display = rows[page * PAGE_SIZE: (page + 1) * PAGE_SIZE]
+    return display, page, n_pages, total
+
 
 def manual_refresh():
     python = sys.executable
@@ -373,18 +395,17 @@ def manual_refresh():
         st.error(e.stderr[-400:] if e.stderr else "갱신 실패")
 
 
-# ── 5분마다 증시 지수 자동 새로고침 ────────────────────────
-st_autorefresh = None
+# ── 5분마다 지수 자동 새로고침 ───────────────────────────────
 try:
     from streamlit_autorefresh import st_autorefresh
-    st_autorefresh(interval=300_000, key="idx_refresh")   # 300,000ms = 5분
+    st_autorefresh(interval=300_000, key="idx_refresh")
 except ImportError:
-    pass   # 미설치 시 무시
+    pass
 
 # ── 데이터 로드 ───────────────────────────────────────────────
-results = load_results()
+results      = load_results()
 indices_data = fetch_indices()
-lang = st.session_state.lang
+lang         = st.session_state.lang
 
 gen_str = ""
 if results:
@@ -394,16 +415,19 @@ if results:
     except Exception:
         pass
 
-# ── 헤더: [STOCKal] [지수 가로띠] [KO|REFRESH|MY] ──────────
+# ── 헤더: [STOCKal+시간] [지수 가로띠] [KO|↺|◉] ─────────────
 def _idx_strip(data: list) -> str:
     items = ""
     for d in data:
         name = d["label_en"] if lang == "en" else d["label_ko"]
         if d["val"] is None:
-            items += f'<div class="hdr-idx"><span class="hdr-idx-name">{name}</span><span class="hdr-idx-val" style="color:#2e2e2e">—</span></div>'
+            items += (f'<div class="hdr-idx">'
+                      f'<span class="hdr-idx-name">{name}</span>'
+                      f'<span class="hdr-idx-val" style="color:#2e2e2e">—</span>'
+                      f'</div>')
             continue
         val, chg, unit = d["val"], d["chg"], d["unit"]
-        val_str = f'{unit}{val:,.2f}' if unit in ("$","₩") else f'{val:,.2f}'
+        val_str = f'{unit}{val:,.2f}' if unit in ("$", "₩") else f'{val:,.2f}'
         sign    = "+" if chg >= 0 else ""
         chg_cls = "hdr-chg-pos" if chg >= 0 else "hdr-chg-neg"
         items += (f'<div class="hdr-idx">'
@@ -413,14 +437,13 @@ def _idx_strip(data: list) -> str:
                   f'</div>')
     return f'<div class="hdr-idx-strip">{items}</div>'
 
-col_logo, col_idx, col_btns = st.columns([2, 7, 3])
+col_logo, col_idx, col_btns = st.columns([2, 8, 2])
 
 with col_logo:
     st.markdown(
-        f'<div class="site-logo" style="padding-top:10px">STOCKal</div>'
+        f'<div class="site-logo" style="padding-top:6px">STOCKal</div>'
         f'<div class="updated-txt">{gen_str or t("no_data")}</div>',
-        unsafe_allow_html=True,
-    )
+        unsafe_allow_html=True)
 
 with col_idx:
     st.markdown(_idx_strip(indices_data), unsafe_allow_html=True)
@@ -428,20 +451,21 @@ with col_idx:
                 unsafe_allow_html=True)
 
 with col_btns:
-    b1, b2, b3 = st.columns(3)
-    with b1:
+    # 빈 공간 + 3개 버튼 → 우측 정렬
+    _, bn1, bn2, bn3 = st.columns([1, 1, 1, 1])
+    with bn1:
         if st.button("KO" if lang == "en" else "EN", key="lang_toggle"):
             st.session_state.lang = "ko" if lang == "en" else "en"
             st.rerun()
-    with b2:
+    with bn2:
         if st.button("↺", key="refresh_btn"):
             with st.spinner(""):
                 manual_refresh()
             st.rerun()
-    with b3:
+    with bn3:
+        # 프로필 아이콘: 로그인 여부에 따라 색감 표현
         if st.session_state.page == "main":
-            my_label = f"MY·{st.session_state.user}" if st.session_state.user else "MY"
-            if st.button(my_label, key="my_btn"):
+            if st.button("◉", key="my_btn"):
                 if st.session_state.user:
                     st.session_state.watchlist = load_watchlist(st.session_state.user)
                 st.session_state.page = "my"
@@ -455,13 +479,12 @@ st.markdown("<hr>", unsafe_allow_html=True)
 
 
 # ════════════════════════════════════════════════════
-# MY 페이지
+# MY 페이지 (로그인 / 회원가입만)
 # ════════════════════════════════════════════════════
 if st.session_state.page == "my":
 
     st.markdown(f'<div class="my-header">{t("my")}</div>', unsafe_allow_html=True)
 
-    # ── 로그인/가입 영역 ─────────────────────────────
     if not st.session_state.user:
         tab_login, tab_signup = st.tabs([t("login"), t("signup")])
 
@@ -471,120 +494,53 @@ if st.session_state.page == "my":
                 pw    = st.text_input(t("password"), type="password", placeholder="••••••••")
                 if st.form_submit_button(t("login")):
                     users = load_users()
-                    import hashlib
                     hw = hashlib.sha256(pw.encode()).hexdigest()
                     if uname not in users:
                         st.error(t("err_user"))
                     elif users[uname].get("pw") != hw:
                         st.error(t("err_pw"))
                     else:
-                        st.session_state.user = uname
+                        st.session_state.user      = uname
                         st.session_state.watchlist = load_watchlist(uname)
+                        st.session_state.page      = "main"
                         st.rerun()
 
         with tab_signup:
             with st.form("signup_form"):
                 new_u = st.text_input(t("username"), placeholder="username", key="su_u")
-                new_p = st.text_input(t("password"), type="password", placeholder="••••••••", key="su_p")
+                new_p = st.text_input(t("password"), type="password",
+                                      placeholder="••••••••", key="su_p")
                 if st.form_submit_button(t("signup")):
-                    import hashlib
                     users = load_users()
                     if new_u in users:
                         st.error(t("err_dup"))
                     elif len(new_u) < 2 or len(new_p) < 4:
                         st.error("아이디 2자 이상, 비밀번호 4자 이상")
                     else:
-                        hw = hashlib.sha256(new_p.encode()).hexdigest()
-                        users[new_u] = {"pw": hw, "watchlist": []}
+                        users[new_u] = {
+                            "pw": hashlib.sha256(new_p.encode()).hexdigest(),
+                            "watchlist": [],
+                        }
                         save_users(users)
                         st.success(t("ok_signup"))
-
     else:
-        # ── 로그인 상태 ──────────────────────────────
         col_w, col_out = st.columns([8, 1])
         with col_w:
-            st.markdown(f'<div style="color:#555;font-size:0.78rem;letter-spacing:0.1em">'
-                        f'{t("welcome")},  <span style="color:#D1FF00">{st.session_state.user}</span></div>',
-                        unsafe_allow_html=True)
+            st.markdown(
+                f'<div style="color:#555;font-size:0.78rem;letter-spacing:0.1em">'
+                f'{t("welcome")}, <span style="color:#D1FF00">{st.session_state.user}</span></div>',
+                unsafe_allow_html=True)
         with col_out:
             if st.button(t("logout")):
-                st.session_state.user = None
+                st.session_state.user      = None
                 st.session_state.watchlist = []
+                st.session_state.page      = "main"
                 st.rerun()
 
-        st.markdown("<hr>", unsafe_allow_html=True)
-        st.markdown(f'<div class="section-label"><span>◈</span>{t("watchlist")}</div>',
-                    unsafe_allow_html=True)
-
-        wl = st.session_state.watchlist
-
-        # 현재가 일괄 조회
-        current_prices = {}
-        if wl:
-            us_tickers = [w["ticker"] + (".KS" if w["market"] == "KR" else "") for w in wl
-                          if w["market"] == "KR"]
-            us_tickers += [w["ticker"] for w in wl if w["market"] == "US"]
-            try:
-                raw = yf.download(us_tickers, period="2d", auto_adjust=True,
-                                  progress=False, threads=True)
-                for w in wl:
-                    sym = w["ticker"] + ".KS" if w["market"] == "KR" else w["ticker"]
-                    try:
-                        if isinstance(raw.columns, pd.MultiIndex):
-                            cp = float(raw["Close"][sym].dropna().iloc[-1])
-                        else:
-                            cp = float(raw["Close"].dropna().iloc[-1])
-                        current_prices[w["ticker"]] = cp
-                    except Exception:
-                        current_prices[w["ticker"]] = None
-            except Exception:
-                pass
-
-        if not wl:
-            st.markdown(f'<div style="color:#333;font-size:0.82rem;padding:16px 0">{t("no_watch")}</div>',
-                        unsafe_allow_html=True)
-        else:
-            to_remove = None
-            for idx, w in enumerate(wl):
-                cur = current_prices.get(w["ticker"])
-                entry = w.get("entry_price", 0)
-                ret_str = "—"
-                ret_cls = "ret-pos"
-                if cur and entry:
-                    ret = (cur - entry) / entry * 100
-                    sign = "+" if ret >= 0 else ""
-                    ret_str = f"{sign}{ret:.2f}%"
-                    ret_cls = "ret-pos" if ret >= 0 else "ret-neg"
-
-                is_kr = w["market"] == "KR"
-                cur_str   = f"{cur:,.0f}원" if is_kr and cur else (f"${cur:,.2f}" if cur else "—")
-                entry_str = f"{entry:,.0f}원" if is_kr else f"${entry:,.2f}"
-
-                col_info, col_ret, col_del = st.columns([6, 2, 1])
-                with col_info:
-                    flag = "🇰🇷" if is_kr else "🇺🇸"
-                    st.markdown(
-                        f'{flag} <span class="watch-name">{w.get("name", w["ticker"])}</span>'
-                        f' <span style="color:#333;font-family:DM Mono,monospace;font-size:0.7rem">{w["ticker"]}</span>'
-                        f'<br><span style="color:#333;font-size:0.7rem">'
-                        f'{t("entry_price")}: {entry_str} &nbsp;→&nbsp; {t("current")}: {cur_str}'
-                        f'&nbsp; | &nbsp;{t("added_at")}: {w.get("added_at","")}</span>',
-                        unsafe_allow_html=True,
-                    )
-                with col_ret:
-                    st.markdown(f'<div class="{ret_cls}" style="padding-top:8px">{ret_str}</div>',
-                                unsafe_allow_html=True)
-                with col_del:
-                    if st.button(t("remove"), key=f"del_{idx}"):
-                        to_remove = idx
-
-                st.markdown("<hr>", unsafe_allow_html=True)
-
-            if to_remove is not None:
-                wl.pop(to_remove)
-                save_watchlist(st.session_state.user, wl)
-                st.session_state.watchlist = wl
-                st.rerun()
+        st.markdown(
+            '<div style="color:#333;font-size:0.8rem;padding:28px 0 8px">'
+            '관심종목은 메인 화면 우하단에서 확인할 수 있습니다.</div>',
+            unsafe_allow_html=True)
 
     st.stop()
 
@@ -599,7 +555,14 @@ filt_col, _ = st.columns([4, 6])
 with filt_col:
     mf = st.radio("", [t("all"), t("kr"), t("us")], horizontal=True,
                   label_visibility="collapsed")
-mf_code = {"ALL": None, t("all"): None, t("kr"): "KR", t("us"): "US"}.get(mf)
+mf_code = {t("all"): None, t("kr"): "KR", t("us"): "US"}.get(mf)
+
+# 필터 변경 시 모든 페이지 초기화
+if st.session_state["_prev_mf"] != str(mf_code):
+    for _pk in ("page_a1", "page_a2", "page_b1", "page_b2",
+                "page_c1", "page_c2", "page_watch"):
+        st.session_state[_pk] = 0
+    st.session_state["_prev_mf"] = str(mf_code)
 
 st.markdown("<div style='height:6px'></div>", unsafe_allow_html=True)
 
@@ -607,15 +570,19 @@ st.markdown("<div style='height:6px'></div>", unsafe_allow_html=True)
 left_col, right_col = st.columns(2, gap="medium")
 
 
-# ┌── 좌상단: MA20 일목균형표 돌파 ──────────────────┐
+# ┌── 좌상단: MA20 · 일목균형표 ─────────────────────┐
 with left_col:
     st.markdown(f'<div class="section-label"><span>◈</span>{t("tab_a")}</div>',
                 unsafe_allow_html=True)
     sub_a1, sub_a2 = st.tabs([f"▲ {t('a1')}", f"◎ {t('a2')}"])
     with sub_a1:
-        _render_table(signals.get("A1", []), "dist_a_pct", "ma20", t("ma20"), mf_code, "a1")
+        rows, pg, np_, tot = _get_page("A1", "page_a1", mf_code)
+        _render_table(rows, "dist_a_pct", "ma20", t("ma20"), "a1", total=tot)
+        _page_nav(pg, np_, "page_a1")
     with sub_a2:
-        _render_table(signals.get("A2", []), "dist_a_pct", "ma20", t("ma20"), mf_code, "a2")
+        rows, pg, np_, tot = _get_page("A2", "page_a2", mf_code)
+        _render_table(rows, "dist_a_pct", "ma20", t("ma20"), "a2", total=tot)
+        _page_nav(pg, np_, "page_a2")
 
 
 # ┌── 우상단: MA200 근접 ─────────────────────────────┐
@@ -624,9 +591,13 @@ with right_col:
                 unsafe_allow_html=True)
     sub_c1, sub_c2 = st.tabs([f"▲ {t('c1')}", f"▼ {t('c2')}"])
     with sub_c1:
-        _render_table(signals.get("C1", []), "dist_200_pct", "ma200", t("ma200"), mf_code, "c1")
+        rows, pg, np_, tot = _get_page("C1", "page_c1", mf_code)
+        _render_table(rows, "dist_200_pct", "ma200", t("ma200"), "c1", total=tot)
+        _page_nav(pg, np_, "page_c1")
     with sub_c2:
-        _render_table(signals.get("C2", []), "dist_200_pct", "ma200", t("ma200"), mf_code, "c2")
+        rows, pg, np_, tot = _get_page("C2", "page_c2", mf_code)
+        _render_table(rows, "dist_200_pct", "ma200", t("ma200"), "c2", total=tot)
+        _page_nav(pg, np_, "page_c2")
 
 st.markdown("<div style='height:16px'></div>", unsafe_allow_html=True)
 left_col2, right_col2 = st.columns(2, gap="medium")
@@ -638,33 +609,93 @@ with left_col2:
                 unsafe_allow_html=True)
     sub_b1, sub_b2 = st.tabs([f"▲ {t('b1')}", f"◎ {t('b2')}"])
     with sub_b1:
-        _render_table(signals.get("B1", []), "dist_b_pct", "close", t("price"), mf_code, "b1")
+        rows, pg, np_, tot = _get_page("B1", "page_b1", mf_code)
+        _render_table(rows, "dist_b_pct", "close", t("price"), "b1", total=tot)
+        _page_nav(pg, np_, "page_b1")
     with sub_b2:
-        _render_table(signals.get("B2", []), "dist_b_pct", "close", t("price"), mf_code, "b2")
+        rows, pg, np_, tot = _get_page("B2", "page_b2", mf_code)
+        _render_table(rows, "dist_b_pct", "close", t("price"), "b2", total=tot)
+        _page_nav(pg, np_, "page_b2")
 
 
-# ┌── 우하단: 증시 지수 (상세) ───────────────────────┐
+# ┌── 우하단: 관심종목 (WATCHLIST) ──────────────────┐
 with right_col2:
-    st.markdown(f'<div class="section-label"><span>◈</span>{t("indices")}</div>',
+    st.markdown(f'<div class="section-label"><span>◈</span>{t("watchlist")}</div>',
                 unsafe_allow_html=True)
-    cells = ""
-    for d in indices_data:
-        name = d["label_en"] if lang == "en" else d["label_ko"]
-        if d["val"] is None:
-            cells += f'<div class="idx-cell"><span class="idx-name">{name}</span><span class="idx-val" style="color:#333">—</span></div>'
-            continue
-        val  = d["val"]
-        chg  = d["chg"]
-        unit = d["unit"]
-        val_str = f'{unit}{val:,.2f}' if unit in ("$", "₩") else f'{val:,.2f}'
-        sign    = "+" if chg >= 0 else ""
-        chg_cls = "idx-chg-pos" if chg >= 0 else "idx-chg-neg"
-        cells += (f'<div class="idx-cell">'
-                  f'<span class="idx-name">{name}</span>'
-                  f'<div style="text-align:right">'
-                  f'<span class="idx-val">{val_str}</span>&nbsp;'
-                  f'<span class="{chg_cls}">{sign}{chg:.2f}%</span>'
-                  f'</div></div>')
-    st.markdown(f'<div class="indices-grid">{cells}</div>', unsafe_allow_html=True)
-    st.markdown('<div class="updated-txt" style="margin-top:4px">~15min delayed · auto-refresh 5min</div>',
+
+    if not st.session_state.user:
+        st.markdown(
+            f'<div style="color:#2e2e2e;font-size:0.82rem;padding:16px 0">'
+            f'{t("login_req")}</div>',
+            unsafe_allow_html=True)
+    else:
+        wl = st.session_state.watchlist
+
+        # 현재가 일괄 조회 (캐시 활용)
+        yf_syms = tuple(
+            (w["ticker"] + ".KS" if w["market"] == "KR" else w["ticker"])
+            for w in wl
+        )
+        raw_prices = fetch_current_prices(yf_syms) if yf_syms else {}
+        current_prices = {}
+        for w in wl:
+            sym = w["ticker"] + ".KS" if w["market"] == "KR" else w["ticker"]
+            current_prices[w["ticker"]] = raw_prices.get(sym)
+
+        if not wl:
+            st.markdown(
+                f'<div style="color:#2e2e2e;font-size:0.82rem;padding:16px 0">'
+                f'{t("no_watch")}</div>',
                 unsafe_allow_html=True)
+        else:
+            wl_total   = len(wl)
+            wl_pages   = max(1, (wl_total + PAGE_SIZE - 1) // PAGE_SIZE)
+            wl_page    = min(st.session_state.get("page_watch", 0), wl_pages - 1)
+            st.session_state["page_watch"] = wl_page
+            wl_display = wl[wl_page * PAGE_SIZE: (wl_page + 1) * PAGE_SIZE]
+
+            to_remove = None
+            for idx_w, w in enumerate(wl_display):
+                real_idx = wl_page * PAGE_SIZE + idx_w
+                cur   = current_prices.get(w["ticker"])
+                entry = w.get("entry_price", 0)
+                is_kr = w["market"] == "KR"
+                flag  = "🇰🇷" if is_kr else "🇺🇸"
+
+                cur_str   = (f"{cur:,.0f}원" if is_kr else f"${cur:,.2f}") if cur else "—"
+                entry_str = (f"{entry:,.0f}원" if is_kr else f"${entry:,.2f}") if entry else "—"
+
+                ret_str = "—"
+                ret_cls = "ret-pos"
+                if cur and entry:
+                    ret     = (cur - entry) / entry * 100
+                    sign    = "+" if ret >= 0 else ""
+                    ret_str = f"{sign}{ret:.2f}%"
+                    ret_cls = "ret-pos" if ret >= 0 else "ret-neg"
+
+                c_info, c_ret, c_del = st.columns([5, 2, 1])
+                with c_info:
+                    st.markdown(
+                        f'{flag} <span class="watch-name">{w.get("name", w["ticker"])}</span>'
+                        f' <span style="color:#333;font-family:DM Mono,monospace;'
+                        f'font-size:0.7rem">{w["ticker"]}</span>'
+                        f'<br><span class="watch-sub">'
+                        f'{t("entry_price")}: {entry_str} → {t("current")}: {cur_str}'
+                        f'&nbsp;|&nbsp;{t("added_at")}: {w.get("added_at","")}</span>',
+                        unsafe_allow_html=True)
+                with c_ret:
+                    st.markdown(
+                        f'<div class="{ret_cls}" style="padding-top:8px">{ret_str}</div>',
+                        unsafe_allow_html=True)
+                with c_del:
+                    if st.button(t("remove"), key=f"del_{real_idx}"):
+                        to_remove = real_idx
+                st.markdown("<hr>", unsafe_allow_html=True)
+
+            if to_remove is not None:
+                wl.pop(to_remove)
+                save_watchlist(st.session_state.user, wl)
+                st.session_state.watchlist = wl
+                st.rerun()
+
+            _page_nav(wl_page, wl_pages, "page_watch")
