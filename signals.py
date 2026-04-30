@@ -119,11 +119,11 @@ def detect_signals(df: pd.DataFrame) -> dict:
 
     return {
         "A1": a1, "A2": a2, "B1": b1, "B2": b2,
-        "dist_a": round(dist_a, 2),
-        "dist_b": round(dist_b, 2),
-        "ma20_today":      round(ma20_t,  2),
-        "close_today":     round(close_t, 2),
-        "cloud_top_today": round(ct_t,    2),
+        "dist_a": round(float(dist_a), 2),
+        "dist_b": round(float(dist_b), 2),
+        "ma20_today":      round(float(ma20_t),  2),
+        "close_today":     round(float(close_t), 2),
+        "cloud_top_today": round(float(ct_t),    2),
     }
 
 
