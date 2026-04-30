@@ -25,6 +25,23 @@ from datetime import datetime
 import numpy as np
 import pandas as pd
 
+
+def _to_python(obj):
+    """numpy/pandas 타입을 재귀적으로 파이썬 기본 타입으로 변환."""
+    if isinstance(obj, dict):
+        return {k: _to_python(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [_to_python(v) for v in obj]
+    if isinstance(obj, (np.integer, np.int64, np.int32)):
+        return int(obj)
+    if isinstance(obj, (np.floating, np.float64, np.float32)):
+        return float(obj)
+    if isinstance(obj, np.bool_):
+        return bool(obj)
+    if isinstance(obj, np.ndarray):
+        return obj.tolist()
+    return obj
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s %(levelname)s %(message)s",
@@ -204,24 +221,13 @@ def run():
 
     log.info(f"시그널 결과 — A1:{counts['A1']} A2:{counts['A2']} B1:{counts['B1']} B2:{counts['B2']}")
 
-    # 저장 (numpy int64/float64 → 파이썬 기본 타입 변환)
-    class _Encoder(json.JSONEncoder):
-        def default(self, obj):
-            if isinstance(obj, (np.integer,)):
-                return int(obj)
-            if isinstance(obj, (np.floating,)):
-                return float(obj)
-            if isinstance(obj, np.ndarray):
-                return obj.tolist()
-            return super().default(obj)
-
     output = {
         "generated_at": datetime.now().isoformat(),
         "signals": results,
     }
     os.makedirs(DATA_DIR, exist_ok=True)
     with open(RESULTS_PATH, "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=2, cls=_Encoder)
+        json.dump(_to_python(output), f, ensure_ascii=False, indent=2)
     log.info(f"저장: {RESULTS_PATH}")
 
 
