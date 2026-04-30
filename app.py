@@ -452,9 +452,9 @@ col_logo, col_idx, col_btns = st.columns([2, 8, 2])
 
 with col_logo:
     st.markdown(
-        f'<a href="?go=main" style="text-decoration:none">'
-        f'<div class="site-logo" style="padding-top:6px;cursor:pointer">STOCKal</div>'
-        f'</a>'
+        f'<div class="site-logo" style="padding-top:6px;cursor:pointer"'
+        f'     onclick="window.location.href=window.location.pathname+\'?go=main\'">'
+        f'STOCKal</div>'
         f'<div class="updated-txt">{gen_str or t("no_data")}</div>',
         unsafe_allow_html=True)
 
