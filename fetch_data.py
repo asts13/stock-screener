@@ -243,6 +243,7 @@ def fetch_usa(usd_krw: float) -> tuple[pd.DataFrame, list[dict]]:
             if raw.empty:
                 continue
 
+            # yfinance는 단일 종목도 멀티인덱스를 반환할 수 있음
             if isinstance(raw.columns, pd.MultiIndex):
                 for sym in batch:
                     try:
@@ -258,6 +259,9 @@ def fetch_usa(usd_krw: float) -> tuple[pd.DataFrame, list[dict]]:
                     except Exception:
                         pass
             else:
+                # 단일 종목 flat 컬럼 케이스
+                raw.columns = [c[0] if isinstance(c, tuple) else c
+                               for c in raw.columns]
                 sym_df = raw[["Open", "High", "Low", "Close", "Volume"]].dropna(how="all")
                 if len(sym_df) >= 30:
                     sym_df.index.name = "Date"
