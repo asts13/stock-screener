@@ -112,11 +112,25 @@ div[data-testid="stButton"] > button:hover { border-color: #D1FF00; color: #D1FF
 div[data-testid="stRadio"] > div { gap: 6px; }
 div[data-testid="stRadio"] label {
     font-size: 0.76rem; letter-spacing: 0.1em;
-    color: #444; padding: 5px 14px !important;
+    color: #888; padding: 5px 18px !important;
     border: 1px solid #2a2a2a; border-radius: 2px;
 }
 div[data-testid="stRadio"] label:has(input:checked) {
-    color: #1A1A1A !important; background: #D1FF00 !important; border-color: #D1FF00 !important;
+    color: #000000 !important; background: #D1FF00 !important;
+    border-color: #D1FF00 !important; font-weight: 700 !important;
+}
+
+/* 로고 버튼 */
+.logo-btn-wrap div[data-testid="stButton"] > button {
+    background: none !important; border: none !important;
+    color: #D1FF00 !important; font-size: 1.4rem !important;
+    font-weight: 700 !important; letter-spacing: 0.2em !important;
+    padding: 0 !important; width: auto !important;
+    text-align: left !important; box-shadow: none !important;
+}
+.logo-btn-wrap div[data-testid="stButton"] > button:hover {
+    background: none !important; border: none !important;
+    color: #D1FF00 !important; opacity: 0.75;
 }
 
 /* 헤더 지수 가로띠 */
@@ -197,7 +211,7 @@ _defaults = {
     "page_a1": 0, "page_a2": 0,
     "page_b1": 0, "page_b2": 0,
     "page_c1": 0, "page_c2": 0,
-    "page_watch": 0, "_prev_mf": "INIT",
+    "page_watch": 0, "_prev_mf": "BOOT",
 }
 for _k, _v in _defaults.items():
     if _k not in st.session_state:
@@ -350,23 +364,26 @@ def _render_table(rows: list, dist_key: str, ref_key: str,
 
 
 def _page_nav(page: int, n_pages: int, page_key: str):
-    """이전/다음 페이지 네비게이션 버튼."""
+    """이전/다음 페이지 네비게이션 버튼 (중앙 압축)."""
     if n_pages <= 1:
         return
-    c_prev, c_info, c_next = st.columns([1, 4, 1])
-    with c_prev:
-        if st.button("‹", key=f"{page_key}_prev", disabled=(page == 0)):
-            st.session_state[page_key] = page - 1
-            st.rerun()
-    with c_info:
-        st.markdown(
-            f'<div style="text-align:center;color:#383838;font-size:0.7rem;'
-            f'padding-top:8px;letter-spacing:0.1em">{page + 1} / {n_pages}</div>',
-            unsafe_allow_html=True)
-    with c_next:
-        if st.button("›", key=f"{page_key}_next", disabled=(page == n_pages - 1)):
-            st.session_state[page_key] = page + 1
-            st.rerun()
+    # 좌우 여백으로 가운데 압축
+    _, nav_area, _ = st.columns([3, 2, 3])
+    with nav_area:
+        c_prev, c_info, c_next = st.columns([1, 2, 1])
+        with c_prev:
+            if st.button("‹", key=f"{page_key}_prev", disabled=(page == 0)):
+                st.session_state[page_key] = page - 1
+                st.rerun()
+        with c_info:
+            st.markdown(
+                f'<div style="text-align:center;color:#444;font-size:0.7rem;'
+                f'padding-top:8px;letter-spacing:0.08em">{page + 1}&thinsp;/&thinsp;{n_pages}</div>',
+                unsafe_allow_html=True)
+        with c_next:
+            if st.button("›", key=f"{page_key}_next", disabled=(page == n_pages - 1)):
+                st.session_state[page_key] = page + 1
+                st.rerun()
 
 
 def _get_page(signal_key: str, page_key: str, mf: str):
@@ -440,10 +457,13 @@ def _idx_strip(data: list) -> str:
 col_logo, col_idx, col_btns = st.columns([2, 8, 2])
 
 with col_logo:
-    st.markdown(
-        f'<div class="site-logo" style="padding-top:6px">STOCKal</div>'
-        f'<div class="updated-txt">{gen_str or t("no_data")}</div>',
-        unsafe_allow_html=True)
+    st.markdown('<div class="logo-btn-wrap">', unsafe_allow_html=True)
+    if st.button("STOCKal", key="logo_btn"):
+        st.session_state.page = "main"
+        st.rerun()
+    st.markdown('</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="updated-txt">{gen_str or t("no_data")}</div>',
+                unsafe_allow_html=True)
 
 with col_idx:
     st.markdown(_idx_strip(indices_data), unsafe_allow_html=True)
@@ -551,11 +571,11 @@ if st.session_state.page == "my":
 signals = results.get("signals", {})
 
 # ── 시장 필터 ────────────────────────────────────────
-filt_col, _ = st.columns([4, 6])
+filt_col, _ = st.columns([3, 7])
 with filt_col:
-    mf = st.radio("", [t("all"), t("kr"), t("us")], horizontal=True,
+    mf = st.radio("", [t("kr"), t("us")], horizontal=True,
                   label_visibility="collapsed")
-mf_code = {t("all"): None, t("kr"): "KR", t("us"): "US"}.get(mf)
+mf_code = {t("kr"): "KR", t("us"): "US"}.get(mf, "KR")
 
 # 필터 변경 시 모든 페이지 초기화
 if st.session_state["_prev_mf"] != str(mf_code):

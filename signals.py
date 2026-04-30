@@ -54,6 +54,25 @@ PRICES_PATH = os.path.join(DATA_DIR, "prices.parquet")
 UNIVERSE_PATH = os.path.join(DATA_DIR, "universe.json")
 RESULTS_PATH = os.path.join(DATA_DIR, "results.json")
 
+# 거래정지·불량 종목 블랙리스트 (모든 시그널에서 영구 제외)
+TICKER_BLACKLIST = {
+    "001570",  # 금양
+    "006380",  # 카프로
+    "298000",  # 효성화학
+    "015590",  # DKME
+    "011810",  # STX
+    "119650",  # KC코트렐
+    "121800",  # 비덴트
+    "377460",  # 큐에이드
+    "016790",  # 현대사료
+    "066410",  # 버킷스튜디오
+    "046070",  # 코다코
+    "269620",  # 시스웍
+    "036690",  # 코맥스
+    "041590",  # 플래스크
+    "149980",  # 하이로닉
+}
+
 
 # ─────────────────────────────────────────────
 # 지표 계산
@@ -190,6 +209,8 @@ def run():
     counts  = {"A1": 0, "A2": 0, "B1": 0, "B2": 0, "C1": 0, "C2": 0}
 
     for i, ticker in enumerate(tickers):
+        if ticker in TICKER_BLACKLIST:
+            continue
         try:
             df = prices[prices["ticker"] == ticker].set_index("Date").sort_index()
             df = calc_indicators(df)
