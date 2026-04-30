@@ -22,6 +22,7 @@ import json
 import logging
 from datetime import datetime
 
+import numpy as np
 import pandas as pd
 
 logging.basicConfig(
@@ -203,14 +204,24 @@ def run():
 
     log.info(f"시그널 결과 — A1:{counts['A1']} A2:{counts['A2']} B1:{counts['B1']} B2:{counts['B2']}")
 
-    # 저장
+    # 저장 (numpy int64/float64 → 파이썬 기본 타입 변환)
+    class _Encoder(json.JSONEncoder):
+        def default(self, obj):
+            if isinstance(obj, (np.integer,)):
+                return int(obj)
+            if isinstance(obj, (np.floating,)):
+                return float(obj)
+            if isinstance(obj, np.ndarray):
+                return obj.tolist()
+            return super().default(obj)
+
     output = {
         "generated_at": datetime.now().isoformat(),
         "signals": results,
     }
     os.makedirs(DATA_DIR, exist_ok=True)
     with open(RESULTS_PATH, "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
+        json.dump(output, f, ensure_ascii=False, indent=2, cls=_Encoder)
     log.info(f"저장: {RESULTS_PATH}")
 
 
