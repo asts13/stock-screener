@@ -1,0 +1,81 @@
+name: 데이터 자동 갱신
+
+on:
+  schedule:
+    # 한국장 마감 직후: 06:35 UTC = 15:35 KST
+    - cron: "35 6 * * 1-5"
+    # 미국장 마감 직후: 21:30 UTC = 06:30 KST
+    - cron: "30 21 * * 1-5"
+
+  # 수동 실행 (GitHub Actions 탭에서 직접 클릭 가능)
+  workflow_dispatch:
+    inputs:
+      market:
+        description: "수집할 시장 (all / kr / us)"
+        required: false
+        default: "all"
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # 결과 파일 자동 커밋에 필요
+
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v4
+
+      - name: Python 3.12 설정
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: 의존성 설치
+        run: pip install -r requirements.txt
+
+      # 어떤 cron이 실행됐는지에 따라 시장 결정
+      # - 06:35 UTC → 한국(kr)
+      # - 21:30 UTC → 미국(us)
+      # - 수동(workflow_dispatch) → 입력값 사용
+      - name: 시장 결정
+        id: market
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            MARKET="${{ github.event.inputs.market }}"
+          else
+            HOUR=$(date -u +%H)
+            MINUTE=$(date -u +%M)
+            if [ "$HOUR" = "06" ]; then
+              MARKET="kr"
+            else
+              MARKET="us"
+            fi
+          fi
+          echo "market=$MARKET" >> $GITHUB_OUTPUT
+          echo "▶ 수집 시장: $MARKET"
+
+      - name: 데이터 수집 (fetch_data.py)
+        run: |
+          echo "▶ fetch_data.py --market ${{ steps.market.outputs.market }}"
+          python fetch_data.py --market ${{ steps.market.outputs.market }}
+
+      - name: 시그널 계산 (signals.py)
+        run: |
+          echo "▶ signals.py 실행"
+          python signals.py
+
+      - name: 결과 파일 자동 커밋
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/results.json data/universe.json
+          # parquet은 용량이 커서 선택적으로 추가 (있으면 포함)
+          git add data/prices.parquet 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "변경사항 없음, 커밋 스킵"
+          else
+            MARKET="${{ steps.market.outputs.market }}"
+            git commit -m "auto: ${MARKET} 데이터 갱신 $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
