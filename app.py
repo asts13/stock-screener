@@ -120,18 +120,6 @@ div[data-testid="stRadio"] label:has(input:checked) {
     border-color: #D1FF00 !important; font-weight: 700 !important;
 }
 
-/* 로고 버튼 */
-.logo-btn-wrap div[data-testid="stButton"] > button {
-    background: none !important; border: none !important;
-    color: #D1FF00 !important; font-size: 1.4rem !important;
-    font-weight: 700 !important; letter-spacing: 0.2em !important;
-    padding: 0 !important; width: auto !important;
-    text-align: left !important; box-shadow: none !important;
-}
-.logo-btn-wrap div[data-testid="stButton"] > button:hover {
-    background: none !important; border: none !important;
-    color: #D1FF00 !important; opacity: 0.75;
-}
 
 /* 헤더 지수 가로띠 */
 .hdr-idx-strip {
@@ -412,6 +400,12 @@ def manual_refresh():
         st.error(e.stderr[-400:] if e.stderr else "갱신 실패")
 
 
+# ── 로고 클릭 → 메인 화면 리디렉션 ─────────────────────────
+if st.query_params.get("go") == "main":
+    st.session_state.page = "main"
+    st.query_params.clear()
+    st.rerun()
+
 # ── 5분마다 지수 자동 새로고침 ───────────────────────────────
 try:
     from streamlit_autorefresh import st_autorefresh
@@ -457,13 +451,12 @@ def _idx_strip(data: list) -> str:
 col_logo, col_idx, col_btns = st.columns([2, 8, 2])
 
 with col_logo:
-    st.markdown('<div class="logo-btn-wrap">', unsafe_allow_html=True)
-    if st.button("STOCKal", key="logo_btn"):
-        st.session_state.page = "main"
-        st.rerun()
-    st.markdown('</div>', unsafe_allow_html=True)
-    st.markdown(f'<div class="updated-txt">{gen_str or t("no_data")}</div>',
-                unsafe_allow_html=True)
+    st.markdown(
+        f'<a href="?go=main" style="text-decoration:none">'
+        f'<div class="site-logo" style="padding-top:6px;cursor:pointer">STOCKal</div>'
+        f'</a>'
+        f'<div class="updated-txt">{gen_str or t("no_data")}</div>',
+        unsafe_allow_html=True)
 
 with col_idx:
     st.markdown(_idx_strip(indices_data), unsafe_allow_html=True)
