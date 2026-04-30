@@ -124,20 +124,19 @@ div[data-testid="stRadio"] label:has(input:checked) {
 /* 헤더 지수 가로띠 */
 .hdr-idx-strip {
     display: flex; align-items: center;
-    overflow-x: auto; padding: 4px 0;
-    scrollbar-width: none; height: 52px;
+    overflow: hidden; padding: 4px 0; height: 52px;
 }
-.hdr-idx-strip::-webkit-scrollbar { display: none; }
 .hdr-idx {
-    display: flex; flex-direction: column; align-items: flex-start;
-    padding: 2px 14px 2px 0; margin-right: 14px;
+    display: flex; flex-direction: column; align-items: flex-start; justify-content: center;
+    flex: 1; min-width: 0;
+    padding: 0 6px 0 0;
     border-right: 1px solid #2a2a2a; white-space: nowrap;
 }
-.hdr-idx:last-child { border-right: none; }
-.hdr-idx-name { font-size: 0.62rem; letter-spacing: 0.08em; color: #888; text-transform: uppercase; }
-.hdr-idx-val  { font-size: 0.82rem; font-family: 'DM Mono', monospace; color: #D0D0D0; font-weight: 500; }
-.hdr-chg-pos  { font-size: 0.66rem; font-family: 'DM Mono', monospace; color: #D1FF00; }
-.hdr-chg-neg  { font-size: 0.66rem; font-family: 'DM Mono', monospace; color: #ff5555; }
+.hdr-idx:last-child { border-right: none; padding-right: 0; }
+.hdr-idx-name { font-size: 0.58rem; letter-spacing: 0.06em; color: #888; text-transform: uppercase; }
+.hdr-idx-val  { font-size: 0.78rem; font-family: 'DM Mono', monospace; color: #D0D0D0; font-weight: 500; }
+.hdr-chg-pos  { font-size: 0.62rem; font-family: 'DM Mono', monospace; color: #D1FF00; }
+.hdr-chg-neg  { font-size: 0.62rem; font-family: 'DM Mono', monospace; color: #ff5555; }
 
 /* 섹션 레이블 */
 .section-label {
@@ -242,7 +241,8 @@ def fetch_indices() -> list:
     out = []
     tickers = [i["ticker"] for i in INDICES]
     try:
-        raw = yf.download(tickers, period="2d", auto_adjust=True,
+        # 5d: 휴장일·마감 후에도 최근 거래일 데이터 확보
+        raw = yf.download(tickers, period="5d", auto_adjust=True,
                           progress=False, threads=True)
         for idx in INDICES:
             t_sym = idx["ticker"]
@@ -253,8 +253,8 @@ def fetch_indices() -> list:
                     close = raw["Close"].dropna()
                 if len(close) < 2:
                     raise ValueError("short")
-                val  = float(close.iloc[-1])
-                prev = float(close.iloc[-2])
+                val  = float(close.iloc[-1])   # 마지막 거래가
+                prev = float(close.iloc[-2])   # 직전 거래가
                 chg  = (val - prev) / prev * 100
                 out.append({**idx, "val": val, "chg": chg})
             except Exception:
