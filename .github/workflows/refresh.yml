@@ -6,6 +6,8 @@ on:
     - cron: "35 6 * * 1-5"
     # 미국장 마감 직후: 21:30 UTC = 06:30 KST
     - cron: "30 21 * * 1-5"
+    # 3시간마다 전체 갱신: 평일 00/03/06/09/12/15/18/21 UTC
+    - cron: "0 */3 * * 1-5"
 
   # 수동 실행 (GitHub Actions 탭에서 직접 클릭 가능)
   workflow_dispatch:
@@ -35,8 +37,9 @@ jobs:
         run: pip install -r requirements.txt
 
       # 어떤 cron이 실행됐는지에 따라 시장 결정
-      # - 06:35 UTC → 한국(kr)
-      # - 21:30 UTC → 미국(us)
+      # - 06:xx UTC → 한국(kr)
+      # - 21:xx UTC → 미국(us)
+      # - 그 외 3시간 cron → 전체(all)
       # - 수동(workflow_dispatch) → 입력값 사용
       - name: 시장 결정
         id: market
@@ -45,11 +48,12 @@ jobs:
             MARKET="${{ github.event.inputs.market }}"
           else
             HOUR=$(date -u +%H)
-            MINUTE=$(date -u +%M)
             if [ "$HOUR" = "06" ]; then
               MARKET="kr"
-            else
+            elif [ "$HOUR" = "21" ]; then
               MARKET="us"
+            else
+              MARKET="all"
             fi
           fi
           echo "market=$MARKET" >> $GITHUB_OUTPUT
