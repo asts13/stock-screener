@@ -201,6 +201,52 @@ hr { border-color:#1f1f1f !important; margin:14px 0 !important; }
 .stAlert { background:#1e1e1e !important; border:1px solid #2a2a2a !important; border-radius:2px !important; }
 ::-webkit-scrollbar { width:3px; height:3px; }
 ::-webkit-scrollbar-thumb { background:#2a2a2a; }
+
+/* ── 테이블 래퍼 ─────────────────────────── */
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* ── 모바일 반응형 ─────────────────────────── */
+@media (max-width: 768px) {
+    /* 헤더·콘텐츠 컬럼 세로 스택 */
+    [data-testid="stHorizontalBlock"] {
+        flex-wrap: wrap !important;
+    }
+    [data-testid="column"] {
+        min-width: 100% !important;
+        width: 100% !important;
+        flex: 1 1 100% !important;
+    }
+    /* 중첩 컬럼(버튼행·페이지 네비·관심종목행)은 가로 유지 */
+    [data-testid="stHorizontalBlock"] [data-testid="stHorizontalBlock"] {
+        flex-wrap: nowrap !important;
+    }
+    [data-testid="stHorizontalBlock"] [data-testid="stHorizontalBlock"] [data-testid="column"] {
+        min-width: 0 !important;
+        width: auto !important;
+        flex: 1 1 0 !important;
+    }
+
+    /* 지수 띠: 가로 스크롤 */
+    .hdr-idx-strip {
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        height: auto !important;
+        padding-bottom: 6px !important;
+        -webkit-overflow-scrolling: touch;
+    }
+    .hdr-idx {
+        flex: 0 0 auto !important;
+        min-width: 70px !important;
+    }
+
+    /* 테이블 */
+    .stock-table { min-width: 540px; font-size: 0.74rem; }
+    .stock-table th, .stock-table td { padding: 7px 8px; }
+
+    /* 간격·크기 조정 */
+    .section-label { margin: 8px 0 6px 0; }
+    .site-logo { font-size: 1.15rem; }
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -353,6 +399,7 @@ def _render_table(rows: list, dist_key: str, ref_key: str,
 
     count_label = f"{total if total is not None else len(rows)} {t('results')}"
     st.markdown(f"""
+    <div class="table-wrap">
     <table class="stock-table">
       <thead><tr>
         <th></th><th>{t('ticker')}</th><th>{t('price')}</th><th>{t('mktcap')}</th>
@@ -360,6 +407,7 @@ def _render_table(rows: list, dist_key: str, ref_key: str,
       </tr></thead>
       <tbody>{tbody}</tbody>
     </table>
+    </div>
     <div class="count-txt">{count_label}</div>
     """, unsafe_allow_html=True)
 
