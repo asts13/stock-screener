@@ -169,64 +169,104 @@ _HEADERS = {
 
 def _fetch_us_symbols() -> list[str]:
     """
-    Wikipedia에서 S&P500 + NASDAQ-100 종목 목록을 가져온다.
-    (ftp.nasdaqtrader.com은 GitHub Actions IP를 차단하므로 Wikipedia 사용)
-    requests로 User-Agent 헤더를 붙여 403 방지.
+    NYSE + NASDAQ 상장 종목 목록 수집.
+    1순위: FinanceDataReader (Yahoo Finance 기반, GitHub Actions 정상 동작)
+    2순위: Wikipedia S&P500 + NASDAQ-100 폴백
     """
     from io import StringIO
     all_symbols = []
 
-    wiki_sources = [
-        ("S&P500",     "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"),
-        ("NASDAQ-100", "https://en.wikipedia.org/wiki/NASDAQ-100"),
-    ]
-
-    for name, url in wiki_sources:
+    # ── 1순위: FinanceDataReader ──────────────────────────────
+    for market in ["NYSE", "NASDAQ"]:
         try:
-            resp = requests.get(url, headers=_HEADERS, timeout=30)
-            resp.raise_for_status()
-            tables = pd.read_html(StringIO(resp.text))
-            for df in tables:
-                col = next(
-                    (c for c in df.columns
-                     if "ticker" in str(c).lower() or "symbol" in str(c).lower()),
-                    None,
-                )
-                if col and len(df) >= 90:
-                    syms = df[col].dropna().astype(str).str.strip()
-                    syms = [s.replace(".", "-") for s in syms
-                            if re.match(r"^[A-Z]{1,5}$", s.replace(".", "-"))]
-                    all_symbols.extend(syms)
-                    log.info(f"{name}: {len(syms)}종목")
-                    break
+            listing = fdr.StockListing(market)
+            sym_col = next(
+                (c for c in listing.columns if str(c).lower() in ["symbol", "code", "ticker"]),
+                listing.columns[0],
+            )
+            syms = listing[sym_col].dropna().astype(str).str.strip()
+            syms = [s for s in syms if re.match(r"^[A-Z]{1,5}$", s)]
+            all_symbols.extend(syms)
+            log.info(f"FDR {market}: {len(syms)}종목")
         except Exception as e:
-            log.warning(f"{name} 목록 조회 실패: {e}")
+            log.warning(f"FDR {market} 목록 조회 실패: {e}")
+
+    # ── 2순위: Wikipedia 폴백 (FDR 결과 없을 때) ─────────────
+    if len(all_symbols) < 100:
+        log.info("FDR 목록 부족 → Wikipedia 폴백 사용")
+        for name, url in [
+            ("S&P500",     "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"),
+            ("NASDAQ-100", "https://en.wikipedia.org/wiki/NASDAQ-100"),
+        ]:
+            try:
+                resp = requests.get(url, headers=_HEADERS, timeout=30)
+                resp.raise_for_status()
+                tables = pd.read_html(StringIO(resp.text))
+                for df in tables:
+                    col = next(
+                        (c for c in df.columns
+                         if "ticker" in str(c).lower() or "symbol" in str(c).lower()),
+                        None,
+                    )
+                    if col and len(df) >= 90:
+                        syms = df[col].dropna().astype(str).str.strip()
+                        syms = [s for s in syms if re.match(r"^[A-Z]{1,5}$", s)]
+                        all_symbols.extend(syms)
+                        log.info(f"Wikipedia {name} (폴백): {len(syms)}종목")
+                        break
+            except Exception as e:
+                log.warning(f"Wikipedia {name} 폴백 실패: {e}")
 
     symbols = list(set(all_symbols))
-    log.info(f"US 유니버스 (S&P500+NQ100 합산): {len(symbols)}종목")
+    log.info(f"US 상장 종목 합산: {len(symbols)}개 (시총 필터 전)")
     return symbols
 
 
 def fetch_usa(usd_krw: float) -> tuple[pd.DataFrame, list[dict]]:
     """
-    Wikipedia(S&P500+NASDAQ-100) → 일봉 수집.
-    S&P500/NQ100은 전부 대형주이므로 시총 필터 생략 → 속도 대폭 개선.
+    NYSE+NASDAQ 목록 → 시총 $400M 이상 필터 → 일봉 수집.
     """
     log.info("=== 미국 종목 수집 시작 ===")
+    log.info(f"미국 시총 기준: ${US_MKTCAP_MIN_USD/1e6:.0f}M (환율 {usd_krw:.0f})")
 
     all_symbols = _fetch_us_symbols()
     if not all_symbols:
         return pd.DataFrame(), []
 
-    log.info(f"미국 유니버스: {len(all_symbols)}종목 (시총 필터 생략 — 모두 대형주)")
+    # ── 시총 필터링 (fast_info, 배치당 100개) ────────────────
+    universe = []
+    CAP_BATCH = 100
+    for i in range(0, len(all_symbols), CAP_BATCH):
+        batch = all_symbols[i:i+CAP_BATCH]
+        try:
+            tickers_obj = yf.Tickers(" ".join(batch))
+            for sym in batch:
+                try:
+                    cap = getattr(tickers_obj.tickers[sym].fast_info, "market_cap", None)
+                    if cap and cap >= US_MKTCAP_MIN_USD:
+                        universe.append({
+                            "ticker": sym, "name": sym, "market": "US",
+                            "market_cap_krw": int(cap * usd_krw),
+                            "market_cap_usd": int(cap),
+                        })
+                except Exception:
+                    pass
+        except Exception as e:
+            log.warning(f"[US] 시총 조회 실패 배치 {i}: {e}")
+        time.sleep(0.3)
+        if (i // CAP_BATCH + 1) % 20 == 0:
+            log.info(f"[US] 시총 확인 {min(i+CAP_BATCH, len(all_symbols))}/{len(all_symbols)} "
+                     f"(통과: {len(universe)})")
 
-    # 일봉 수집 (배치당 50개)
+    log.info(f"미국 유니버스 (시총 필터 후): {len(universe)}종목")
+
+    # ── 일봉 수집 (배치당 50개) ───────────────────────────────
+    us_tickers = [u["ticker"] for u in universe]
     all_frames = []
-    universe   = []
-    BATCH      = 50
+    OHLCV_BATCH = 50
 
-    for i in range(0, len(all_symbols), BATCH):
-        batch = all_symbols[i:i+BATCH]
+    for i in range(0, len(us_tickers), OHLCV_BATCH):
+        batch = us_tickers[i:i+OHLCV_BATCH]
         try:
             raw = yf.download(
                 batch,
@@ -250,10 +290,6 @@ def fetch_usa(usd_krw: float) -> tuple[pd.DataFrame, list[dict]]:
                         sym_df["ticker"] = sym
                         sym_df["market"] = "US"
                         all_frames.append(sym_df)
-                        universe.append({
-                            "ticker": sym, "name": sym, "market": "US",
-                            "market_cap_krw": None, "market_cap_usd": None,
-                        })
                     except Exception:
                         pass
             else:
@@ -264,15 +300,11 @@ def fetch_usa(usd_krw: float) -> tuple[pd.DataFrame, list[dict]]:
                     sym_df["ticker"] = batch[0]
                     sym_df["market"] = "US"
                     all_frames.append(sym_df)
-                    universe.append({
-                        "ticker": batch[0], "name": batch[0], "market": "US",
-                        "market_cap_krw": None, "market_cap_usd": None,
-                    })
         except Exception as e:
-            log.warning(f"[US] 배치 {i}~{i+BATCH} 실패: {e}")
+            log.warning(f"[US] 일봉 배치 {i}~{i+OHLCV_BATCH} 실패: {e}")
         time.sleep(0.5)
-        if (i // BATCH + 1) % 5 == 0:
-            log.info(f"[US] 일봉 {min(i+BATCH, len(all_symbols))}/{len(all_symbols)}...")
+        if (i // OHLCV_BATCH + 1) % 10 == 0:
+            log.info(f"[US] 일봉 {min(i+OHLCV_BATCH, len(us_tickers))}/{len(us_tickers)}...")
 
     if not all_frames:
         log.warning("미국 데이터 없음")

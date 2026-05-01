@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-30T16:51:55.423924",
+  "updated_at": "2026-05-01T08:24:31.807123",
   "universe": [
     {
       "ticker": "005930",
@@ -2459,6 +2459,2120 @@
       "market_cap_usd": null
     },
     {
+      "ticker": "145990",
+      "name": "삼양사",
+      "market": "KR",
+      "market_cap_krw": 497108241800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "126720",
+      "name": "수산인더스트리",
+      "market": "KR",
+      "market_cap_krw": 486438300000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "029530",
+      "name": "신도리코",
+      "market": "KR",
+      "market_cap_krw": 485300663550,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "006220",
+      "name": "제주은행",
+      "market": "KR",
+      "market_cap_krw": 477017789340,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "001390",
+      "name": "KG케미칼",
+      "market": "KR",
+      "market_cap_krw": 475337522100,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "017810",
+      "name": "풀무원",
+      "market": "KR",
+      "market_cap_krw": 468882666600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "344820",
+      "name": "KCC글라스",
+      "market": "KR",
+      "market_cap_krw": 467936001600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "192650",
+      "name": "드림텍",
+      "market": "KR",
+      "market_cap_krw": 462816875290,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "105630",
+      "name": "한세실업",
+      "market": "KR",
+      "market_cap_krw": 461600000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "145720",
+      "name": "덴티움",
+      "market": "KR",
+      "market_cap_krw": 459653390300,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "004700",
+      "name": "조광피혁",
+      "market": "KR",
+      "market_cap_krw": 458790522000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "357120",
+      "name": "코람코라이프인프라리츠",
+      "market": "KR",
+      "market_cap_krw": 456016133490,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "072710",
+      "name": "농심홀딩스",
+      "market": "KR",
+      "market_cap_krw": 452648304000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "015360",
+      "name": "INVENI",
+      "market": "KR",
+      "market_cap_krw": 437907500000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "084010",
+      "name": "대한제강",
+      "market": "KR",
+      "market_cap_krw": 435144405360,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "010690",
+      "name": "화신",
+      "market": "KR",
+      "market_cap_krw": 433013084000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "029460",
+      "name": "케이씨",
+      "market": "KR",
+      "market_cap_krw": 431453945250,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "170900",
+      "name": "동아에스티",
+      "market": "KR",
+      "market_cap_krw": 430942381700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "194370",
+      "name": "제이에스코퍼레이션",
+      "market": "KR",
+      "market_cap_krw": 429157850820,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "005610",
+      "name": "삼립",
+      "market": "KR",
+      "market_cap_krw": 428861747300,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "183190",
+      "name": "아세아시멘트",
+      "market": "KR",
+      "market_cap_krw": 428220400440,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "089590",
+      "name": "제주항공",
+      "market": "KR",
+      "market_cap_krw": 428203630350,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "017860",
+      "name": "DS단석",
+      "market": "KR",
+      "market_cap_krw": 426219336000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "001250",
+      "name": "GS글로벌",
+      "market": "KR",
+      "market_cap_krw": 421747534040,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "417310",
+      "name": "코람코더원리츠",
+      "market": "KR",
+      "market_cap_krw": 419756000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "016800",
+      "name": "퍼시스",
+      "market": "KR",
+      "market_cap_krw": 412850000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "009290",
+      "name": "광동제약",
+      "market": "KR",
+      "market_cap_krw": 411844412160,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "011760",
+      "name": "현대코퍼레이션",
+      "market": "KR",
+      "market_cap_krw": 408775049400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "012030",
+      "name": "DB",
+      "market": "KR",
+      "market_cap_krw": 404359605330,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "034830",
+      "name": "한국토지신탁",
+      "market": "KR",
+      "market_cap_krw": 403225300310,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "097520",
+      "name": "엠씨넥스",
+      "market": "KR",
+      "market_cap_krw": 400234500000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "060980",
+      "name": "HL홀딩스",
+      "market": "KR",
+      "market_cap_krw": 394475902150,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "018250",
+      "name": "애경산업",
+      "market": "KR",
+      "market_cap_krw": 393508031500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "026890",
+      "name": "스틱인베스트먼트",
+      "market": "KR",
+      "market_cap_krw": 392360870440,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "078520",
+      "name": "에이블씨엔씨",
+      "market": "KR",
+      "market_cap_krw": 388131282120,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "007690",
+      "name": "국도화학",
+      "market": "KR",
+      "market_cap_krw": 387102777600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "104700",
+      "name": "한국철강",
+      "market": "KR",
+      "market_cap_krw": 386370000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "092230",
+      "name": "KPX홀딩스",
+      "market": "KR",
+      "market_cap_krw": 384442786000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "003720",
+      "name": "삼영",
+      "market": "KR",
+      "market_cap_krw": 383860000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "009160",
+      "name": "SIMPAC",
+      "market": "KR",
+      "market_cap_krw": 383727582160,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "005010",
+      "name": "휴스틸",
+      "market": "KR",
+      "market_cap_krw": 383202671500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "001940",
+      "name": "KISCO홀딩스",
+      "market": "KR",
+      "market_cap_krw": 382762260000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "091810",
+      "name": "트리니티항공",
+      "market": "KR",
+      "market_cap_krw": 381996773625,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "200880",
+      "name": "서연이화",
+      "market": "KR",
+      "market_cap_krw": 381371246070,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "004430",
+      "name": "송원산업",
+      "market": "KR",
+      "market_cap_krw": 380400000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "005720",
+      "name": "넥센",
+      "market": "KR",
+      "market_cap_krw": 378316634400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "002810",
+      "name": "삼영무역",
+      "market": "KR",
+      "market_cap_krw": 374879044400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "011500",
+      "name": "한농화성",
+      "market": "KR",
+      "market_cap_krw": 369034191200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "092220",
+      "name": "KEC",
+      "market": "KR",
+      "market_cap_krw": 369002653158,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "126560",
+      "name": "현대퓨처넷",
+      "market": "KR",
+      "market_cap_krw": 368628851025,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "001750",
+      "name": "한양증권",
+      "market": "KR",
+      "market_cap_krw": 364672499100,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "001230",
+      "name": "동국홀딩스",
+      "market": "KR",
+      "market_cap_krw": 362525506200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "002310",
+      "name": "아세아제지",
+      "market": "KR",
+      "market_cap_krw": 356623570400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "000680",
+      "name": "LS네트웍스",
+      "market": "KR",
+      "market_cap_krw": 352643496600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "286940",
+      "name": "롯데이노베이트",
+      "market": "KR",
+      "market_cap_krw": 349488377700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "084690",
+      "name": "대상홀딩스",
+      "market": "KR",
+      "market_cap_krw": 345467612520,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "024720",
+      "name": "콜마홀딩스",
+      "market": "KR",
+      "market_cap_krw": 336446300790,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "002900",
+      "name": "TYM",
+      "market": "KR",
+      "market_cap_krw": 333270000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "001340",
+      "name": "PKC",
+      "market": "KR",
+      "market_cap_krw": 329251923310,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "900140",
+      "name": "엘브이엠씨홀딩스",
+      "market": "KR",
+      "market_cap_krw": 328895215264,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "272450",
+      "name": "진에어",
+      "market": "KR",
+      "market_cap_krw": 327816000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "037270",
+      "name": "YG PLUS",
+      "market": "KR",
+      "market_cap_krw": 325318492100,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "123890",
+      "name": "한국자산신탁",
+      "market": "KR",
+      "market_cap_krw": 324902773530,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "108670",
+      "name": "LX하우시스",
+      "market": "KR",
+      "market_cap_krw": 323732887000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "017390",
+      "name": "서울가스",
+      "market": "KR",
+      "market_cap_krw": 323730000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "003520",
+      "name": "영진약품",
+      "market": "KR",
+      "market_cap_krw": 323720133870,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "033270",
+      "name": "유나이티드제약",
+      "market": "KR",
+      "market_cap_krw": 321397655000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "009470",
+      "name": "삼화전기",
+      "market": "KR",
+      "market_cap_krw": 320770270000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "128820",
+      "name": "대성산업",
+      "market": "KR",
+      "market_cap_krw": 320267184240,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "096760",
+      "name": "JW홀딩스",
+      "market": "KR",
+      "market_cap_krw": 316398751760,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "003920",
+      "name": "남양유업",
+      "market": "KR",
+      "market_cap_krw": 315600000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "001460",
+      "name": "BYC",
+      "market": "KR",
+      "market_cap_krw": 314805960000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "088260",
+      "name": "이리츠코크렙",
+      "market": "KR",
+      "market_cap_krw": 314490994350,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "475560",
+      "name": "더본코리아",
+      "market": "KR",
+      "market_cap_krw": 309904573000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "003200",
+      "name": "일신방직",
+      "market": "KR",
+      "market_cap_krw": 307204800000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "005680",
+      "name": "삼영전자",
+      "market": "KR",
+      "market_cap_krw": 307200000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "053690",
+      "name": "한미글로벌",
+      "market": "KR",
+      "market_cap_krw": 306811400000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "037710",
+      "name": "광주신세계",
+      "market": "KR",
+      "market_cap_krw": 306351815000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "004360",
+      "name": "세방",
+      "market": "KR",
+      "market_cap_krw": 304511555790,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "003120",
+      "name": "일성아이에스",
+      "market": "KR",
+      "market_cap_krw": 302575000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "002320",
+      "name": "한진",
+      "market": "KR",
+      "market_cap_krw": 301371522720,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "003960",
+      "name": "사조대림",
+      "market": "KR",
+      "market_cap_krw": 300136294250,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "011690",
+      "name": "와이투솔루션",
+      "market": "KR",
+      "market_cap_krw": 298406723220,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "044450",
+      "name": "KSS해운",
+      "market": "KR",
+      "market_cap_krw": 295960981600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "092200",
+      "name": "디아이씨",
+      "market": "KR",
+      "market_cap_krw": 295164238710,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "035510",
+      "name": "신세계 I&C",
+      "market": "KR",
+      "market_cap_krw": 294996990000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "034120",
+      "name": "SBS",
+      "market": "KR",
+      "market_cap_krw": 294964684200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "000320",
+      "name": "노루홀딩스",
+      "market": "KR",
+      "market_cap_krw": 293734437100,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "005950",
+      "name": "이수화학",
+      "market": "KR",
+      "market_cap_krw": 292654100970,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "241590",
+      "name": "화승엔터프라이즈",
+      "market": "KR",
+      "market_cap_krw": 292646203080,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "000490",
+      "name": "대동",
+      "market": "KR",
+      "market_cap_krw": 292016142450,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "003070",
+      "name": "코오롱글로벌",
+      "market": "KR",
+      "market_cap_krw": 291104330550,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "001780",
+      "name": "알루코",
+      "market": "KR",
+      "market_cap_krw": 290974546660,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "334890",
+      "name": "이지스밸류플러스리츠",
+      "market": "KR",
+      "market_cap_krw": 290642738355,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "013890",
+      "name": "지누스",
+      "market": "KR",
+      "market_cap_krw": 287306576160,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "000650",
+      "name": "천일고속",
+      "market": "KR",
+      "market_cap_krw": 287273220000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "377190",
+      "name": "디앤디플랫폼리츠",
+      "market": "KR",
+      "market_cap_krw": 284206000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "000540",
+      "name": "흥국화재",
+      "market": "KR",
+      "market_cap_krw": 283631277675,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "404990",
+      "name": "신한서부티엔디리츠",
+      "market": "KR",
+      "market_cap_krw": 282426478105,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "134380",
+      "name": "미원화학",
+      "market": "KR",
+      "market_cap_krw": 281946157600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "004980",
+      "name": "성신양회",
+      "market": "KR",
+      "market_cap_krw": 280218714390,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "000050",
+      "name": "경방",
+      "market": "KR",
+      "market_cap_krw": 276894227000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "004310",
+      "name": "현대약품",
+      "market": "KR",
+      "market_cap_krw": 275840000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "084680",
+      "name": "이월드",
+      "market": "KR",
+      "market_cap_krw": 272835115332,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "008350",
+      "name": "남선알미늄",
+      "market": "KR",
+      "market_cap_krw": 271711484450,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "226320",
+      "name": "잇츠한불",
+      "market": "KR",
+      "market_cap_krw": 271265626550,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "000430",
+      "name": "대원강업",
+      "market": "KR",
+      "market_cap_krw": 270630000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "030210",
+      "name": "다올투자증권",
+      "market": "KR",
+      "market_cap_krw": 268922532990,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "007160",
+      "name": "사조산업",
+      "market": "KR",
+      "market_cap_krw": 265500000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "001130",
+      "name": "대한제분",
+      "market": "KR",
+      "market_cap_krw": 264485000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "001790",
+      "name": "대한제당",
+      "market": "KR",
+      "market_cap_krw": 261017047800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "004560",
+      "name": "현대비앤지스틸",
+      "market": "KR",
+      "market_cap_krw": 259355549200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "013580",
+      "name": "계룡건설",
+      "market": "KR",
+      "market_cap_krw": 258996303000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "0030R0",
+      "name": "대신밸류리츠",
+      "market": "KR",
+      "market_cap_krw": 258548500000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "004710",
+      "name": "한솔테크닉스",
+      "market": "KR",
+      "market_cap_krw": 258451708140,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "000390",
+      "name": "SP삼화",
+      "market": "KR",
+      "market_cap_krw": 257072782050,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "136490",
+      "name": "선진",
+      "market": "KR",
+      "market_cap_krw": 254917354880,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "122900",
+      "name": "아이마켓코리아",
+      "market": "KR",
+      "market_cap_krw": 254059184000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "033920",
+      "name": "무학",
+      "market": "KR",
+      "market_cap_krw": 253650000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "117580",
+      "name": "대성에너지",
+      "market": "KR",
+      "market_cap_krw": 252725000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "005500",
+      "name": "삼진제약",
+      "market": "KR",
+      "market_cap_krw": 249217200000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "035150",
+      "name": "백산",
+      "market": "KR",
+      "market_cap_krw": 248357628400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "001630",
+      "name": "종근당홀딩스",
+      "market": "KR",
+      "market_cap_krw": 246986147300,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "004380",
+      "name": "삼익THK",
+      "market": "KR",
+      "market_cap_krw": 245295000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "244920",
+      "name": "에이플러스에셋",
+      "market": "KR",
+      "market_cap_krw": 244163084400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "487570",
+      "name": "HS효성",
+      "market": "KR",
+      "market_cap_krw": 244048218500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "010580",
+      "name": "에스엠벡셀",
+      "market": "KR",
+      "market_cap_krw": 242528836800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "028100",
+      "name": "동아지질",
+      "market": "KR",
+      "market_cap_krw": 241011036000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "016880",
+      "name": "웅진",
+      "market": "KR",
+      "market_cap_krw": 240980146200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "003220",
+      "name": "대원제약",
+      "market": "KR",
+      "market_cap_krw": 240423689760,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "002150",
+      "name": "도화엔지니어링",
+      "market": "KR",
+      "market_cap_krw": 240086400000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "000480",
+      "name": "CR홀딩스",
+      "market": "KR",
+      "market_cap_krw": 240079308800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "095570",
+      "name": "AJ네트웍스",
+      "market": "KR",
+      "market_cap_krw": 239839622700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "009680",
+      "name": "모토닉",
+      "market": "KR",
+      "market_cap_krw": 239498695880,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "298690",
+      "name": "에어부산",
+      "market": "KR",
+      "market_cap_krw": 239112000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "210980",
+      "name": "SK디앤디",
+      "market": "KR",
+      "market_cap_krw": 238674837240,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "025000",
+      "name": "KPX케미칼",
+      "market": "KR",
+      "market_cap_krw": 237326027800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "053210",
+      "name": "스카이라이프",
+      "market": "KR",
+      "market_cap_krw": 234050553375,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "348950",
+      "name": "제이알글로벌리츠",
+      "market": "KR",
+      "market_cap_krw": 233298432000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "008490",
+      "name": "서흥",
+      "market": "KR",
+      "market_cap_krw": 231960715650,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "003610",
+      "name": "방림",
+      "market": "KR",
+      "market_cap_krw": 229956343760,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "003350",
+      "name": "한국화장품제조",
+      "market": "KR",
+      "market_cap_krw": 228866000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "339770",
+      "name": "교촌에프앤비",
+      "market": "KR",
+      "market_cap_krw": 224093383800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "102260",
+      "name": "동성케미컬",
+      "market": "KR",
+      "market_cap_krw": 222946200400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "007860",
+      "name": "서연",
+      "market": "KR",
+      "market_cap_krw": 222119324240,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "018470",
+      "name": "조일알미늄",
+      "market": "KR",
+      "market_cap_krw": 221478880029,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "033530",
+      "name": "SJG세종",
+      "market": "KR",
+      "market_cap_krw": 221176639950,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "005960",
+      "name": "동부건설",
+      "market": "KR",
+      "market_cap_krw": 220976364690,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "016580",
+      "name": "환인제약",
+      "market": "KR",
+      "market_cap_krw": 220596830200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "001080",
+      "name": "만호제강",
+      "market": "KR",
+      "market_cap_krw": 219950000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "432320",
+      "name": "KB스타리츠",
+      "market": "KR",
+      "market_cap_krw": 219561927025,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "000860",
+      "name": "강남제비스코",
+      "market": "KR",
+      "market_cap_krw": 218920000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "039570",
+      "name": "HDC랩스",
+      "market": "KR",
+      "market_cap_krw": 217784272390,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "003650",
+      "name": "미창석유",
+      "market": "KR",
+      "market_cap_krw": 217632967200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "007570",
+      "name": "일양약품",
+      "market": "KR",
+      "market_cap_krw": 214713720000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "000140",
+      "name": "하이트진로홀딩스",
+      "market": "KR",
+      "market_cap_krw": 213734305650,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "012610",
+      "name": "경인양행",
+      "market": "KR",
+      "market_cap_krw": 211827297850,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "081000",
+      "name": "일진다이아",
+      "market": "KR",
+      "market_cap_krw": 208925762250,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "271980",
+      "name": "제일약품",
+      "market": "KR",
+      "market_cap_krw": 205868208000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "234080",
+      "name": "JW생명과학",
+      "market": "KR",
+      "market_cap_krw": 204740783220,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "002100",
+      "name": "경농",
+      "market": "KR",
+      "market_cap_krw": 204596586000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "002990",
+      "name": "금호건설",
+      "market": "KR",
+      "market_cap_krw": 204592082800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "460850",
+      "name": "동국씨엠",
+      "market": "KR",
+      "market_cap_krw": 204207820480,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "004090",
+      "name": "한국석유",
+      "market": "KR",
+      "market_cap_krw": 203613684800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "213500",
+      "name": "한솔제지",
+      "market": "KR",
+      "market_cap_krw": 203018913280,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "031440",
+      "name": "신세계푸드",
+      "market": "KR",
+      "market_cap_krw": 202530704000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "002780",
+      "name": "진흥기업",
+      "market": "KR",
+      "market_cap_krw": 201769310315,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "003460",
+      "name": "유화증권",
+      "market": "KR",
+      "market_cap_krw": 201577085325,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "025820",
+      "name": "이구산업",
+      "market": "KR",
+      "market_cap_krw": 200652000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "102460",
+      "name": "이연제약",
+      "market": "KR",
+      "market_cap_krw": 200551690690,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "100250",
+      "name": "진양홀딩스",
+      "market": "KR",
+      "market_cap_krw": 198409500000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "008970",
+      "name": "KBI동양철관",
+      "market": "KR",
+      "market_cap_krw": 195600619695,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "017550",
+      "name": "수산세보틱스",
+      "market": "KR",
+      "market_cap_krw": 194061294300,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "006060",
+      "name": "화승인더",
+      "market": "KR",
+      "market_cap_krw": 193066800000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "000520",
+      "name": "삼일제약",
+      "market": "KR",
+      "market_cap_krw": 192840199790,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "015230",
+      "name": "대창단조",
+      "market": "KR",
+      "market_cap_krw": 192448265800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "001520",
+      "name": "동양",
+      "market": "KR",
+      "market_cap_krw": 191901986652,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "001360",
+      "name": "삼성제약",
+      "market": "KR",
+      "market_cap_krw": 191149020370,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "012200",
+      "name": "계양전기",
+      "market": "KR",
+      "market_cap_krw": 190559803000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "101530",
+      "name": "해태제과식품",
+      "market": "KR",
+      "market_cap_krw": 189259343000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "071840",
+      "name": "롯데하이마트",
+      "market": "KR",
+      "market_cap_krw": 189097773120,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "009580",
+      "name": "무림P&P",
+      "market": "KR",
+      "market_cap_krw": 188976021720,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "317400",
+      "name": "자이에스앤디",
+      "market": "KR",
+      "market_cap_krw": 187125659000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "005430",
+      "name": "한국공항",
+      "market": "KR",
+      "market_cap_krw": 186181674000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "400760",
+      "name": "NH올원리츠",
+      "market": "KR",
+      "market_cap_krw": 184562364000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "214420",
+      "name": "토니모리",
+      "market": "KR",
+      "market_cap_krw": 183057020390,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "037560",
+      "name": "LG헬로비전",
+      "market": "KR",
+      "market_cap_krw": 182774601400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "003480",
+      "name": "한진중공업홀딩스",
+      "market": "KR",
+      "market_cap_krw": 181903641920,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "016450",
+      "name": "한세예스24홀딩스",
+      "market": "KR",
+      "market_cap_krw": 181600000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "002170",
+      "name": "SYTS",
+      "market": "KR",
+      "market_cap_krw": 180600000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "009070",
+      "name": "KCTC",
+      "market": "KR",
+      "market_cap_krw": 177900000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "272550",
+      "name": "삼양패키징",
+      "market": "KR",
+      "market_cap_krw": 177053770500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "090350",
+      "name": "노루페인트",
+      "market": "KR",
+      "market_cap_krw": 176600000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "293480",
+      "name": "하나제약",
+      "market": "KR",
+      "market_cap_krw": 174352600260,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "000300",
+      "name": "DH오토넥스",
+      "market": "KR",
+      "market_cap_krw": 174035631000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "089470",
+      "name": "HDC현대EP",
+      "market": "KR",
+      "market_cap_krw": 173855000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "462520",
+      "name": "조선내화",
+      "market": "KR",
+      "market_cap_krw": 173678211200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "004960",
+      "name": "한신공영",
+      "market": "KR",
+      "market_cap_krw": 172403459800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "044820",
+      "name": "코스맥스비티아이",
+      "market": "KR",
+      "market_cap_krw": 171045833010,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "210540",
+      "name": "디와이파워",
+      "market": "KR",
+      "market_cap_krw": 170594388600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "000020",
+      "name": "동화약품",
+      "market": "KR",
+      "market_cap_krw": 169264708200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "000970",
+      "name": "한국주철관",
+      "market": "KR",
+      "market_cap_krw": 167583675000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "003830",
+      "name": "대한화섬",
+      "market": "KR",
+      "market_cap_krw": 165070400000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "013520",
+      "name": "화승코퍼레이션",
+      "market": "KR",
+      "market_cap_krw": 164168106560,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "079430",
+      "name": "현대리바트",
+      "market": "KR",
+      "market_cap_krw": 163871550360,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "000700",
+      "name": "유수홀딩스",
+      "market": "KR",
+      "market_cap_krw": 162761325000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "214390",
+      "name": "경보제약",
+      "market": "KR",
+      "market_cap_krw": 159697824800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "009270",
+      "name": "신원",
+      "market": "KR",
+      "market_cap_krw": 158842223912,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "077500",
+      "name": "유니퀘스트",
+      "market": "KR",
+      "market_cap_krw": 158328747660,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "025620",
+      "name": "차AI헬스케어",
+      "market": "KR",
+      "market_cap_krw": 157464366450,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "014280",
+      "name": "금강공업",
+      "market": "KR",
+      "market_cap_krw": 157205353520,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "078000",
+      "name": "텔코웨어",
+      "market": "KR",
+      "market_cap_krw": 156157301300,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "012320",
+      "name": "경동인베스트",
+      "market": "KR",
+      "market_cap_krw": 156091518000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "004970",
+      "name": "신라교역",
+      "market": "KR",
+      "market_cap_krw": 154880000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "021820",
+      "name": "세원정공",
+      "market": "KR",
+      "market_cap_krw": 152500000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "094280",
+      "name": "효성ITX",
+      "market": "KR",
+      "market_cap_krw": 152337076000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "007610",
+      "name": "선도전기",
+      "market": "KR",
+      "market_cap_krw": 152100000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "012800",
+      "name": "대창",
+      "market": "KR",
+      "market_cap_krw": 150381823350,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "083420",
+      "name": "그린케미칼",
+      "market": "KR",
+      "market_cap_krw": 150240000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "070960",
+      "name": "모나용평",
+      "market": "KR",
+      "market_cap_krw": 150175998960,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "011700",
+      "name": "한신기계",
+      "market": "KR",
+      "market_cap_krw": 149738986865,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "015890",
+      "name": "태경산업",
+      "market": "KR",
+      "market_cap_krw": 149651200000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "016740",
+      "name": "두올",
+      "market": "KR",
+      "market_cap_krw": 149104924800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "007540",
+      "name": "샘표",
+      "market": "KR",
+      "market_cap_krw": 148966440000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "011280",
+      "name": "태림포장",
+      "market": "KR",
+      "market_cap_krw": 148338444300,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "298000",
+      "name": "효성화학",
+      "market": "KR",
+      "market_cap_krw": 147501447900,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "139990",
+      "name": "아주스틸",
+      "market": "KR",
+      "market_cap_krw": 147270573200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "008040",
+      "name": "사조동아원",
+      "market": "KR",
+      "market_cap_krw": 147072673200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "107590",
+      "name": "미원홀딩스",
+      "market": "KR",
+      "market_cap_krw": 146856000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "035000",
+      "name": "HS애드",
+      "market": "KR",
+      "market_cap_krw": 145706719560,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "027970",
+      "name": "한국제지",
+      "market": "KR",
+      "market_cap_krw": 145296173068,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "350520",
+      "name": "이지스레지던스리츠",
+      "market": "KR",
+      "market_cap_krw": 144515511840,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "004250",
+      "name": "NPC",
+      "market": "KR",
+      "market_cap_krw": 144126000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "007210",
+      "name": "벽산",
+      "market": "KR",
+      "market_cap_krw": 143792000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "002620",
+      "name": "제일파마홀딩스",
+      "market": "KR",
+      "market_cap_krw": 143760195000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "020120",
+      "name": "키다리스튜디오",
+      "market": "KR",
+      "market_cap_krw": 143622093250,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "363280",
+      "name": "티와이홀딩스",
+      "market": "KR",
+      "market_cap_krw": 143219121120,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "123690",
+      "name": "한국화장품",
+      "market": "KR",
+      "market_cap_krw": 142844520000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "024090",
+      "name": "디씨엠",
+      "market": "KR",
+      "market_cap_krw": 142500000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "002390",
+      "name": "한독",
+      "market": "KR",
+      "market_cap_krw": 141902025230,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "001290",
+      "name": "상상인증권",
+      "market": "KR",
+      "market_cap_krw": 141379941600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "004140",
+      "name": "동방",
+      "market": "KR",
+      "market_cap_krw": 139837697890,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "014710",
+      "name": "사조씨푸드",
+      "market": "KR",
+      "market_cap_krw": 139814569160,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "002220",
+      "name": "한일철강",
+      "market": "KR",
+      "market_cap_krw": 139627715800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "014530",
+      "name": "극동유화",
+      "market": "KR",
+      "market_cap_krw": 139477680000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "016710",
+      "name": "대성홀딩스",
+      "market": "KR",
+      "market_cap_krw": 139012925760,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "013570",
+      "name": "디와이",
+      "market": "KR",
+      "market_cap_krw": 138704465910,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "004150",
+      "name": "한솔홀딩스",
+      "market": "KR",
+      "market_cap_krw": 137439177000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "010100",
+      "name": "한국무브넥스",
+      "market": "KR",
+      "market_cap_krw": 136417881600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "005800",
+      "name": "신영와코루",
+      "market": "KR",
+      "market_cap_krw": 135720000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "019180",
+      "name": "티에이치엔",
+      "market": "KR",
+      "market_cap_krw": 135720000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "267290",
+      "name": "경동도시가스",
+      "market": "KR",
+      "market_cap_krw": 135594338000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "002460",
+      "name": "HS화성",
+      "market": "KR",
+      "market_cap_krw": 135096500000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "014790",
+      "name": "HL D&I",
+      "market": "KR",
+      "market_cap_krw": 134398033550,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "005870",
+      "name": "휴니드",
+      "market": "KR",
+      "market_cap_krw": 133537501900,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "014580",
+      "name": "태경비케이",
+      "market": "KR",
+      "market_cap_krw": 131847218000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "004080",
+      "name": "신흥",
+      "market": "KR",
+      "market_cap_krw": 131506000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "095720",
+      "name": "웅진씽크빅",
+      "market": "KR",
+      "market_cap_krw": 131156913334,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "023800",
+      "name": "인지컨트롤스",
+      "market": "KR",
+      "market_cap_krw": 130425875250,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "067830",
+      "name": "세이브존I&C",
+      "market": "KR",
+      "market_cap_krw": 130304841625,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "014160",
+      "name": "대영포장",
+      "market": "KR",
+      "market_cap_krw": 129531486055,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "019680",
+      "name": "대교",
+      "market": "KR",
+      "market_cap_krw": 127308383550,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "120030",
+      "name": "조선선재",
+      "market": "KR",
+      "market_cap_krw": 127274281200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "007110",
+      "name": "일신석재",
+      "market": "KR",
+      "market_cap_krw": 126873927180,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "227840",
+      "name": "현대코퍼레이션홀딩스",
+      "market": "KR",
+      "market_cap_krw": 126501620400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "248170",
+      "name": "샘표식품",
+      "market": "KR",
+      "market_cap_krw": 124485793500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "036580",
+      "name": "팜스코",
+      "market": "KR",
+      "market_cap_krw": 124140447340,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "015590",
+      "name": "DKME",
+      "market": "KR",
+      "market_cap_krw": 122045495160,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "079980",
+      "name": "휴비스",
+      "market": "KR",
+      "market_cap_krw": 120232500000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "267850",
+      "name": "아시아나IDT",
+      "market": "KR",
+      "market_cap_krw": 120102000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "001020",
+      "name": "페이퍼코리아",
+      "market": "KR",
+      "market_cap_krw": 119960752962,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "004100",
+      "name": "태양금속",
+      "market": "KR",
+      "market_cap_krw": 118724500000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "034590",
+      "name": "인천도시가스",
+      "market": "KR",
+      "market_cap_krw": 117899620300,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "036420",
+      "name": "콘텐트리중앙",
+      "market": "KR",
+      "market_cap_krw": 116536963400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "008700",
+      "name": "아남전자",
+      "market": "KR",
+      "market_cap_krw": 115147356260,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "000230",
+      "name": "일동홀딩스",
+      "market": "KR",
+      "market_cap_krw": 114826980000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "006840",
+      "name": "AK홀딩스",
+      "market": "KR",
+      "market_cap_krw": 113399122160,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "002450",
+      "name": "삼익악기",
+      "market": "KR",
+      "market_cap_krw": 113163643750,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "008260",
+      "name": "NI스틸",
+      "market": "KR",
+      "market_cap_krw": 112684460980,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "017370",
+      "name": "우신시스템",
+      "market": "KR",
+      "market_cap_krw": 112082010480,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "010660",
+      "name": "화천기계",
+      "market": "KR",
+      "market_cap_krw": 111760000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "003580",
+      "name": "HLB글로벌",
+      "market": "KR",
+      "market_cap_krw": 111713028525,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "058850",
+      "name": "KTcs",
+      "market": "KR",
+      "market_cap_krw": 111584992750,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "011810",
+      "name": "STX",
+      "market": "KR",
+      "market_cap_krw": 109493282310,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "084670",
+      "name": "동양고속",
+      "market": "KR",
+      "market_cap_krw": 109452508200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "032560",
+      "name": "황금에스티",
+      "market": "KR",
+      "market_cap_krw": 108290000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "264900",
+      "name": "크라운제과",
+      "market": "KR",
+      "market_cap_krw": 107204156000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "063160",
+      "name": "종근당바이오",
+      "market": "KR",
+      "market_cap_krw": 107031118620,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "005740",
+      "name": "크라운해태홀딩스",
+      "market": "KR",
+      "market_cap_krw": 106455477990,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "006660",
+      "name": "삼성공조",
+      "market": "KR",
+      "market_cap_krw": 106373450260,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "002200",
+      "name": "한국수출포장",
+      "market": "KR",
+      "market_cap_krw": 106210000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "023450",
+      "name": "동남합성",
+      "market": "KR",
+      "market_cap_krw": 105700000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "163560",
+      "name": "동일고무벨트",
+      "market": "KR",
+      "market_cap_krw": 104806000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "004440",
+      "name": "삼일씨엔에스",
+      "market": "KR",
+      "market_cap_krw": 104656604340,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "006890",
+      "name": "태경케미컬",
+      "market": "KR",
+      "market_cap_krw": 104284000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "004840",
+      "name": "DRB동일",
+      "market": "KR",
+      "market_cap_krw": 103878041960,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "002700",
+      "name": "신일전자",
+      "market": "KR",
+      "market_cap_krw": 103250045954,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "007980",
+      "name": "TP",
+      "market": "KR",
+      "market_cap_krw": 102705196500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "013360",
+      "name": "일성건설",
+      "market": "KR",
+      "market_cap_krw": 101890923680,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "119650",
+      "name": "KC코트렐",
+      "market": "KR",
+      "market_cap_krw": 100782913662,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "000180",
+      "name": "성창기업지주",
+      "market": "KR",
+      "market_cap_krw": 100442304000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "058860",
+      "name": "KTis",
+      "market": "KR",
+      "market_cap_krw": 100055750000,
+      "market_cap_usd": null
+    },
+    {
       "ticker": "086520",
       "name": "에코프로",
       "market": "KR",
@@ -4094,6 +6208,4752 @@
       "name": "케이아이엔엑스",
       "market": "KR",
       "market_cap_krw": 508984000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "079370",
+      "name": "제우스",
+      "market": "KR",
+      "market_cap_krw": 499683708900,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "101730",
+      "name": "위메이드맥스",
+      "market": "KR",
+      "market_cap_krw": 498629551700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "340570",
+      "name": "티앤엘",
+      "market": "KR",
+      "market_cap_krw": 497433600000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "069540",
+      "name": "빛과전자",
+      "market": "KR",
+      "market_cap_krw": 497339818120,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "230360",
+      "name": "에코마케팅",
+      "market": "KR",
+      "market_cap_krw": 495980128000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "030520",
+      "name": "한글과컴퓨터",
+      "market": "KR",
+      "market_cap_krw": 492057790400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "078130",
+      "name": "국일제지",
+      "market": "KR",
+      "market_cap_krw": 491548959756,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "317330",
+      "name": "덕산테코피아",
+      "market": "KR",
+      "market_cap_krw": 491438016000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "215200",
+      "name": "메가스터디교육",
+      "market": "KR",
+      "market_cap_krw": 491311238400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "064820",
+      "name": "케이프",
+      "market": "KR",
+      "market_cap_krw": 489443009900,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "389650",
+      "name": "넥스트바이오메디컬",
+      "market": "KR",
+      "market_cap_krw": 488131217000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "114810",
+      "name": "한솔아이원스",
+      "market": "KR",
+      "market_cap_krw": 484368367560,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "215600",
+      "name": "신라젠",
+      "market": "KR",
+      "market_cap_krw": 484244706180,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "170920",
+      "name": "엘티씨",
+      "market": "KR",
+      "market_cap_krw": 483836970800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "034950",
+      "name": "한국기업평가",
+      "market": "KR",
+      "market_cap_krw": 482656638200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "138080",
+      "name": "오이솔루션",
+      "market": "KR",
+      "market_cap_krw": 479019234600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "092870",
+      "name": "엑시콘",
+      "market": "KR",
+      "market_cap_krw": 478964249900,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "095660",
+      "name": "네오위즈",
+      "market": "KR",
+      "market_cap_krw": 476002098000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "0082N0",
+      "name": "카나프테라퓨틱스",
+      "market": "KR",
+      "market_cap_krw": 473964066000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "078350",
+      "name": "한양디지텍",
+      "market": "KR",
+      "market_cap_krw": 471813622900,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "110990",
+      "name": "디아이티",
+      "market": "KR",
+      "market_cap_krw": 471555000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "206650",
+      "name": "유바이오로직스",
+      "market": "KR",
+      "market_cap_krw": 470058329600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "0001A0",
+      "name": "덕양에너젠",
+      "market": "KR",
+      "market_cap_krw": 466570289900,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "308430",
+      "name": "셀비온",
+      "market": "KR",
+      "market_cap_krw": 465142237500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "455900",
+      "name": "엔젤로보틱스",
+      "market": "KR",
+      "market_cap_krw": 462750425850,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "330860",
+      "name": "네패스아크",
+      "market": "KR",
+      "market_cap_krw": 461166103250,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "091700",
+      "name": "파트론",
+      "market": "KR",
+      "market_cap_krw": 455400000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "180400",
+      "name": "DXVX",
+      "market": "KR",
+      "market_cap_krw": 455236123000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "080580",
+      "name": "오킨스전자",
+      "market": "KR",
+      "market_cap_krw": 453814930800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "241520",
+      "name": "DSC인베스트먼트",
+      "market": "KR",
+      "market_cap_krw": 453796000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "234340",
+      "name": "헥토파이낸셜",
+      "market": "KR",
+      "market_cap_krw": 449156590400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "304360",
+      "name": "에스바이오메딕스",
+      "market": "KR",
+      "market_cap_krw": 447103120800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "042370",
+      "name": "비츠로테크",
+      "market": "KR",
+      "market_cap_krw": 444090423750,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "089980",
+      "name": "상아프론테크",
+      "market": "KR",
+      "market_cap_krw": 438899065650,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "078020",
+      "name": "LS증권",
+      "market": "KR",
+      "market_cap_krw": 434972529600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "389260",
+      "name": "대명에너지",
+      "market": "KR",
+      "market_cap_krw": 434470881250,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "441270",
+      "name": "파인엠텍",
+      "market": "KR",
+      "market_cap_krw": 432780315360,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "378340",
+      "name": "필에너지",
+      "market": "KR",
+      "market_cap_krw": 431858878540,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "389500",
+      "name": "에스비비테크",
+      "market": "KR",
+      "market_cap_krw": 430607420900,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "376270",
+      "name": "HEM파마",
+      "market": "KR",
+      "market_cap_krw": 429733982600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "394800",
+      "name": "쓰리빌리언",
+      "market": "KR",
+      "market_cap_krw": 429097540760,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "036170",
+      "name": "에이치엠넥스",
+      "market": "KR",
+      "market_cap_krw": 428945725740,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "419530",
+      "name": "SAMG엔터",
+      "market": "KR",
+      "market_cap_krw": 428651008500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "450950",
+      "name": "아스테라시스",
+      "market": "KR",
+      "market_cap_krw": 427825721040,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "025770",
+      "name": "한국정보통신",
+      "market": "KR",
+      "market_cap_krw": 427613574820,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "228760",
+      "name": "지노믹트리",
+      "market": "KR",
+      "market_cap_krw": 426335314300,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "452280",
+      "name": "한선엔지니어링",
+      "market": "KR",
+      "market_cap_krw": 423421240000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "482630",
+      "name": "삼양엔씨켐",
+      "market": "KR",
+      "market_cap_krw": 422881569600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "0088M0",
+      "name": "메쥬",
+      "market": "KR",
+      "market_cap_krw": 421456637500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "069080",
+      "name": "웹젠",
+      "market": "KR",
+      "market_cap_krw": 420746749440,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "042520",
+      "name": "한스바이오메드",
+      "market": "KR",
+      "market_cap_krw": 419284189800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "204620",
+      "name": "글로벌텍스프리",
+      "market": "KR",
+      "market_cap_krw": 418888646800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "220100",
+      "name": "퓨쳐켐",
+      "market": "KR",
+      "market_cap_krw": 411318882800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "243840",
+      "name": "신흥에스이씨",
+      "market": "KR",
+      "market_cap_krw": 406789379250,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "160980",
+      "name": "싸이맥스",
+      "market": "KR",
+      "market_cap_krw": 406381839600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "352480",
+      "name": "씨앤씨인터내셔널",
+      "market": "KR",
+      "market_cap_krw": 404808059700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "179900",
+      "name": "유티아이",
+      "market": "KR",
+      "market_cap_krw": 404713925400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "079940",
+      "name": "가비아",
+      "market": "KR",
+      "market_cap_krw": 403291554200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "356680",
+      "name": "엑스게이트",
+      "market": "KR",
+      "market_cap_krw": 402177802280,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "298830",
+      "name": "슈어소프트테크",
+      "market": "KR",
+      "market_cap_krw": 400938742500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "114190",
+      "name": "강원에너지",
+      "market": "KR",
+      "market_cap_krw": 400466172540,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "073490",
+      "name": "LIG아큐버",
+      "market": "KR",
+      "market_cap_krw": 399962299600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "049630",
+      "name": "재영솔루텍",
+      "market": "KR",
+      "market_cap_krw": 399789655200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "0008Z0",
+      "name": "에스엔시스",
+      "market": "KR",
+      "market_cap_krw": 399166657200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "041830",
+      "name": "인바디",
+      "market": "KR",
+      "market_cap_krw": 397686019000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "355150",
+      "name": "코스텍시스",
+      "market": "KR",
+      "market_cap_krw": 397664850000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "084990",
+      "name": "헬릭스미스",
+      "market": "KR",
+      "market_cap_krw": 397319910140,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "200670",
+      "name": "휴메딕스",
+      "market": "KR",
+      "market_cap_krw": 396978025500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "459510",
+      "name": "나우로보틱스",
+      "market": "KR",
+      "market_cap_krw": 396489570100,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "092190",
+      "name": "서울바이오시스",
+      "market": "KR",
+      "market_cap_krw": 396302829120,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "064290",
+      "name": "인텍플러스",
+      "market": "KR",
+      "market_cap_krw": 396210029600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "494120",
+      "name": "큐리오시스",
+      "market": "KR",
+      "market_cap_krw": 396057064000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "078340",
+      "name": "컴투스",
+      "market": "KR",
+      "market_cap_krw": 395990500750,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "265520",
+      "name": "AP시스템",
+      "market": "KR",
+      "market_cap_krw": 394331510200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "321550",
+      "name": "티움바이오",
+      "market": "KR",
+      "market_cap_krw": 394168923900,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "046120",
+      "name": "오르비텍",
+      "market": "KR",
+      "market_cap_krw": 393738685790,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "478340",
+      "name": "나라스페이스테크놀로지",
+      "market": "KR",
+      "market_cap_krw": 393295453100,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "230240",
+      "name": "에치에프알",
+      "market": "KR",
+      "market_cap_krw": 392615500000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "036890",
+      "name": "진성티이씨",
+      "market": "KR",
+      "market_cap_krw": 392180689400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "041920",
+      "name": "메디아나",
+      "market": "KR",
+      "market_cap_krw": 390562683000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "365270",
+      "name": "큐라클",
+      "market": "KR",
+      "market_cap_krw": 390257274800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "094360",
+      "name": "칩스앤미디어",
+      "market": "KR",
+      "market_cap_krw": 389562017240,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "236200",
+      "name": "슈프리마",
+      "market": "KR",
+      "market_cap_krw": 389166553800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "086390",
+      "name": "유니테스트",
+      "market": "KR",
+      "market_cap_krw": 388022553360,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "084850",
+      "name": "아이티엠반도체",
+      "market": "KR",
+      "market_cap_krw": 385156219320,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "199820",
+      "name": "제일일렉트릭",
+      "market": "KR",
+      "market_cap_krw": 383517200000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "0015G0",
+      "name": "그린광학",
+      "market": "KR",
+      "market_cap_krw": 382673090700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "332570",
+      "name": "PS일렉트로닉스",
+      "market": "KR",
+      "market_cap_krw": 380956037020,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "003800",
+      "name": "에이스침대",
+      "market": "KR",
+      "market_cap_krw": 379832500000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "475400",
+      "name": "씨메스로보틱스",
+      "market": "KR",
+      "market_cap_krw": 378545196400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "217730",
+      "name": "강스템바이오텍",
+      "market": "KR",
+      "market_cap_krw": 375746325255,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "144510",
+      "name": "지씨셀",
+      "market": "KR",
+      "market_cap_krw": 375258170000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "093520",
+      "name": "매커스",
+      "market": "KR",
+      "market_cap_krw": 373905628800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "035890",
+      "name": "서희건설",
+      "market": "KR",
+      "market_cap_krw": 372979125711,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "241770",
+      "name": "메카로",
+      "market": "KR",
+      "market_cap_krw": 372031360000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "448280",
+      "name": "에코아이",
+      "market": "KR",
+      "market_cap_krw": 371574357660,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "318060",
+      "name": "그래피",
+      "market": "KR",
+      "market_cap_krw": 369442196400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "418550",
+      "name": "제이오",
+      "market": "KR",
+      "market_cap_krw": 366922532580,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "065680",
+      "name": "우주일렉트로",
+      "market": "KR",
+      "market_cap_krw": 366846698700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "200470",
+      "name": "에이팩트",
+      "market": "KR",
+      "market_cap_krw": 366432104450,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "425040",
+      "name": "티이엠씨",
+      "market": "KR",
+      "market_cap_krw": 366007047120,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "046970",
+      "name": "우리로",
+      "market": "KR",
+      "market_cap_krw": 365938741650,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "014940",
+      "name": "오리엔탈정공",
+      "market": "KR",
+      "market_cap_krw": 361854868340,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "065660",
+      "name": "안트로젠",
+      "market": "KR",
+      "market_cap_krw": 360219600000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "053030",
+      "name": "바이넥스",
+      "market": "KR",
+      "market_cap_krw": 360179751760,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "085910",
+      "name": "네오티스",
+      "market": "KR",
+      "market_cap_krw": 359518304400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "092460",
+      "name": "한라IMS",
+      "market": "KR",
+      "market_cap_krw": 358447796000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "099430",
+      "name": "바이오플러스",
+      "market": "KR",
+      "market_cap_krw": 356283373160,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "451760",
+      "name": "컨텍",
+      "market": "KR",
+      "market_cap_krw": 355865175000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "432720",
+      "name": "퀄리타스반도체",
+      "market": "KR",
+      "market_cap_krw": 354623130600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "091580",
+      "name": "상신이디피",
+      "market": "KR",
+      "market_cap_krw": 354530625400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "108860",
+      "name": "셀바스AI",
+      "market": "KR",
+      "market_cap_krw": 353660340600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "088800",
+      "name": "에이스테크",
+      "market": "KR",
+      "market_cap_krw": 353370111120,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "036200",
+      "name": "유니셈",
+      "market": "KR",
+      "market_cap_krw": 352638564500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "035810",
+      "name": "이지홀딩스",
+      "market": "KR",
+      "market_cap_krw": 352258370100,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "151860",
+      "name": "KG에코솔루션",
+      "market": "KR",
+      "market_cap_krw": 350358094720,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "136480",
+      "name": "하림",
+      "market": "KR",
+      "market_cap_krw": 349960968090,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "452430",
+      "name": "사피엔반도체",
+      "market": "KR",
+      "market_cap_krw": 349266955000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "058970",
+      "name": "엠로",
+      "market": "KR",
+      "market_cap_krw": 349248930500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "394420",
+      "name": "리센스메디컬",
+      "market": "KR",
+      "market_cap_krw": 347209536000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "314930",
+      "name": "바이오다인",
+      "market": "KR",
+      "market_cap_krw": 347049440980,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "402490",
+      "name": "그린리소스",
+      "market": "KR",
+      "market_cap_krw": 346781531200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "389020",
+      "name": "자람테크놀로지",
+      "market": "KR",
+      "market_cap_krw": 346524776000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "101360",
+      "name": "에코앤드림",
+      "market": "KR",
+      "market_cap_krw": 342916277920,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "051500",
+      "name": "CJ프레시웨이",
+      "market": "KR",
+      "market_cap_krw": 341901676800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "043150",
+      "name": "바텍",
+      "market": "KR",
+      "market_cap_krw": 341647888000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "474650",
+      "name": "링크솔루션",
+      "market": "KR",
+      "market_cap_krw": 341378155800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "462350",
+      "name": "이노스페이스",
+      "market": "KR",
+      "market_cap_krw": 341202623700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "200130",
+      "name": "콜마비앤에이치",
+      "market": "KR",
+      "market_cap_krw": 340338006060,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "338840",
+      "name": "와이바이오로직스",
+      "market": "KR",
+      "market_cap_krw": 338066982000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "254490",
+      "name": "미래반도체",
+      "market": "KR",
+      "market_cap_krw": 337127300000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "472850",
+      "name": "폰드그룹",
+      "market": "KR",
+      "market_cap_krw": 336794164200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "018000",
+      "name": "유니슨",
+      "market": "KR",
+      "market_cap_krw": 335442334604,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "416180",
+      "name": "신성에스티",
+      "market": "KR",
+      "market_cap_krw": 335375763800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "094480",
+      "name": "갤럭시아머니트리",
+      "market": "KR",
+      "market_cap_krw": 334238219760,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "060720",
+      "name": "KH바텍",
+      "market": "KR",
+      "market_cap_krw": 332194511260,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "251370",
+      "name": "와이엠티",
+      "market": "KR",
+      "market_cap_krw": 327490743870,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "445090",
+      "name": "에이직랜드",
+      "market": "KR",
+      "market_cap_krw": 327223457100,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "092730",
+      "name": "네오팜",
+      "market": "KR",
+      "market_cap_krw": 326970975600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "094820",
+      "name": "일진파워",
+      "market": "KR",
+      "market_cap_krw": 326454049850,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "052710",
+      "name": "아모텍",
+      "market": "KR",
+      "market_cap_krw": 325916930700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "061970",
+      "name": "LB세미콘",
+      "market": "KR",
+      "market_cap_krw": 325264833600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "322310",
+      "name": "오로스테크놀로지",
+      "market": "KR",
+      "market_cap_krw": 323145699000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "095500",
+      "name": "미래나노텍",
+      "market": "KR",
+      "market_cap_krw": 323124189580,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "054210",
+      "name": "이랜텍",
+      "market": "KR",
+      "market_cap_krw": 322462927500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "215000",
+      "name": "골프존",
+      "market": "KR",
+      "market_cap_krw": 321928789500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "272110",
+      "name": "케이엔제이",
+      "market": "KR",
+      "market_cap_krw": 321818339500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "067390",
+      "name": "아스트",
+      "market": "KR",
+      "market_cap_krw": 321597857094,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "045390",
+      "name": "대아티아이",
+      "market": "KR",
+      "market_cap_krw": 320653865350,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "049070",
+      "name": "인탑스",
+      "market": "KR",
+      "market_cap_krw": 320264000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "243070",
+      "name": "휴온스",
+      "market": "KR",
+      "market_cap_krw": 316263156000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "023410",
+      "name": "유진기업",
+      "market": "KR",
+      "market_cap_krw": 315814875355,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "035600",
+      "name": "KG이니시스",
+      "market": "KR",
+      "market_cap_krw": 315498269300,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "900290",
+      "name": "GRT",
+      "market": "KR",
+      "market_cap_krw": 313698000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "051370",
+      "name": "인터플렉스",
+      "market": "KR",
+      "market_cap_krw": 313521223680,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "456010",
+      "name": "아이씨티케이",
+      "market": "KR",
+      "market_cap_krw": 313486807700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "115450",
+      "name": "HLB테라퓨틱스",
+      "market": "KR",
+      "market_cap_krw": 312687784770,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "357550",
+      "name": "석경에이티",
+      "market": "KR",
+      "market_cap_krw": 312026000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "0007C0",
+      "name": "아크릴",
+      "market": "KR",
+      "market_cap_krw": 311576571200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "098120",
+      "name": "마이크로컨텍솔",
+      "market": "KR",
+      "market_cap_krw": 310897448400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "086820",
+      "name": "바이오솔루션",
+      "market": "KR",
+      "market_cap_krw": 310829779150,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "064850",
+      "name": "에프앤가이드",
+      "market": "KR",
+      "market_cap_krw": 310361030400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "382900",
+      "name": "범한퓨얼셀",
+      "market": "KR",
+      "market_cap_krw": 308825250000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "023760",
+      "name": "한국캐피탈",
+      "market": "KR",
+      "market_cap_krw": 306772507872,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "226590",
+      "name": "엠디바이스",
+      "market": "KR",
+      "market_cap_krw": 303508883200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "099440",
+      "name": "스맥",
+      "market": "KR",
+      "market_cap_krw": 302318235420,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "054950",
+      "name": "제이브이엠",
+      "market": "KR",
+      "market_cap_krw": 302247300000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "294570",
+      "name": "쿠콘",
+      "market": "KR",
+      "market_cap_krw": 301238200200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "484810",
+      "name": "티엑스알로보틱스",
+      "market": "KR",
+      "market_cap_krw": 300520296750,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "017890",
+      "name": "한국알콜",
+      "market": "KR",
+      "market_cap_krw": 299318229420,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "108380",
+      "name": "대양전기공업",
+      "market": "KR",
+      "market_cap_krw": 298500789600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "274090",
+      "name": "켄코아에어로스페이스",
+      "market": "KR",
+      "market_cap_krw": 297107344950,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "221800",
+      "name": "지구홀딩스",
+      "market": "KR",
+      "market_cap_krw": 296242650500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "012210",
+      "name": "삼미금속",
+      "market": "KR",
+      "market_cap_krw": 296041440080,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "125020",
+      "name": "티씨머티리얼즈",
+      "market": "KR",
+      "market_cap_krw": 295374976500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "144960",
+      "name": "뉴파워프라즈마",
+      "market": "KR",
+      "market_cap_krw": 295362138240,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "304100",
+      "name": "솔트룩스",
+      "market": "KR",
+      "market_cap_krw": 294696207000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "138610",
+      "name": "나이벡",
+      "market": "KR",
+      "market_cap_krw": 294425838700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "464080",
+      "name": "에스오에스랩",
+      "market": "KR",
+      "market_cap_krw": 290921599450,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "138360",
+      "name": "앤로보틱스",
+      "market": "KR",
+      "market_cap_krw": 290258791940,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "255220",
+      "name": "SG",
+      "market": "KR",
+      "market_cap_krw": 289794933790,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "372170",
+      "name": "윤성에프앤씨",
+      "market": "KR",
+      "market_cap_krw": 289639442400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "382800",
+      "name": "지앤비에스 에코",
+      "market": "KR",
+      "market_cap_krw": 289344162690,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "219130",
+      "name": "타이거일렉",
+      "market": "KR",
+      "market_cap_krw": 288878767500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "474170",
+      "name": "루미르",
+      "market": "KR",
+      "market_cap_krw": 288824852160,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "199430",
+      "name": "케이엔알시스템",
+      "market": "KR",
+      "market_cap_krw": 288630713700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "361390",
+      "name": "제노코",
+      "market": "KR",
+      "market_cap_krw": 285847619450,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "112290",
+      "name": "와이씨켐",
+      "market": "KR",
+      "market_cap_krw": 284106314500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "289930",
+      "name": "웨이비스",
+      "market": "KR",
+      "market_cap_krw": 282512517000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "083310",
+      "name": "엘오티베큠",
+      "market": "KR",
+      "market_cap_krw": 281932822390,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "036800",
+      "name": "나이스정보통신",
+      "market": "KR",
+      "market_cap_krw": 280500000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "012860",
+      "name": "모베이스전자",
+      "market": "KR",
+      "market_cap_krw": 279751805740,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "267980",
+      "name": "매일유업",
+      "market": "KR",
+      "market_cap_krw": 278190059400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "018310",
+      "name": "삼목에스폼",
+      "market": "KR",
+      "market_cap_krw": 276948000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "005710",
+      "name": "대원산업",
+      "market": "KR",
+      "market_cap_krw": 276318504000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "043370",
+      "name": "피에이치에이",
+      "market": "KR",
+      "market_cap_krw": 275100000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "126700",
+      "name": "하이비젼시스템",
+      "market": "KR",
+      "market_cap_krw": 274785439680,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "194480",
+      "name": "데브시스터즈",
+      "market": "KR",
+      "market_cap_krw": 274725247500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "488280",
+      "name": "에스투더블유",
+      "market": "KR",
+      "market_cap_krw": 274080873700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "067080",
+      "name": "대화제약",
+      "market": "KR",
+      "market_cap_krw": 274037088000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "092070",
+      "name": "디엔에프",
+      "market": "KR",
+      "market_cap_krw": 273674441700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "417840",
+      "name": "저스템",
+      "market": "KR",
+      "market_cap_krw": 273553647170,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "388050",
+      "name": "지투파워",
+      "market": "KR",
+      "market_cap_krw": 273344874570,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "053300",
+      "name": "한국정보인증",
+      "market": "KR",
+      "market_cap_krw": 272897951230,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "256840",
+      "name": "한국비엔씨",
+      "market": "KR",
+      "market_cap_krw": 272211646280,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "064550",
+      "name": "바이오니아",
+      "market": "KR",
+      "market_cap_krw": 272040467140,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "194700",
+      "name": "노바렉스",
+      "market": "KR",
+      "market_cap_krw": 271997235200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "078070",
+      "name": "유비쿼스홀딩스",
+      "market": "KR",
+      "market_cap_krw": 271817679680,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "357580",
+      "name": "아모센스",
+      "market": "KR",
+      "market_cap_krw": 270089919350,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "190510",
+      "name": "나무가",
+      "market": "KR",
+      "market_cap_krw": 269170407870,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "024060",
+      "name": "흥구석유",
+      "market": "KR",
+      "market_cap_krw": 268950000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "309710",
+      "name": "아이티켐",
+      "market": "KR",
+      "market_cap_krw": 268443021000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "214180",
+      "name": "헥토이노베이션",
+      "market": "KR",
+      "market_cap_krw": 267663360200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "079960",
+      "name": "동양이엔피",
+      "market": "KR",
+      "market_cap_krw": 267240000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "182400",
+      "name": "엔케이젠바이오텍코리아",
+      "market": "KR",
+      "market_cap_krw": 265496721770,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "338220",
+      "name": "뷰노",
+      "market": "KR",
+      "market_cap_krw": 265474564080,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "0004V0",
+      "name": "엔비알모션",
+      "market": "KR",
+      "market_cap_krw": 265313934000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "126600",
+      "name": "BGF에코머티리얼즈",
+      "market": "KR",
+      "market_cap_krw": 264248644790,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "078150",
+      "name": "HB테크놀러지",
+      "market": "KR",
+      "market_cap_krw": 264240360600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "051360",
+      "name": "토비스",
+      "market": "KR",
+      "market_cap_krw": 264045821100,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "481070",
+      "name": "에이유브랜즈",
+      "market": "KR",
+      "market_cap_krw": 263239600000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "058820",
+      "name": "CMG제약",
+      "market": "KR",
+      "market_cap_krw": 262272032642,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "034810",
+      "name": "해성산업",
+      "market": "KR",
+      "market_cap_krw": 262082698850,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "203650",
+      "name": "드림시큐리티",
+      "market": "KR",
+      "market_cap_krw": 262033992560,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "125210",
+      "name": "아모그린텍",
+      "market": "KR",
+      "market_cap_krw": 261639089400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "216080",
+      "name": "제테마",
+      "market": "KR",
+      "market_cap_krw": 261579965970,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "439090",
+      "name": "마녀공장",
+      "market": "KR",
+      "market_cap_krw": 261308564400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "039860",
+      "name": "나노엔텍",
+      "market": "KR",
+      "market_cap_krw": 260937413050,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "462860",
+      "name": "더즌",
+      "market": "KR",
+      "market_cap_krw": 260621281750,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "013120",
+      "name": "동원개발",
+      "market": "KR",
+      "market_cap_krw": 260165206500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "405100",
+      "name": "큐알티",
+      "market": "KR",
+      "market_cap_krw": 259304251100,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "402030",
+      "name": "코난테크놀로지",
+      "market": "KR",
+      "market_cap_krw": 258486127200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "176750",
+      "name": "듀켐바이오",
+      "market": "KR",
+      "market_cap_krw": 257235188800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "121800",
+      "name": "비덴트",
+      "market": "KR",
+      "market_cap_krw": 256309348520,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "206640",
+      "name": "바디텍메드",
+      "market": "KR",
+      "market_cap_krw": 256103596490,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "353810",
+      "name": "이지바이오",
+      "market": "KR",
+      "market_cap_krw": 256054060800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "314130",
+      "name": "지놈앤컴퍼니",
+      "market": "KR",
+      "market_cap_krw": 255282038740,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "299030",
+      "name": "하나기술",
+      "market": "KR",
+      "market_cap_krw": 254637883500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "484120",
+      "name": "도우인시스",
+      "market": "KR",
+      "market_cap_krw": 254212190400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "457550",
+      "name": "우진엔텍",
+      "market": "KR",
+      "market_cap_krw": 253941605500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "377460",
+      "name": "큐에이드",
+      "market": "KR",
+      "market_cap_krw": 253187202960,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "036030",
+      "name": "케이티알파",
+      "market": "KR",
+      "market_cap_krw": 250978728960,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "042600",
+      "name": "새로닉스",
+      "market": "KR",
+      "market_cap_krw": 250956194800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "403850",
+      "name": "더핑크퐁컴퍼니",
+      "market": "KR",
+      "market_cap_krw": 250712144700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "211270",
+      "name": "AP위성",
+      "market": "KR",
+      "market_cap_krw": 250517069440,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "293580",
+      "name": "나우IB",
+      "market": "KR",
+      "market_cap_krw": 250140418250,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "297090",
+      "name": "씨에스베어링",
+      "market": "KR",
+      "market_cap_krw": 249520500000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "104480",
+      "name": "티케이케미칼",
+      "market": "KR",
+      "market_cap_krw": 249053489160,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "452450",
+      "name": "피아이이",
+      "market": "KR",
+      "market_cap_krw": 248956935000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "102120",
+      "name": "어보브반도체",
+      "market": "KR",
+      "market_cap_krw": 247685889290,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "285490",
+      "name": "노바텍",
+      "market": "KR",
+      "market_cap_krw": 247474445400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "461300",
+      "name": "아이스크림미디어",
+      "market": "KR",
+      "market_cap_krw": 247425253800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "095700",
+      "name": "제넥신",
+      "market": "KR",
+      "market_cap_krw": 247284882420,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "203400",
+      "name": "에이비온",
+      "market": "KR",
+      "market_cap_krw": 246877572960,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "0011A0",
+      "name": "액스비스",
+      "market": "KR",
+      "market_cap_krw": 246877423000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "041020",
+      "name": "폴라리스오피스",
+      "market": "KR",
+      "market_cap_krw": 246431613280,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "119610",
+      "name": "인터로조",
+      "market": "KR",
+      "market_cap_krw": 245395560500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "100120",
+      "name": "뷰웍스",
+      "market": "KR",
+      "market_cap_krw": 243573808650,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "011560",
+      "name": "세보엠이씨",
+      "market": "KR",
+      "market_cap_krw": 243225000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "270660",
+      "name": "에브리봇",
+      "market": "KR",
+      "market_cap_krw": 243151570280,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "380550",
+      "name": "뉴로핏",
+      "market": "KR",
+      "market_cap_krw": 243045883500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "036190",
+      "name": "금화피에스시",
+      "market": "KR",
+      "market_cap_krw": 241800000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "371950",
+      "name": "풍원정밀",
+      "market": "KR",
+      "market_cap_krw": 241129510720,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "950250",
+      "name": "테라뷰",
+      "market": "KR",
+      "market_cap_krw": 240455038870,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "237880",
+      "name": "클리오",
+      "market": "KR",
+      "market_cap_krw": 240168281370,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "950140",
+      "name": "잉글우드랩",
+      "market": "KR",
+      "market_cap_krw": 238414392000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "293780",
+      "name": "압타바이오",
+      "market": "KR",
+      "market_cap_krw": 237951140350,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "065710",
+      "name": "서호전기",
+      "market": "KR",
+      "market_cap_krw": 237930000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "469610",
+      "name": "이노테크",
+      "market": "KR",
+      "market_cap_krw": 237668340000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "061090",
+      "name": "세나테크놀로지",
+      "market": "KR",
+      "market_cap_krw": 237668301200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "019010",
+      "name": "베뉴지",
+      "market": "KR",
+      "market_cap_krw": 235939000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "073010",
+      "name": "케이에스피",
+      "market": "KR",
+      "market_cap_krw": 235922637500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "147830",
+      "name": "제룡산업",
+      "market": "KR",
+      "market_cap_krw": 233800000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "083930",
+      "name": "아바코",
+      "market": "KR",
+      "market_cap_krw": 233661804080,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "039840",
+      "name": "디오",
+      "market": "KR",
+      "market_cap_krw": 231557191280,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "209640",
+      "name": "와이제이링크",
+      "market": "KR",
+      "market_cap_krw": 231527208440,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "036560",
+      "name": "KZ정밀",
+      "market": "KR",
+      "market_cap_krw": 231210000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "234690",
+      "name": "녹십자웰빙",
+      "market": "KR",
+      "market_cap_krw": 230469010700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "068930",
+      "name": "디지털대성",
+      "market": "KR",
+      "market_cap_krw": 229151831760,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "146320",
+      "name": "비씨엔씨",
+      "market": "KR",
+      "market_cap_krw": 228442925550,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "417010",
+      "name": "나노팀",
+      "market": "KR",
+      "market_cap_krw": 225934553600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "121440",
+      "name": "골프존홀딩스",
+      "market": "KR",
+      "market_cap_krw": 224893294500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "123330",
+      "name": "제닉",
+      "market": "KR",
+      "market_cap_krw": 224318342000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "308080",
+      "name": "바이젠셀",
+      "market": "KR",
+      "market_cap_krw": 223236941400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "118990",
+      "name": "모트렉스",
+      "market": "KR",
+      "market_cap_krw": 221572460130,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "017510",
+      "name": "세명전기",
+      "market": "KR",
+      "market_cap_krw": 221067000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "377450",
+      "name": "리파인",
+      "market": "KR",
+      "market_cap_krw": 220091000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "307180",
+      "name": "아이엘",
+      "market": "KR",
+      "market_cap_krw": 220083418820,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "289080",
+      "name": "SV인베스트먼트",
+      "market": "KR",
+      "market_cap_krw": 219709522490,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "264660",
+      "name": "씨앤지하이테크",
+      "market": "KR",
+      "market_cap_krw": 218726370000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "264450",
+      "name": "유비쿼스",
+      "market": "KR",
+      "market_cap_krw": 218515845700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "232680",
+      "name": "라온로보틱스",
+      "market": "KR",
+      "market_cap_krw": 218249391360,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "445180",
+      "name": "퓨릿",
+      "market": "KR",
+      "market_cap_krw": 218130795720,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "489500",
+      "name": "엘케이켐",
+      "market": "KR",
+      "market_cap_krw": 216906834800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "054450",
+      "name": "텔레칩스",
+      "market": "KR",
+      "market_cap_krw": 216713974230,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "060150",
+      "name": "인선이엔티",
+      "market": "KR",
+      "market_cap_krw": 216055159680,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "140670",
+      "name": "알에스오토메이션",
+      "market": "KR",
+      "market_cap_krw": 215452515200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "080160",
+      "name": "모두투어",
+      "market": "KR",
+      "market_cap_krw": 215271000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "051980",
+      "name": "중앙첨단소재",
+      "market": "KR",
+      "market_cap_krw": 213518264698,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "259630",
+      "name": "엠플러스",
+      "market": "KR",
+      "market_cap_krw": 212526709200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "950170",
+      "name": "JTC",
+      "market": "KR",
+      "market_cap_krw": 212418758540,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "101970",
+      "name": "우양에이치씨",
+      "market": "KR",
+      "market_cap_krw": 212236629150,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "123860",
+      "name": "아나패스",
+      "market": "KR",
+      "market_cap_krw": 212159762500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "032620",
+      "name": "GC메디아이",
+      "market": "KR",
+      "market_cap_krw": 211920384340,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "039560",
+      "name": "다산네트웍스",
+      "market": "KR",
+      "market_cap_krw": 211763514340,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "179290",
+      "name": "엠아이텍",
+      "market": "KR",
+      "market_cap_krw": 211347877340,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "307750",
+      "name": "국전",
+      "market": "KR",
+      "market_cap_krw": 211086386080,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "052330",
+      "name": "코텍",
+      "market": "KR",
+      "market_cap_krw": 209053902530,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "458650",
+      "name": "성우",
+      "market": "KR",
+      "market_cap_krw": 207630246000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "380540",
+      "name": "옵티코어",
+      "market": "KR",
+      "market_cap_krw": 206658130575,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "475230",
+      "name": "엔알비",
+      "market": "KR",
+      "market_cap_krw": 205440174550,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "106190",
+      "name": "하이텍팜",
+      "market": "KR",
+      "market_cap_krw": 204475916790,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "418420",
+      "name": "라온텍",
+      "market": "KR",
+      "market_cap_krw": 204161204450,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "040160",
+      "name": "누리플렉스",
+      "market": "KR",
+      "market_cap_krw": 202171321950,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "037350",
+      "name": "성도이엔지",
+      "market": "KR",
+      "market_cap_krw": 202140900000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "122990",
+      "name": "와이솔",
+      "market": "KR",
+      "market_cap_krw": 201125061550,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "340450",
+      "name": "지씨지놈",
+      "market": "KR",
+      "market_cap_krw": 200322216710,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "267320",
+      "name": "나인테크",
+      "market": "KR",
+      "market_cap_krw": 199805226600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "453450",
+      "name": "그리드위즈",
+      "market": "KR",
+      "market_cap_krw": 199760162500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "036710",
+      "name": "심텍홀딩스",
+      "market": "KR",
+      "market_cap_krw": 199688910120,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "474610",
+      "name": "RF시스템즈",
+      "market": "KR",
+      "market_cap_krw": 199591689600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "115310",
+      "name": "인포바인",
+      "market": "KR",
+      "market_cap_krw": 199395543350,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "046440",
+      "name": "KG파이낸셜",
+      "market": "KR",
+      "market_cap_krw": 198796494460,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "282880",
+      "name": "코윈테크",
+      "market": "KR",
+      "market_cap_krw": 198565512360,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "119830",
+      "name": "아이텍",
+      "market": "KR",
+      "market_cap_krw": 197617672500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "005160",
+      "name": "동국산업",
+      "market": "KR",
+      "market_cap_krw": 196636247250,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "056090",
+      "name": "시지메드텍",
+      "market": "KR",
+      "market_cap_krw": 196605204544,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "082800",
+      "name": "비보존 제약",
+      "market": "KR",
+      "market_cap_krw": 196124521180,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "158430",
+      "name": "아톤",
+      "market": "KR",
+      "market_cap_krw": 196101556920,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "037070",
+      "name": "파세코",
+      "market": "KR",
+      "market_cap_krw": 195600000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "473980",
+      "name": "노머스",
+      "market": "KR",
+      "market_cap_krw": 195161733300,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "282720",
+      "name": "금양그린파워",
+      "market": "KR",
+      "market_cap_krw": 195123950000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "123410",
+      "name": "코리아에프티",
+      "market": "KR",
+      "market_cap_krw": 194330626720,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "088130",
+      "name": "동아엘텍",
+      "market": "KR",
+      "market_cap_krw": 194086985400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "086890",
+      "name": "이수앱지스",
+      "market": "KR",
+      "market_cap_krw": 194066294800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "002230",
+      "name": "피에스텍",
+      "market": "KR",
+      "market_cap_krw": 193787115200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "054920",
+      "name": "한컴위드",
+      "market": "KR",
+      "market_cap_krw": 193569175660,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "204610",
+      "name": "티쓰리",
+      "market": "KR",
+      "market_cap_krw": 193331045800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "333430",
+      "name": "일승",
+      "market": "KR",
+      "market_cap_krw": 193271238630,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "038390",
+      "name": "레드캡투어",
+      "market": "KR",
+      "market_cap_krw": 192623869440,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "101170",
+      "name": "우림피티에스",
+      "market": "KR",
+      "market_cap_krw": 191835000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "220260",
+      "name": "켐트로스",
+      "market": "KR",
+      "market_cap_krw": 191790888900,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "264850",
+      "name": "이랜시스",
+      "market": "KR",
+      "market_cap_krw": 191461947840,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "032940",
+      "name": "원익",
+      "market": "KR",
+      "market_cap_krw": 191210847300,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "143160",
+      "name": "아이디스",
+      "market": "KR",
+      "market_cap_krw": 191073233700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "115500",
+      "name": "케이씨에스",
+      "market": "KR",
+      "market_cap_krw": 190440000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "452190",
+      "name": "한빛레이저",
+      "market": "KR",
+      "market_cap_krw": 190407633720,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "300080",
+      "name": "플리토",
+      "market": "KR",
+      "market_cap_krw": 190142795520,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "217270",
+      "name": "넵튠",
+      "market": "KR",
+      "market_cap_krw": 189980388795,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "047310",
+      "name": "파워로직스",
+      "market": "KR",
+      "market_cap_krw": 189643710900,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "365330",
+      "name": "에스와이스틸텍",
+      "market": "KR",
+      "market_cap_krw": 188893815000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "217820",
+      "name": "원익피앤이",
+      "market": "KR",
+      "market_cap_krw": 188631872025,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "187790",
+      "name": "나노",
+      "market": "KR",
+      "market_cap_krw": 188129063000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "016790",
+      "name": "현대사료",
+      "market": "KR",
+      "market_cap_krw": 187340898626,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "086980",
+      "name": "쇼박스",
+      "market": "KR",
+      "market_cap_krw": 187287620000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "114840",
+      "name": "아이패밀리에스씨",
+      "market": "KR",
+      "market_cap_krw": 187054920000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "068790",
+      "name": "DMS",
+      "market": "KR",
+      "market_cap_krw": 186881454720,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "322180",
+      "name": "LS티라유텍",
+      "market": "KR",
+      "market_cap_krw": 186833317120,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "290690",
+      "name": "소룩스",
+      "market": "KR",
+      "market_cap_krw": 186001409880,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "446540",
+      "name": "메가터치",
+      "market": "KR",
+      "market_cap_krw": 185381167860,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "334970",
+      "name": "프레스티지바이오로직스",
+      "market": "KR",
+      "market_cap_krw": 185051276060,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "048870",
+      "name": "시너지이노베이션",
+      "market": "KR",
+      "market_cap_krw": 185024622300,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "322510",
+      "name": "제이엘케이",
+      "market": "KR",
+      "market_cap_krw": 184711904560,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "092130",
+      "name": "이크레더블",
+      "market": "KR",
+      "market_cap_krw": 184387516000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "290740",
+      "name": "액트로",
+      "market": "KR",
+      "market_cap_krw": 183787100860,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "126730",
+      "name": "코칩",
+      "market": "KR",
+      "market_cap_krw": 183734139700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "143240",
+      "name": "사람인",
+      "market": "KR",
+      "market_cap_krw": 183315045480,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "049430",
+      "name": "코메론",
+      "market": "KR",
+      "market_cap_krw": 183222000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "008830",
+      "name": "대동기어",
+      "market": "KR",
+      "market_cap_krw": 181547904000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "053080",
+      "name": "케이엔솔",
+      "market": "KR",
+      "market_cap_krw": 181087311510,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "149950",
+      "name": "아바텍",
+      "market": "KR",
+      "market_cap_krw": 179593617420,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "071200",
+      "name": "인피니트헬스케어",
+      "market": "KR",
+      "market_cap_krw": 179557930880,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "039830",
+      "name": "오로라",
+      "market": "KR",
+      "market_cap_krw": 179525005200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "163730",
+      "name": "핑거",
+      "market": "KR",
+      "market_cap_krw": 178254463600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "242040",
+      "name": "나무기술",
+      "market": "KR",
+      "market_cap_krw": 178222259600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "024840",
+      "name": "KBI메탈",
+      "market": "KR",
+      "market_cap_krw": 178036914900,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "069510",
+      "name": "에스텍",
+      "market": "KR",
+      "market_cap_krw": 177942100000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "042420",
+      "name": "네오위즈홀딩스",
+      "market": "KR",
+      "market_cap_krw": 177501769400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "066620",
+      "name": "국보디자인",
+      "market": "KR",
+      "market_cap_krw": 177000000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "086670",
+      "name": "비엠티",
+      "market": "KR",
+      "market_cap_krw": 176581494150,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "038290",
+      "name": "마크로젠",
+      "market": "KR",
+      "market_cap_krw": 175847508000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "049080",
+      "name": "기가레인",
+      "market": "KR",
+      "market_cap_krw": 175708528290,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "166480",
+      "name": "코아스템켐온",
+      "market": "KR",
+      "market_cap_krw": 175529648320,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "235980",
+      "name": "메드팩토",
+      "market": "KR",
+      "market_cap_krw": 175488619520,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "054540",
+      "name": "삼영엠텍",
+      "market": "KR",
+      "market_cap_krw": 174590000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "108230",
+      "name": "톱텍",
+      "market": "KR",
+      "market_cap_krw": 174526694550,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "067280",
+      "name": "멀티캠퍼스",
+      "market": "KR",
+      "market_cap_krw": 174247302600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "475580",
+      "name": "에이럭스",
+      "market": "KR",
+      "market_cap_krw": 173989973000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "323990",
+      "name": "박셀바이오",
+      "market": "KR",
+      "market_cap_krw": 173964940600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "047770",
+      "name": "코데즈컴바인",
+      "market": "KR",
+      "market_cap_krw": 173886756190,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "011040",
+      "name": "경동제약",
+      "market": "KR",
+      "market_cap_krw": 173535840240,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "107600",
+      "name": "새빗켐",
+      "market": "KR",
+      "market_cap_krw": 173177287800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "013990",
+      "name": "아가방컴퍼니",
+      "market": "KR",
+      "market_cap_krw": 172988439360,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "023910",
+      "name": "대한약품",
+      "market": "KR",
+      "market_cap_krw": 171900000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "234030",
+      "name": "싸이닉솔루션",
+      "market": "KR",
+      "market_cap_krw": 171608350000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "456070",
+      "name": "이엔셀",
+      "market": "KR",
+      "market_cap_krw": 171403634860,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "047560",
+      "name": "이스트소프트",
+      "market": "KR",
+      "market_cap_krw": 171377457200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "067000",
+      "name": "조이시티",
+      "market": "KR",
+      "market_cap_krw": 171263442700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "357880",
+      "name": "SKAI",
+      "market": "KR",
+      "market_cap_krw": 170823902700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "148150",
+      "name": "세경하이테크",
+      "market": "KR",
+      "market_cap_krw": 170250098220,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "396270",
+      "name": "넥스트칩",
+      "market": "KR",
+      "market_cap_krw": 169699143960,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "007330",
+      "name": "푸른저축은행",
+      "market": "KR",
+      "market_cap_krw": 169229016000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "297890",
+      "name": "HB솔루션",
+      "market": "KR",
+      "market_cap_krw": 168224102200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "0007J0",
+      "name": "인벤테라",
+      "market": "KR",
+      "market_cap_krw": 167932993900,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "172670",
+      "name": "에이엘티",
+      "market": "KR",
+      "market_cap_krw": 167825651070,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "105330",
+      "name": "케이엔더블유",
+      "market": "KR",
+      "market_cap_krw": 167666692320,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "065450",
+      "name": "빅텍",
+      "market": "KR",
+      "market_cap_krw": 166852979000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "095190",
+      "name": "신화프리텍",
+      "market": "KR",
+      "market_cap_krw": 166740480410,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "192440",
+      "name": "슈피겐코리아",
+      "market": "KR",
+      "market_cap_krw": 166287710250,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "389030",
+      "name": "지니너스",
+      "market": "KR",
+      "market_cap_krw": 166286207200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "360070",
+      "name": "탑머티리얼",
+      "market": "KR",
+      "market_cap_krw": 166180732900,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "083500",
+      "name": "에프엔에스테크",
+      "market": "KR",
+      "market_cap_krw": 165940220700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "256940",
+      "name": "킵스파마",
+      "market": "KR",
+      "market_cap_krw": 165443931280,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "040300",
+      "name": "YTN",
+      "market": "KR",
+      "market_cap_krw": 165439120600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "041440",
+      "name": "현대에버다임",
+      "market": "KR",
+      "market_cap_krw": 164826684800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "024800",
+      "name": "유성티엔에스",
+      "market": "KR",
+      "market_cap_krw": 164324786220,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "067990",
+      "name": "도이치모터스",
+      "market": "KR",
+      "market_cap_krw": 163708495500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "090470",
+      "name": "제이스로보틱스",
+      "market": "KR",
+      "market_cap_krw": 163580919840,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "156100",
+      "name": "엘앤케이바이오",
+      "market": "KR",
+      "market_cap_krw": 163386928430,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "059120",
+      "name": "아진엑스텍",
+      "market": "KR",
+      "market_cap_krw": 163142688060,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "182360",
+      "name": "큐브엔터",
+      "market": "KR",
+      "market_cap_krw": 162651420540,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "408470",
+      "name": "한패스",
+      "market": "KR",
+      "market_cap_krw": 161857320000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "021080",
+      "name": "에이티넘인베스트",
+      "market": "KR",
+      "market_cap_krw": 161760000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "023600",
+      "name": "삼보판지",
+      "market": "KR",
+      "market_cap_krw": 161523747000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "054800",
+      "name": "아이디스홀딩스",
+      "market": "KR",
+      "market_cap_krw": 161424993600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "085670",
+      "name": "뉴프렉스",
+      "market": "KR",
+      "market_cap_krw": 161375022600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "072870",
+      "name": "메가스터디",
+      "market": "KR",
+      "market_cap_krw": 161171365680,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "093190",
+      "name": "빅솔론",
+      "market": "KR",
+      "market_cap_krw": 161029634850,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "131030",
+      "name": "옵투스제약",
+      "market": "KR",
+      "market_cap_krw": 160407503100,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "080420",
+      "name": "모다이노칩",
+      "market": "KR",
+      "market_cap_krw": 160240460220,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "260970",
+      "name": "에스앤디",
+      "market": "KR",
+      "market_cap_krw": 159680020800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "066410",
+      "name": "버킷스튜디오",
+      "market": "KR",
+      "market_cap_krw": 159637252154,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "136540",
+      "name": "윈스테크넷",
+      "market": "KR",
+      "market_cap_krw": 159636698000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "093640",
+      "name": "케이알엠",
+      "market": "KR",
+      "market_cap_krw": 159619553710,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "388790",
+      "name": "라이콤",
+      "market": "KR",
+      "market_cap_krw": 159499773600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "046070",
+      "name": "코다코",
+      "market": "KR",
+      "market_cap_krw": 159196994920,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "215100",
+      "name": "로보로보",
+      "market": "KR",
+      "market_cap_krw": 158921425740,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "063570",
+      "name": "NICE인프라",
+      "market": "KR",
+      "market_cap_krw": 158786935200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "104460",
+      "name": "디와이피엔에프",
+      "market": "KR",
+      "market_cap_krw": 158718144090,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "214680",
+      "name": "디알텍",
+      "market": "KR",
+      "market_cap_krw": 158606406400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "033340",
+      "name": "좋은사람들",
+      "market": "KR",
+      "market_cap_krw": 157738557866,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "003100",
+      "name": "선광",
+      "market": "KR",
+      "market_cap_krw": 157410000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "408920",
+      "name": "메쎄이상",
+      "market": "KR",
+      "market_cap_krw": 156717649375,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "396300",
+      "name": "세아메카닉스",
+      "market": "KR",
+      "market_cap_krw": 156288050000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "005860",
+      "name": "한일사료",
+      "market": "KR",
+      "market_cap_krw": 155447537325,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "062970",
+      "name": "한국첨단소재",
+      "market": "KR",
+      "market_cap_krw": 154710143940,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "036010",
+      "name": "아비코전자",
+      "market": "KR",
+      "market_cap_krw": 154596822420,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "041520",
+      "name": "이엘씨",
+      "market": "KR",
+      "market_cap_krw": 153821772600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "136150",
+      "name": "원일티엔아이",
+      "market": "KR",
+      "market_cap_krw": 153791900500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "027710",
+      "name": "팜스토리",
+      "market": "KR",
+      "market_cap_krw": 153643491400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "464490",
+      "name": "쿼드메디슨",
+      "market": "KR",
+      "market_cap_krw": 153630671940,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "123040",
+      "name": "엠에스오토텍",
+      "market": "KR",
+      "market_cap_krw": 153439332550,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "115440",
+      "name": "우리넷",
+      "market": "KR",
+      "market_cap_krw": 153278946400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "109740",
+      "name": "디에스케이",
+      "market": "KR",
+      "market_cap_krw": 153233924400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "366030",
+      "name": "공구우먼",
+      "market": "KR",
+      "market_cap_krw": 152913487500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "053700",
+      "name": "삼보모터스",
+      "market": "KR",
+      "market_cap_krw": 152793325020,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "263720",
+      "name": "디앤씨미디어",
+      "market": "KR",
+      "market_cap_krw": 152178365660,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "021320",
+      "name": "KCC건설",
+      "market": "KR",
+      "market_cap_krw": 152154000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "321370",
+      "name": "센서뷰",
+      "market": "KR",
+      "market_cap_krw": 151894823640,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "100130",
+      "name": "동국S&C",
+      "market": "KR",
+      "market_cap_krw": 151714665000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "336680",
+      "name": "탑런토탈솔루션",
+      "market": "KR",
+      "market_cap_krw": 151689037250,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "225190",
+      "name": "LK삼양",
+      "market": "KR",
+      "market_cap_krw": 151507146000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "038110",
+      "name": "에코플라스틱",
+      "market": "KR",
+      "market_cap_krw": 151503281600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "382840",
+      "name": "원준",
+      "market": "KR",
+      "market_cap_krw": 151341367710,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "049960",
+      "name": "쎌바이오텍",
+      "market": "KR",
+      "market_cap_krw": 150400000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "417500",
+      "name": "제이아이테크",
+      "market": "KR",
+      "market_cap_krw": 150154127520,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "306620",
+      "name": "지아이에스",
+      "market": "KR",
+      "market_cap_krw": 150090975265,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "0015S0",
+      "name": "페스카로",
+      "market": "KR",
+      "market_cap_krw": 148888955700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "331740",
+      "name": "아우토크립트",
+      "market": "KR",
+      "market_cap_krw": 148585290840,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "250060",
+      "name": "모비스",
+      "market": "KR",
+      "market_cap_krw": 148470614110,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "005990",
+      "name": "매일홀딩스",
+      "market": "KR",
+      "market_cap_krw": 148143106560,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "310200",
+      "name": "애니플러스",
+      "market": "KR",
+      "market_cap_krw": 148142454240,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "413630",
+      "name": "씨피시스템",
+      "market": "KR",
+      "market_cap_krw": 147750518430,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "090850",
+      "name": "현대이지웰",
+      "market": "KR",
+      "market_cap_krw": 147702365420,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "476040",
+      "name": "오가노이드사이언스",
+      "market": "KR",
+      "market_cap_krw": 147521024000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "045970",
+      "name": "코아시아",
+      "market": "KR",
+      "market_cap_krw": 147363305600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "006620",
+      "name": "동구바이오제약",
+      "market": "KR",
+      "market_cap_krw": 146594708800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "240550",
+      "name": "동방메디컬",
+      "market": "KR",
+      "market_cap_krw": 146328240600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "109610",
+      "name": "에스와이",
+      "market": "KR",
+      "market_cap_krw": 146233126000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "037030",
+      "name": "파워넷",
+      "market": "KR",
+      "market_cap_krw": 146189444160,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "096250",
+      "name": "와이즈넛",
+      "market": "KR",
+      "market_cap_krw": 146124585600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "129920",
+      "name": "대성하이텍",
+      "market": "KR",
+      "market_cap_krw": 145928163920,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "493330",
+      "name": "지에프아이",
+      "market": "KR",
+      "market_cap_krw": 144808452100,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "013310",
+      "name": "아진산업",
+      "market": "KR",
+      "market_cap_krw": 144748550860,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "071280",
+      "name": "로체시스템즈",
+      "market": "KR",
+      "market_cap_krw": 144705864380,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "049720",
+      "name": "고려신용정보",
+      "market": "KR",
+      "market_cap_krw": 143858000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "443670",
+      "name": "에스피소프트",
+      "market": "KR",
+      "market_cap_krw": 143747487520,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "079810",
+      "name": "APS이노베이션",
+      "market": "KR",
+      "market_cap_krw": 143592386980,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "122450",
+      "name": "KX",
+      "market": "KR",
+      "market_cap_krw": 142975270460,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "049950",
+      "name": "미래컴퍼니",
+      "market": "KR",
+      "market_cap_krw": 142849720800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "307930",
+      "name": "컴퍼니케이",
+      "market": "KR",
+      "market_cap_krw": 142363200000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "066310",
+      "name": "큐에스아이",
+      "market": "KR",
+      "market_cap_krw": 142226666140,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "187870",
+      "name": "디바이스",
+      "market": "KR",
+      "market_cap_krw": 142139501800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "255440",
+      "name": "야스",
+      "market": "KR",
+      "market_cap_krw": 141679300000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "089230",
+      "name": "THE E&M",
+      "market": "KR",
+      "market_cap_krw": 141290067060,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "159010",
+      "name": "아스플로",
+      "market": "KR",
+      "market_cap_krw": 141214886010,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "246710",
+      "name": "티앤알바이오팹",
+      "market": "KR",
+      "market_cap_krw": 141086931840,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "052420",
+      "name": "오성첨단소재",
+      "market": "KR",
+      "market_cap_krw": 141064299008,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "089600",
+      "name": "KT나스미디어",
+      "market": "KR",
+      "market_cap_krw": 141015906970,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "263860",
+      "name": "지니언스",
+      "market": "KR",
+      "market_cap_krw": 141006188000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "225530",
+      "name": "HC보광산업",
+      "market": "KR",
+      "market_cap_krw": 140994260760,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "042510",
+      "name": "라온시큐어",
+      "market": "KR",
+      "market_cap_krw": 140736985440,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "141000",
+      "name": "비아트론",
+      "market": "KR",
+      "market_cap_krw": 140409488900,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "131370",
+      "name": "알서포트",
+      "market": "KR",
+      "market_cap_krw": 139027086630,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "025950",
+      "name": "동신건설",
+      "market": "KR",
+      "market_cap_krw": 138600000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "035080",
+      "name": "그래디언트",
+      "market": "KR",
+      "market_cap_krw": 138432849240,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "205100",
+      "name": "엑셈",
+      "market": "KR",
+      "market_cap_krw": 138333329811,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "228670",
+      "name": "레이",
+      "market": "KR",
+      "market_cap_krw": 137788585010,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "052260",
+      "name": "현대바이오랜드",
+      "market": "KR",
+      "market_cap_krw": 137700000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "192410",
+      "name": "오늘이엔엠",
+      "market": "KR",
+      "market_cap_krw": 137651637400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "226400",
+      "name": "오스테오닉",
+      "market": "KR",
+      "market_cap_krw": 136986414630,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "309960",
+      "name": "LB인베스트먼트",
+      "market": "KR",
+      "market_cap_krw": 136981710100,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "047820",
+      "name": "초록뱀미디어",
+      "market": "KR",
+      "market_cap_krw": 136697468700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "217330",
+      "name": "싸이토젠",
+      "market": "KR",
+      "market_cap_krw": 136464327300,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "067900",
+      "name": "와이엔텍",
+      "market": "KR",
+      "market_cap_krw": 136315445910,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "095270",
+      "name": "웨이브일렉트로",
+      "market": "KR",
+      "market_cap_krw": 135388064520,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "039980",
+      "name": "폴라리스AI",
+      "market": "KR",
+      "market_cap_krw": 135368521500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "023900",
+      "name": "풍국주정",
+      "market": "KR",
+      "market_cap_krw": 134946000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "086710",
+      "name": "선진뷰티사이언스",
+      "market": "KR",
+      "market_cap_krw": 134602178400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "000440",
+      "name": "중앙에너비스",
+      "market": "KR",
+      "market_cap_krw": 134506008000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "317770",
+      "name": "엑스페릭스",
+      "market": "KR",
+      "market_cap_krw": 134452918325,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "273640",
+      "name": "와이엠텍",
+      "market": "KR",
+      "market_cap_krw": 134333500000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "042500",
+      "name": "링네트",
+      "market": "KR",
+      "market_cap_krw": 133969775440,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "381620",
+      "name": "제닉스로보틱스",
+      "market": "KR",
+      "market_cap_krw": 133540425600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "269620",
+      "name": "시스웍",
+      "market": "KR",
+      "market_cap_krw": 132090012299,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "463020",
+      "name": "뉴엔AI",
+      "market": "KR",
+      "market_cap_krw": 130701824000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "337930",
+      "name": "젝시믹스",
+      "market": "KR",
+      "market_cap_krw": 130428107625,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "036220",
+      "name": "오상헬스케어",
+      "market": "KR",
+      "market_cap_krw": 129786403120,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "054050",
+      "name": "농우바이오",
+      "market": "KR",
+      "market_cap_krw": 129526932880,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "950130",
+      "name": "엑세스바이오",
+      "market": "KR",
+      "market_cap_krw": 128840546280,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "091120",
+      "name": "이엠텍",
+      "market": "KR",
+      "market_cap_krw": 128839678720,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "092040",
+      "name": "아미코젠",
+      "market": "KR",
+      "market_cap_krw": 128027561244,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "029480",
+      "name": "광무",
+      "market": "KR",
+      "market_cap_krw": 127798942480,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "265740",
+      "name": "엔에프씨",
+      "market": "KR",
+      "market_cap_krw": 127546104000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "009780",
+      "name": "엠에스씨",
+      "market": "KR",
+      "market_cap_krw": 127424000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "396470",
+      "name": "워트",
+      "market": "KR",
+      "market_cap_krw": 126864400000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "389140",
+      "name": "포바이포",
+      "market": "KR",
+      "market_cap_krw": 126572549450,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "032300",
+      "name": "한국파마",
+      "market": "KR",
+      "market_cap_krw": 126517731600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "489460",
+      "name": "바이오비쥬",
+      "market": "KR",
+      "market_cap_krw": 125921879100,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "036690",
+      "name": "코맥스",
+      "market": "KR",
+      "market_cap_krw": 125692107675,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "411080",
+      "name": "샌즈랩",
+      "market": "KR",
+      "market_cap_krw": 125652660740,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "054620",
+      "name": "APS",
+      "market": "KR",
+      "market_cap_krw": 125632529430,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "088390",
+      "name": "이녹스",
+      "market": "KR",
+      "market_cap_krw": 125488734280,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "117670",
+      "name": "알파칩스",
+      "market": "KR",
+      "market_cap_krw": 125373984440,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "044990",
+      "name": "에이치엔에스하이텍",
+      "market": "KR",
+      "market_cap_krw": 125272427500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "262260",
+      "name": "에이프로",
+      "market": "KR",
+      "market_cap_krw": 124860151760,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "049520",
+      "name": "유아이엘",
+      "market": "KR",
+      "market_cap_krw": 124449991875,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "251120",
+      "name": "바이오에프디엔씨",
+      "market": "KR",
+      "market_cap_krw": 124435467000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "100700",
+      "name": "세운메디칼",
+      "market": "KR",
+      "market_cap_krw": 124392000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "078890",
+      "name": "가온그룹",
+      "market": "KR",
+      "market_cap_krw": 124184115820,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "432470",
+      "name": "케이엔에스",
+      "market": "KR",
+      "market_cap_krw": 124117517400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "088280",
+      "name": "쏘닉스",
+      "market": "KR",
+      "market_cap_krw": 124087533300,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "038540",
+      "name": "상상인",
+      "market": "KR",
+      "market_cap_krw": 123382137990,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "073560",
+      "name": "우리손에프앤지",
+      "market": "KR",
+      "market_cap_krw": 123035291611,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "339950",
+      "name": "아이비김영",
+      "market": "KR",
+      "market_cap_krw": 122479634875,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "331920",
+      "name": "셀레믹스",
+      "market": "KR",
+      "market_cap_krw": 122380578520,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "063170",
+      "name": "서울옥션",
+      "market": "KR",
+      "market_cap_krw": 122286956960,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "003310",
+      "name": "대주산업",
+      "market": "KR",
+      "market_cap_krw": 122280569250,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "074430",
+      "name": "아미노로직스",
+      "market": "KR",
+      "market_cap_krw": 121815832628,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "223250",
+      "name": "드림씨아이에스",
+      "market": "KR",
+      "market_cap_krw": 121772197800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "063080",
+      "name": "컴투스홀딩스",
+      "market": "KR",
+      "market_cap_krw": 121681292400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "0015N0",
+      "name": "아로마티카",
+      "market": "KR",
+      "market_cap_krw": 121428727500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "205500",
+      "name": "넥써쓰",
+      "market": "KR",
+      "market_cap_krw": 120851306615,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "290720",
+      "name": "푸드나무",
+      "market": "KR",
+      "market_cap_krw": 120820168480,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "078140",
+      "name": "대봉엘에스",
+      "market": "KR",
+      "market_cap_krw": 120621979520,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "081180",
+      "name": "쎄크",
+      "market": "KR",
+      "market_cap_krw": 120115531350,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "059210",
+      "name": "메타바이오메드",
+      "market": "KR",
+      "market_cap_krw": 120097786900,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "294630",
+      "name": "서남",
+      "market": "KR",
+      "market_cap_krw": 119966751450,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "053260",
+      "name": "금강철강",
+      "market": "KR",
+      "market_cap_krw": 119808000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "096240",
+      "name": "크레버스",
+      "market": "KR",
+      "market_cap_krw": 119623325200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "370090",
+      "name": "퓨런티어",
+      "market": "KR",
+      "market_cap_krw": 119538915100,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "018120",
+      "name": "진로발효",
+      "market": "KR",
+      "market_cap_krw": 119113948800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "451220",
+      "name": "아이엠티",
+      "market": "KR",
+      "market_cap_krw": 118749133880,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "417970",
+      "name": "모델솔루션",
+      "market": "KR",
+      "market_cap_krw": 118722752000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "099750",
+      "name": "이지케어텍",
+      "market": "KR",
+      "market_cap_krw": 118698213370,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "053580",
+      "name": "웹케시",
+      "market": "KR",
+      "market_cap_krw": 118662633760,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "026150",
+      "name": "특수건설",
+      "market": "KR",
+      "market_cap_krw": 118613197560,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "024880",
+      "name": "케이피에프",
+      "market": "KR",
+      "market_cap_krw": 118556993520,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "388870",
+      "name": "파로스아이바이오",
+      "market": "KR",
+      "market_cap_krw": 118455277800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "142210",
+      "name": "유니트론텍",
+      "market": "KR",
+      "market_cap_krw": 118075483070,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "330350",
+      "name": "위더스제약",
+      "market": "KR",
+      "market_cap_krw": 118027122660,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "101670",
+      "name": "하이드로리튬",
+      "market": "KR",
+      "market_cap_krw": 117244891155,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "330730",
+      "name": "스톤브릿지벤처스",
+      "market": "KR",
+      "market_cap_krw": 117140646900,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "051160",
+      "name": "지어소프트",
+      "market": "KR",
+      "market_cap_krw": 116367713600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "041590",
+      "name": "플래스크",
+      "market": "KR",
+      "market_cap_krw": 116064014460,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "024740",
+      "name": "한일단조",
+      "market": "KR",
+      "market_cap_krw": 115962097725,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "298540",
+      "name": "더네이쳐홀딩스",
+      "market": "KR",
+      "market_cap_krw": 115746224140,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "265560",
+      "name": "영화테크",
+      "market": "KR",
+      "market_cap_krw": 115560845800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "357230",
+      "name": "에이치피오",
+      "market": "KR",
+      "market_cap_krw": 115208798040,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "305090",
+      "name": "마이크로디지탈",
+      "market": "KR",
+      "market_cap_krw": 115103390450,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "418470",
+      "name": "KT밀리의서재",
+      "market": "KR",
+      "market_cap_krw": 115038546270,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "086960",
+      "name": "MDS테크",
+      "market": "KR",
+      "market_cap_krw": 114502048300,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "412350",
+      "name": "레이저쎌",
+      "market": "KR",
+      "market_cap_krw": 114327433440,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "448710",
+      "name": "코츠테크놀로지",
+      "market": "KR",
+      "market_cap_krw": 114162307200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "048530",
+      "name": "인트론바이오",
+      "market": "KR",
+      "market_cap_krw": 114126475020,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "033290",
+      "name": "로젠",
+      "market": "KR",
+      "market_cap_krw": 113435728020,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "317830",
+      "name": "에스피시스템스",
+      "market": "KR",
+      "market_cap_krw": 113340565360,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "066700",
+      "name": "테라젠이텍스",
+      "market": "KR",
+      "market_cap_krw": 112757461160,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "377480",
+      "name": "마음AI",
+      "market": "KR",
+      "market_cap_krw": 112697858750,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "038460",
+      "name": "바이오스마트",
+      "market": "KR",
+      "market_cap_krw": 112471711900,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "439580",
+      "name": "블루엠텍",
+      "market": "KR",
+      "market_cap_krw": 112370536040,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "424960",
+      "name": "스마트레이더시스템",
+      "market": "KR",
+      "market_cap_krw": 112263599100,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "096350",
+      "name": "대창솔루션",
+      "market": "KR",
+      "market_cap_krw": 112222750290,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "067290",
+      "name": "JW신약",
+      "market": "KR",
+      "market_cap_krw": 112074206000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "208370",
+      "name": "셀바스헬스케어",
+      "market": "KR",
+      "market_cap_krw": 111714047760,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "277880",
+      "name": "티에스아이",
+      "market": "KR",
+      "market_cap_krw": 111518851440,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "094840",
+      "name": "슈프리마에이치큐",
+      "market": "KR",
+      "market_cap_krw": 111299337150,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "278650",
+      "name": "HLB바이오스텝",
+      "market": "KR",
+      "market_cap_krw": 110870043648,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "131400",
+      "name": "이브이첨단소재",
+      "market": "KR",
+      "market_cap_krw": 110840900520,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "303810",
+      "name": "동국생명과학",
+      "market": "KR",
+      "market_cap_krw": 110665124400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "261780",
+      "name": "차백신연구소",
+      "market": "KR",
+      "market_cap_krw": 110343283600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "348350",
+      "name": "위드텍",
+      "market": "KR",
+      "market_cap_krw": 110263530000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "048550",
+      "name": "SM C&C",
+      "market": "KR",
+      "market_cap_krw": 110254666800,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "460940",
+      "name": "피앤에스로보틱스",
+      "market": "KR",
+      "market_cap_krw": 110064190400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "101330",
+      "name": "모베이스",
+      "market": "KR",
+      "market_cap_krw": 109832652605,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "105740",
+      "name": "디케이락",
+      "market": "KR",
+      "market_cap_krw": 109819940400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "011370",
+      "name": "서한",
+      "market": "KR",
+      "market_cap_krw": 109571823390,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "362320",
+      "name": "청담글로벌",
+      "market": "KR",
+      "market_cap_krw": 109563682200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "065440",
+      "name": "이루온",
+      "market": "KR",
+      "market_cap_krw": 109372830200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "040910",
+      "name": "아이씨디",
+      "market": "KR",
+      "market_cap_krw": 109216737000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "382480",
+      "name": "지아이텍",
+      "market": "KR",
+      "market_cap_krw": 108822492100,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "039340",
+      "name": "한국경제TV",
+      "market": "KR",
+      "market_cap_krw": 108790000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "030960",
+      "name": "양지사",
+      "market": "KR",
+      "market_cap_krw": 108664000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "025550",
+      "name": "한국선재",
+      "market": "KR",
+      "market_cap_krw": 108562087020,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "082850",
+      "name": "우리바이오",
+      "market": "KR",
+      "market_cap_krw": 108542734720,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "419050",
+      "name": "삼기에너지솔루션즈",
+      "market": "KR",
+      "market_cap_krw": 108100893600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "463480",
+      "name": "모티브링크",
+      "market": "KR",
+      "market_cap_krw": 108043921760,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "149980",
+      "name": "하이로닉",
+      "market": "KR",
+      "market_cap_krw": 107879307670,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "014970",
+      "name": "삼륭물산",
+      "market": "KR",
+      "market_cap_krw": 107629500000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "006140",
+      "name": "피제이전자",
+      "market": "KR",
+      "market_cap_krw": 106800000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "066590",
+      "name": "스모트로닉",
+      "market": "KR",
+      "market_cap_krw": 106751106120,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "059270",
+      "name": "해성에어로보틱스",
+      "market": "KR",
+      "market_cap_krw": 106740258440,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "311320",
+      "name": "지오엘리먼트",
+      "market": "KR",
+      "market_cap_krw": 106719177600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "222040",
+      "name": "코스맥스엔비티",
+      "market": "KR",
+      "market_cap_krw": 106646760000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "413390",
+      "name": "엠오티",
+      "market": "KR",
+      "market_cap_krw": 106306052400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "100590",
+      "name": "머큐리",
+      "market": "KR",
+      "market_cap_krw": 106265179000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "001540",
+      "name": "안국약품",
+      "market": "KR",
+      "market_cap_krw": 105904450400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "137950",
+      "name": "제이씨케미칼",
+      "market": "KR",
+      "market_cap_krw": 105883455570,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "009300",
+      "name": "삼아제약",
+      "market": "KR",
+      "market_cap_krw": 105742000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "315640",
+      "name": "딥노이드",
+      "market": "KR",
+      "market_cap_krw": 105740035200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "950190",
+      "name": "고스트스튜디오",
+      "market": "KR",
+      "market_cap_krw": 105698519080,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "234300",
+      "name": "에스트래픽",
+      "market": "KR",
+      "market_cap_krw": 104613914100,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "475430",
+      "name": "키스트론",
+      "market": "KR",
+      "market_cap_krw": 104589924600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "347860",
+      "name": "알체라",
+      "market": "KR",
+      "market_cap_krw": 104519594700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "007820",
+      "name": "엠엑스로보틱스",
+      "market": "KR",
+      "market_cap_krw": 104376858660,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "041930",
+      "name": "SY동아",
+      "market": "KR",
+      "market_cap_krw": 104120000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "291650",
+      "name": "압타머사이언스",
+      "market": "KR",
+      "market_cap_krw": 104071907610,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "352090",
+      "name": "스톰테크",
+      "market": "KR",
+      "market_cap_krw": 103864137270,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "043610",
+      "name": "KT지니뮤직",
+      "market": "KR",
+      "market_cap_krw": 103852287706,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "217190",
+      "name": "제너셈",
+      "market": "KR",
+      "market_cap_krw": 103783174290,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "382150",
+      "name": "온코크로스",
+      "market": "KR",
+      "market_cap_krw": 103665634500,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "205470",
+      "name": "휴마시스",
+      "market": "KR",
+      "market_cap_krw": 103629382209,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "035610",
+      "name": "솔본",
+      "market": "KR",
+      "market_cap_krw": 103504598645,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "052860",
+      "name": "아이앤씨",
+      "market": "KR",
+      "market_cap_krw": 103425924660,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "019550",
+      "name": "SBI인베스트먼트",
+      "market": "KR",
+      "market_cap_krw": 103398474850,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "201490",
+      "name": "미투온",
+      "market": "KR",
+      "market_cap_krw": 103322377700,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "348150",
+      "name": "고바이오랩",
+      "market": "KR",
+      "market_cap_krw": 103308489480,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "058630",
+      "name": "엠게임",
+      "market": "KR",
+      "market_cap_krw": 102925796640,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "263600",
+      "name": "덕우전자",
+      "market": "KR",
+      "market_cap_krw": 102909802600,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "228850",
+      "name": "레이언스",
+      "market": "KR",
+      "market_cap_krw": 102698376660,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "347890",
+      "name": "엠엑스온",
+      "market": "KR",
+      "market_cap_krw": 102457752160,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "033130",
+      "name": "디지틀조선",
+      "market": "KR",
+      "market_cap_krw": 102438136920,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "064800",
+      "name": "포니링크",
+      "market": "KR",
+      "market_cap_krw": 102118031102,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "054670",
+      "name": "대한뉴팜",
+      "market": "KR",
+      "market_cap_krw": 102063481200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "049480",
+      "name": "오픈베이스",
+      "market": "KR",
+      "market_cap_krw": 101965632835,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "046940",
+      "name": "우원개발",
+      "market": "KR",
+      "market_cap_krw": 101939334000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "311690",
+      "name": "CJ 바이오사이언스",
+      "market": "KR",
+      "market_cap_krw": 101779948980,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "091440",
+      "name": "한울소재과학",
+      "market": "KR",
+      "market_cap_krw": 101754563200,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "105550",
+      "name": "엣지파운드리",
+      "market": "KR",
+      "market_cap_krw": 101329323994,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "124560",
+      "name": "태웅로직스",
+      "market": "KR",
+      "market_cap_krw": 101254920765,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "299170",
+      "name": "더블유에스아이",
+      "market": "KR",
+      "market_cap_krw": 101079986280,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "067370",
+      "name": "선바이오",
+      "market": "KR",
+      "market_cap_krw": 100962635400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "191420",
+      "name": "테고사이언스",
+      "market": "KR",
+      "market_cap_krw": 100954983300,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "238090",
+      "name": "앤디포스",
+      "market": "KR",
+      "market_cap_krw": 100923356400,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "019990",
+      "name": "에너토크",
+      "market": "KR",
+      "market_cap_krw": 100585267280,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "036630",
+      "name": "세종텔레콤",
+      "market": "KR",
+      "market_cap_krw": 100500000000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "039610",
+      "name": "화성밸브",
+      "market": "KR",
+      "market_cap_krw": 100460360000,
+      "market_cap_usd": null
+    },
+    {
+      "ticker": "173130",
+      "name": "오파스넷",
+      "market": "KR",
+      "market_cap_krw": 100066447910,
       "market_cap_usd": null
     }
   ]
