@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-01T08:24:31.807123",
+  "updated_at": "2026-05-01T08:10:00.796399",
   "universe": [
     {
       "ticker": "005930",
@@ -10955,6 +10955,3338 @@
       "market": "KR",
       "market_cap_krw": 100066447910,
       "market_cap_usd": null
+    },
+    {
+      "ticker": "PTEN",
+      "name": "PTEN",
+      "market": "US",
+      "market_cap_krw": 6832444727947,
+      "market_cap_usd": 4638927821
+    },
+    {
+      "ticker": "GILT",
+      "name": "GILT",
+      "market": "US",
+      "market_cap_krw": 2051965205381,
+      "market_cap_usd": 1393193630
+    },
+    {
+      "ticker": "MLYS",
+      "name": "MLYS",
+      "market": "US",
+      "market_cap_krw": 3236358698985,
+      "market_cap_usd": 2197344436
+    },
+    {
+      "ticker": "GEHC",
+      "name": "GEHC",
+      "market": "US",
+      "market_cap_krw": 40762030835452,
+      "market_cap_usd": 27675616329
+    },
+    {
+      "ticker": "BUI",
+      "name": "BUI",
+      "market": "US",
+      "market_cap_krw": 995411826739,
+      "market_cap_usd": 675840610
+    },
+    {
+      "ticker": "ADT",
+      "name": "ADT",
+      "market": "US",
+      "market_cap_krw": 8939588103523,
+      "market_cap_usd": 6069584989
+    },
+    {
+      "ticker": "MVST",
+      "name": "MVST",
+      "market": "US",
+      "market_cap_krw": 943836977020,
+      "market_cap_usd": 640823568
+    },
+    {
+      "ticker": "SOC",
+      "name": "SOC",
+      "market": "US",
+      "market_cap_krw": 3112062318277,
+      "market_cap_usd": 2112952690
+    },
+    {
+      "ticker": "PTCT",
+      "name": "PTCT",
+      "market": "US",
+      "market_cap_krw": 7944906840794,
+      "market_cap_usd": 5394240399
+    },
+    {
+      "ticker": "STRO",
+      "name": "STRO",
+      "market": "US",
+      "market_cap_krw": 893601652037,
+      "market_cap_usd": 606716004
+    },
+    {
+      "ticker": "TAP",
+      "name": "TAP",
+      "market": "US",
+      "market_cap_krw": 11817904475309,
+      "market_cap_usd": 8023834518
+    },
+    {
+      "ticker": "BPOP",
+      "name": "BPOP",
+      "market": "US",
+      "market_cap_krw": 14315445458428,
+      "market_cap_usd": 9719554398
+    },
+    {
+      "ticker": "IONQ",
+      "name": "IONQ",
+      "market": "US",
+      "market_cap_krw": 24365107526186,
+      "market_cap_usd": 16542830519
+    },
+    {
+      "ticker": "DEO",
+      "name": "DEO",
+      "market": "US",
+      "market_cap_krw": 66031521454405,
+      "market_cap_usd": 44832482974
+    },
+    {
+      "ticker": "FORTY",
+      "name": "FORTY",
+      "market": "US",
+      "market_cap_krw": 2991758412853,
+      "market_cap_usd": 2031271658
+    },
+    {
+      "ticker": "BJ",
+      "name": "BJ",
+      "market": "US",
+      "market_cap_krw": 17932441516052,
+      "market_cap_usd": 12175334768
+    },
+    {
+      "ticker": "LNG",
+      "name": "LNG",
+      "market": "US",
+      "market_cap_krw": 85097067220900,
+      "market_cap_usd": 57777145419
+    },
+    {
+      "ticker": "FBIN",
+      "name": "FBIN",
+      "market": "US",
+      "market_cap_krw": 7155833293561,
+      "market_cap_usd": 4858494355
+    },
+    {
+      "ticker": "DAVE",
+      "name": "DAVE",
+      "market": "US",
+      "market_cap_krw": 5311801332535,
+      "market_cap_usd": 3606478202
+    },
+    {
+      "ticker": "NBXG",
+      "name": "NBXG",
+      "market": "US",
+      "market_cap_krw": 1691336378726,
+      "market_cap_usd": 1148342605
+    },
+    {
+      "ticker": "PAX",
+      "name": "PAX",
+      "market": "US",
+      "market_cap_krw": 3032213659357,
+      "market_cap_usd": 2058738981
+    },
+    {
+      "ticker": "PB",
+      "name": "PB",
+      "market": "US",
+      "market_cap_krw": 10411150244664,
+      "market_cap_usd": 7068710606
+    },
+    {
+      "ticker": "SRE",
+      "name": "SRE",
+      "market": "US",
+      "market_cap_krw": 91530253663266,
+      "market_cap_usd": 62144994521
+    },
+    {
+      "ticker": "OGE",
+      "name": "OGE",
+      "market": "US",
+      "market_cap_krw": 14833170354043,
+      "market_cap_usd": 10071066707
+    },
+    {
+      "ticker": "CCB",
+      "name": "CCB",
+      "market": "US",
+      "market_cap_krw": 1697550311580,
+      "market_cap_usd": 1152561591
+    },
+    {
+      "ticker": "AVIR",
+      "name": "AVIR",
+      "market": "US",
+      "market_cap_krw": 649452215531,
+      "market_cap_usd": 440949333
+    },
+    {
+      "ticker": "CERT",
+      "name": "CERT",
+      "market": "US",
+      "market_cap_krw": 1384306279038,
+      "market_cap_usd": 939882745
+    },
+    {
+      "ticker": "PFIS",
+      "name": "PFIS",
+      "market": "US",
+      "market_cap_krw": 839412519026,
+      "market_cap_usd": 569923979
+    },
+    {
+      "ticker": "PHAR",
+      "name": "PHAR",
+      "market": "US",
+      "market_cap_krw": 1719456759114,
+      "market_cap_usd": 1167435100
+    },
+    {
+      "ticker": "CALM",
+      "name": "CALM",
+      "market": "US",
+      "market_cap_krw": 5391095399434,
+      "market_cap_usd": 3660315367
+    },
+    {
+      "ticker": "WLFC",
+      "name": "WLFC",
+      "market": "US",
+      "market_cap_krw": 2174627567991,
+      "market_cap_usd": 1476475950
+    },
+    {
+      "ticker": "KTB",
+      "name": "KTB",
+      "market": "US",
+      "market_cap_krw": 6006793991668,
+      "market_cap_usd": 4078347483
+    },
+    {
+      "ticker": "LYTS",
+      "name": "LYTS",
+      "market": "US",
+      "market_cap_krw": 1312243500229,
+      "market_cap_usd": 890955305
+    },
+    {
+      "ticker": "BCC",
+      "name": "BCC",
+      "market": "US",
+      "market_cap_krw": 4186324342173,
+      "market_cap_usd": 2842329097
+    },
+    {
+      "ticker": "DLTR",
+      "name": "DLTR",
+      "market": "US",
+      "market_cap_krw": 28219260538397,
+      "market_cap_usd": 19159629973
+    },
+    {
+      "ticker": "OLP",
+      "name": "OLP",
+      "market": "US",
+      "market_cap_krw": 729614668247,
+      "market_cap_usd": 495376094
+    },
+    {
+      "ticker": "DOLE",
+      "name": "DOLE",
+      "market": "US",
+      "market_cap_krw": 2127678102859,
+      "market_cap_usd": 1444599340
+    },
+    {
+      "ticker": "AVBP",
+      "name": "AVBP",
+      "market": "US",
+      "market_cap_krw": 2123252967398,
+      "market_cap_usd": 1441594868
+    },
+    {
+      "ticker": "MIR",
+      "name": "MIR",
+      "market": "US",
+      "market_cap_krw": 7284421986241,
+      "market_cap_usd": 4945800391
+    },
+    {
+      "ticker": "PPTA",
+      "name": "PPTA",
+      "market": "US",
+      "market_cap_krw": 5086982717572,
+      "market_cap_usd": 3453836305
+    },
+    {
+      "ticker": "BBDO",
+      "name": "BBDO",
+      "market": "US",
+      "market_cap_krw": 53713302428053,
+      "market_cap_usd": 36468957000
+    },
+    {
+      "ticker": "URBN",
+      "name": "URBN",
+      "market": "US",
+      "market_cap_krw": 9290761566325,
+      "market_cap_usd": 6308016240
+    },
+    {
+      "ticker": "FPI",
+      "name": "FPI",
+      "market": "US",
+      "market_cap_krw": 690597129350,
+      "market_cap_usd": 468884910
+    },
+    {
+      "ticker": "ATI",
+      "name": "ATI",
+      "market": "US",
+      "market_cap_krw": 31354204249442,
+      "market_cap_usd": 21288118117
+    },
+    {
+      "ticker": "NOG",
+      "name": "NOG",
+      "market": "US",
+      "market_cap_krw": 4231920517742,
+      "market_cap_usd": 2873286884
+    },
+    {
+      "ticker": "PEBO",
+      "name": "PEBO",
+      "market": "US",
+      "market_cap_krw": 1820225416975,
+      "market_cap_usd": 1235852562
+    },
+    {
+      "ticker": "KB",
+      "name": "KB",
+      "market": "US",
+      "market_cap_krw": 58101531098418,
+      "market_cap_usd": 39448370208
+    },
+    {
+      "ticker": "RBA",
+      "name": "RBA",
+      "market": "US",
+      "market_cap_krw": 28561463362615,
+      "market_cap_usd": 19391970557
+    },
+    {
+      "ticker": "PACS",
+      "name": "PACS",
+      "market": "US",
+      "market_cap_krw": 7766170904558,
+      "market_cap_usd": 5272886603
+    },
+    {
+      "ticker": "ALVO",
+      "name": "ALVO",
+      "market": "US",
+      "market_cap_krw": 1535065026859,
+      "market_cap_usd": 1042241268
+    },
+    {
+      "ticker": "BBWI",
+      "name": "BBWI",
+      "market": "US",
+      "market_cap_krw": 5766025400236,
+      "market_cap_usd": 3914876257
+    },
+    {
+      "ticker": "FBRT",
+      "name": "FBRT",
+      "market": "US",
+      "market_cap_krw": 1031530233174,
+      "market_cap_usd": 700363411
+    },
+    {
+      "ticker": "BMEZ",
+      "name": "BMEZ",
+      "market": "US",
+      "market_cap_krw": 1309945330849,
+      "market_cap_usd": 889394950
+    },
+    {
+      "ticker": "IGR",
+      "name": "IGR",
+      "market": "US",
+      "market_cap_krw": 1061428771949,
+      "market_cap_usd": 720663196
+    },
+    {
+      "ticker": "VRNS",
+      "name": "VRNS",
+      "market": "US",
+      "market_cap_krw": 4549449660536,
+      "market_cap_usd": 3088875130
+    },
+    {
+      "ticker": "EZPW",
+      "name": "EZPW",
+      "market": "US",
+      "market_cap_krw": 2978743233454,
+      "market_cap_usd": 2022434927
+    },
+    {
+      "ticker": "MESH",
+      "name": "MESH",
+      "market": "US",
+      "market_cap_krw": 631355526006,
+      "market_cap_usd": 428662481
+    },
+    {
+      "ticker": "VBNK",
+      "name": "VBNK",
+      "market": "US",
+      "market_cap_krw": 848534174293,
+      "market_cap_usd": 576117179
+    },
+    {
+      "ticker": "BFC",
+      "name": "BFC",
+      "market": "US",
+      "market_cap_krw": 2401824874116,
+      "market_cap_usd": 1630732874
+    },
+    {
+      "ticker": "SPFI",
+      "name": "SPFI",
+      "market": "US",
+      "market_cap_krw": 988780726083,
+      "market_cap_usd": 671338386
+    },
+    {
+      "ticker": "ENLT",
+      "name": "ENLT",
+      "market": "US",
+      "market_cap_krw": 18601311605057,
+      "market_cap_usd": 12629467979
+    },
+    {
+      "ticker": "TE",
+      "name": "TE",
+      "market": "US",
+      "market_cap_krw": 1972700555219,
+      "market_cap_usd": 1339376438
+    },
+    {
+      "ticker": "ATAT",
+      "name": "ATAT",
+      "market": "US",
+      "market_cap_krw": 7782879552982,
+      "market_cap_usd": 5284231036
+    },
+    {
+      "ticker": "CHD",
+      "name": "CHD",
+      "market": "US",
+      "market_cap_krw": 33862435249060,
+      "market_cap_usd": 22991096045
+    },
+    {
+      "ticker": "CVSA",
+      "name": "CVSA",
+      "market": "US",
+      "market_cap_krw": 5856157639716,
+      "market_cap_usd": 3976072062
+    },
+    {
+      "ticker": "CCU",
+      "name": "CCU",
+      "market": "US",
+      "market_cap_krw": 3116760540720,
+      "market_cap_usd": 2116142575
+    },
+    {
+      "ticker": "GYRE",
+      "name": "GYRE",
+      "market": "US",
+      "market_cap_krw": 1097146435673,
+      "market_cap_usd": 744913911
+    },
+    {
+      "ticker": "CRCL",
+      "name": "CRCL",
+      "market": "US",
+      "market_cap_krw": 33089757893236,
+      "market_cap_usd": 22466482290
+    },
+    {
+      "ticker": "FRSH",
+      "name": "FRSH",
+      "market": "US",
+      "market_cap_krw": 3352610799090,
+      "market_cap_usd": 2276274471
+    },
+    {
+      "ticker": "LDI",
+      "name": "LDI",
+      "market": "US",
+      "market_cap_krw": 1236346100450,
+      "market_cap_usd": 839424327
+    },
+    {
+      "ticker": "BSBR",
+      "name": "BSBR",
+      "market": "US",
+      "market_cap_krw": 64642916576316,
+      "market_cap_usd": 43889681670
+    },
+    {
+      "ticker": "ORKA",
+      "name": "ORKA",
+      "market": "US",
+      "market_cap_krw": 6031043321126,
+      "market_cap_usd": 4094811705
+    },
+    {
+      "ticker": "IRTC",
+      "name": "IRTC",
+      "market": "US",
+      "market_cap_krw": 6249881735736,
+      "market_cap_usd": 4243393311
+    },
+    {
+      "ticker": "B",
+      "name": "B",
+      "market": "US",
+      "market_cap_krw": 97315677273955,
+      "market_cap_usd": 66073041305
+    },
+    {
+      "ticker": "OFIX",
+      "name": "OFIX",
+      "market": "US",
+      "market_cap_krw": 699512169381,
+      "market_cap_usd": 474937828
+    },
+    {
+      "ticker": "NXP",
+      "name": "NXP",
+      "market": "US",
+      "market_cap_krw": 1084626237025,
+      "market_cap_usd": 736413249
+    },
+    {
+      "ticker": "SSP",
+      "name": "SSP",
+      "market": "US",
+      "market_cap_krw": 644887901290,
+      "market_cap_usd": 437850366
+    },
+    {
+      "ticker": "SAH",
+      "name": "SAH",
+      "market": "US",
+      "market_cap_krw": 3894362154657,
+      "market_cap_usd": 2644099683
+    },
+    {
+      "ticker": "PECO",
+      "name": "PECO",
+      "market": "US",
+      "market_cap_krw": 7451798341724,
+      "market_cap_usd": 5059441535
+    },
+    {
+      "ticker": "HIW",
+      "name": "HIW",
+      "market": "US",
+      "market_cap_krw": 3948311944398,
+      "market_cap_usd": 2680729205
+    },
+    {
+      "ticker": "MGM",
+      "name": "MGM",
+      "market": "US",
+      "market_cap_krw": 14673515270505,
+      "market_cap_usd": 9962667966
+    },
+    {
+      "ticker": "TLRY",
+      "name": "TLRY",
+      "market": "US",
+      "market_cap_krw": 1099232599695,
+      "market_cap_usd": 746330324
+    },
+    {
+      "ticker": "IMMX",
+      "name": "IMMX",
+      "market": "US",
+      "market_cap_krw": 697244229410,
+      "market_cap_usd": 473397997
+    },
+    {
+      "ticker": "AXS",
+      "name": "AXS",
+      "market": "US",
+      "market_cap_krw": 10902846171115,
+      "market_cap_usd": 7402550396
+    },
+    {
+      "ticker": "BOX",
+      "name": "BOX",
+      "market": "US",
+      "market_cap_krw": 4934754335871,
+      "market_cap_usd": 3350479965
+    },
+    {
+      "ticker": "ABR",
+      "name": "ABR",
+      "market": "US",
+      "market_cap_krw": 2238221652843,
+      "market_cap_usd": 1519653522
+    },
+    {
+      "ticker": "ROG",
+      "name": "ROG",
+      "market": "US",
+      "market_cap_krw": 3568625096518,
+      "market_cap_usd": 2422938626
+    },
+    {
+      "ticker": "AB",
+      "name": "AB",
+      "market": "US",
+      "market_cap_krw": 5423249211947,
+      "market_cap_usd": 3682146384
+    },
+    {
+      "ticker": "SGI",
+      "name": "SGI",
+      "market": "US",
+      "market_cap_krw": 23501442065635,
+      "market_cap_usd": 15956439865
+    },
+    {
+      "ticker": "DG",
+      "name": "DG",
+      "market": "US",
+      "market_cap_krw": 37586874153617,
+      "market_cap_usd": 25519825356
+    },
+    {
+      "ticker": "VIAV",
+      "name": "VIAV",
+      "market": "US",
+      "market_cap_krw": 17858014375448,
+      "market_cap_usd": 12124802031
+    },
+    {
+      "ticker": "AMAT",
+      "name": "AMAT",
+      "market": "US",
+      "market_cap_krw": 461106833694025,
+      "market_cap_usd": 313071148682
+    },
+    {
+      "ticker": "ITT",
+      "name": "ITT",
+      "market": "US",
+      "market_cap_krw": 28361593186706,
+      "market_cap_usd": 19256267547
+    },
+    {
+      "ticker": "VIV",
+      "name": "VIV",
+      "market": "US",
+      "market_cap_krw": 37347257462947,
+      "market_cap_usd": 25357136220
+    },
+    {
+      "ticker": "HRMY",
+      "name": "HRMY",
+      "market": "US",
+      "market_cap_krw": 2664289271703,
+      "market_cap_usd": 1808934593
+    },
+    {
+      "ticker": "ETSY",
+      "name": "ETSY",
+      "market": "US",
+      "market_cap_krw": 8992666914807,
+      "market_cap_usd": 6105623155
+    },
+    {
+      "ticker": "NDAQ",
+      "name": "NDAQ",
+      "market": "US",
+      "market_cap_krw": 76557057991329,
+      "market_cap_usd": 51978856815
+    },
+    {
+      "ticker": "ELV",
+      "name": "ELV",
+      "market": "US",
+      "market_cap_krw": 120397040175908,
+      "market_cap_usd": 81744265995
+    },
+    {
+      "ticker": "GENI",
+      "name": "GENI",
+      "market": "US",
+      "market_cap_krw": 1651964441910,
+      "market_cap_usd": 1121610801
+    },
+    {
+      "ticker": "BXMT",
+      "name": "BXMT",
+      "market": "US",
+      "market_cap_krw": 4717980335913,
+      "market_cap_usd": 3203300006
+    },
+    {
+      "ticker": "GDS",
+      "name": "GDS",
+      "market": "US",
+      "market_cap_krw": 12477933786645,
+      "market_cap_usd": 8471965233
+    },
+    {
+      "ticker": "PI",
+      "name": "PI",
+      "market": "US",
+      "market_cap_krw": 6501346512067,
+      "market_cap_usd": 4414126774
+    },
+    {
+      "ticker": "ENIC",
+      "name": "ENIC",
+      "market": "US",
+      "market_cap_krw": 9229600192226,
+      "market_cap_usd": 6266490372
+    },
+    {
+      "ticker": "VNT",
+      "name": "VNT",
+      "market": "US",
+      "market_cap_krw": 7482973591523,
+      "market_cap_usd": 5080608151
+    },
+    {
+      "ticker": "APH",
+      "name": "APH",
+      "market": "US",
+      "market_cap_krw": 266671662314741,
+      "market_cap_usd": 181058265767
+    },
+    {
+      "ticker": "DCH",
+      "name": "DCH",
+      "market": "US",
+      "market_cap_krw": 1991034975715,
+      "market_cap_usd": 1351824699
+    },
+    {
+      "ticker": "CYD",
+      "name": "CYD",
+      "market": "US",
+      "market_cap_krw": 2277217615940,
+      "market_cap_usd": 1546130056
+    },
+    {
+      "ticker": "ABNB",
+      "name": "ABNB",
+      "market": "US",
+      "market_cap_krw": 122905743680573,
+      "market_cap_usd": 83447564733
+    },
+    {
+      "ticker": "BALY",
+      "name": "BALY",
+      "market": "US",
+      "market_cap_krw": 956260449303,
+      "market_cap_usd": 649258556
+    },
+    {
+      "ticker": "BBU",
+      "name": "BBU",
+      "market": "US",
+      "market_cap_krw": 4453676090477,
+      "market_cap_usd": 3023849111
+    },
+    {
+      "ticker": "NHP",
+      "name": "NHP",
+      "market": "US",
+      "market_cap_krw": 1388831231957,
+      "market_cap_usd": 942954988
+    },
+    {
+      "ticker": "GIII",
+      "name": "GIII",
+      "market": "US",
+      "market_cap_krw": 1938099546513,
+      "market_cap_usd": 1315883884
+    },
+    {
+      "ticker": "RIG",
+      "name": "RIG",
+      "market": "US",
+      "market_cap_krw": 11117129743405,
+      "market_cap_usd": 7548039466
+    },
+    {
+      "ticker": "NIQ",
+      "name": "NIQ",
+      "market": "US",
+      "market_cap_krw": 4750839612831,
+      "market_cap_usd": 3225610002
+    },
+    {
+      "ticker": "LVS",
+      "name": "LVS",
+      "market": "US",
+      "market_cap_krw": 53297469339353,
+      "market_cap_usd": 36186624722
+    },
+    {
+      "ticker": "SLG",
+      "name": "SLG",
+      "market": "US",
+      "market_cap_krw": 4461501016352,
+      "market_cap_usd": 3029161890
+    },
+    {
+      "ticker": "KBH",
+      "name": "KBH",
+      "market": "US",
+      "market_cap_krw": 4885699799669,
+      "market_cap_usd": 3317174105
+    },
+    {
+      "ticker": "AVAL",
+      "name": "AVAL",
+      "market": "US",
+      "market_cap_krw": 7798438892338,
+      "market_cap_usd": 5294795139
+    },
+    {
+      "ticker": "TIC",
+      "name": "TIC",
+      "market": "US",
+      "market_cap_krw": 2977891466227,
+      "market_cap_usd": 2021856615
+    },
+    {
+      "ticker": "VIPS",
+      "name": "VIPS",
+      "market": "US",
+      "market_cap_krw": 10179003503160,
+      "market_cap_usd": 6911093235
+    },
+    {
+      "ticker": "GTM",
+      "name": "GTM",
+      "market": "US",
+      "market_cap_krw": 2810332565217,
+      "market_cap_usd": 1908091531
+    },
+    {
+      "ticker": "ROAD",
+      "name": "ROAD",
+      "market": "US",
+      "market_cap_krw": 10293294257041,
+      "market_cap_usd": 6988691603
+    },
+    {
+      "ticker": "VSNT",
+      "name": "VSNT",
+      "market": "US",
+      "market_cap_krw": 8375600982859,
+      "market_cap_usd": 5686662675
+    },
+    {
+      "ticker": "ALLO",
+      "name": "ALLO",
+      "market": "US",
+      "market_cap_krw": 1079117423366,
+      "market_cap_usd": 732673008
+    },
+    {
+      "ticker": "BCX",
+      "name": "BCX",
+      "market": "US",
+      "market_cap_krw": 1394607889487,
+      "market_cap_usd": 946877083
+    },
+    {
+      "ticker": "IOT",
+      "name": "IOT",
+      "market": "US",
+      "market_cap_krw": 24581551260337,
+      "market_cap_usd": 16689786242
+    },
+    {
+      "ticker": "IRM",
+      "name": "IRM",
+      "market": "US",
+      "market_cap_krw": 55201467860173,
+      "market_cap_usd": 37479355518
+    },
+    {
+      "ticker": "IP",
+      "name": "IP",
+      "market": "US",
+      "market_cap_krw": 23723151224068,
+      "market_cap_usd": 16106970579
+    },
+    {
+      "ticker": "SGMT",
+      "name": "SGMT",
+      "market": "US",
+      "market_cap_krw": 730337689595,
+      "market_cap_usd": 495866993
+    },
+    {
+      "ticker": "RVT",
+      "name": "RVT",
+      "market": "US",
+      "market_cap_krw": 3316112940258,
+      "market_cap_usd": 2251494038
+    },
+    {
+      "ticker": "LZM",
+      "name": "LZM",
+      "market": "US",
+      "market_cap_krw": 736170150429,
+      "market_cap_usd": 499826976
+    },
+    {
+      "ticker": "ROIV",
+      "name": "ROIV",
+      "market": "US",
+      "market_cap_krw": 30074055797354,
+      "market_cap_usd": 20418953930
+    },
+    {
+      "ticker": "PRSU",
+      "name": "PRSU",
+      "market": "US",
+      "market_cap_krw": 1736574682283,
+      "market_cap_usd": 1179057413
+    },
+    {
+      "ticker": "SENEA",
+      "name": "SENEA",
+      "market": "US",
+      "market_cap_krw": 1417446540018,
+      "market_cap_usd": 962383517
+    },
+    {
+      "ticker": "TYG",
+      "name": "TYG",
+      "market": "US",
+      "market_cap_krw": 1536072183692,
+      "market_cap_usd": 1042925083
+    },
+    {
+      "ticker": "PNC",
+      "name": "PNC",
+      "market": "US",
+      "market_cap_krw": 132485382462655,
+      "market_cap_usd": 89951715829
+    },
+    {
+      "ticker": "BXSL",
+      "name": "BXSL",
+      "market": "US",
+      "market_cap_krw": 8484409925207,
+      "market_cap_usd": 5760539135
+    },
+    {
+      "ticker": "PS",
+      "name": "PS",
+      "market": "US",
+      "market_cap_krw": 16495919726562,
+      "market_cap_usd": 11200000000
+    },
+    {
+      "ticker": "NCDL",
+      "name": "NCDL",
+      "market": "US",
+      "market_cap_krw": 1064182367649,
+      "market_cap_usd": 722532766
+    },
+    {
+      "ticker": "LNW",
+      "name": "LNW",
+      "market": "US",
+      "market_cap_krw": 10044060549278,
+      "market_cap_usd": 6819472937
+    },
+    {
+      "ticker": "MUSA",
+      "name": "MUSA",
+      "market": "US",
+      "market_cap_krw": 15996274195367,
+      "market_cap_usd": 10860762780
+    },
+    {
+      "ticker": "LI",
+      "name": "LI",
+      "market": "US",
+      "market_cap_krw": 26845201664767,
+      "market_cap_usd": 18226704762
+    },
+    {
+      "ticker": "OWLS",
+      "name": "OWLS",
+      "market": "US",
+      "market_cap_krw": 769548385328,
+      "market_cap_usd": 522489322
+    },
+    {
+      "ticker": "FRO",
+      "name": "FRO",
+      "market": "US",
+      "market_cap_krw": 11964710959871,
+      "market_cap_usd": 8123509629
+    },
+    {
+      "ticker": "MRAM",
+      "name": "MRAM",
+      "market": "US",
+      "market_cap_krw": 627886981913,
+      "market_cap_usd": 426307493
+    },
+    {
+      "ticker": "FDP",
+      "name": "FDP",
+      "market": "US",
+      "market_cap_krw": 2932561221671,
+      "market_cap_usd": 1991079383
+    },
+    {
+      "ticker": "CPA",
+      "name": "CPA",
+      "market": "US",
+      "market_cap_krw": 7009157271796,
+      "market_cap_usd": 4758907823
+    },
+    {
+      "ticker": "CRESY",
+      "name": "CRESY",
+      "market": "US",
+      "market_cap_krw": 1172405671149,
+      "market_cap_usd": 796011603
+    },
+    {
+      "ticker": "GGAL",
+      "name": "GGAL",
+      "market": "US",
+      "market_cap_krw": 10317616664454,
+      "market_cap_usd": 7005205442
+    },
+    {
+      "ticker": "BP",
+      "name": "BP",
+      "market": "US",
+      "market_cap_krw": 179692667143025,
+      "market_cap_usd": 122003374492
+    },
+    {
+      "ticker": "CTEV",
+      "name": "CTEV",
+      "market": "US",
+      "market_cap_krw": 608000073223,
+      "market_cap_usd": 412805162
+    },
+    {
+      "ticker": "STWD",
+      "name": "STWD",
+      "market": "US",
+      "market_cap_krw": 10283343106513,
+      "market_cap_usd": 6981935211
+    },
+    {
+      "ticker": "LSCC",
+      "name": "LSCC",
+      "market": "US",
+      "market_cap_krw": 24650196561221,
+      "market_cap_usd": 16736393366
+    },
+    {
+      "ticker": "CCK",
+      "name": "CCK",
+      "market": "US",
+      "market_cap_krw": 16181842258167,
+      "market_cap_usd": 10986755288
+    },
+    {
+      "ticker": "VINP",
+      "name": "VINP",
+      "market": "US",
+      "market_cap_krw": 1066671245938,
+      "market_cap_usd": 724222604
+    },
+    {
+      "ticker": "NGVC",
+      "name": "NGVC",
+      "market": "US",
+      "market_cap_krw": 982447463395,
+      "market_cap_usd": 667038381
+    },
+    {
+      "ticker": "CR",
+      "name": "CR",
+      "market": "US",
+      "market_cap_krw": 15115590114309,
+      "market_cap_usd": 10262817235
+    },
+    {
+      "ticker": "AIR",
+      "name": "AIR",
+      "market": "US",
+      "market_cap_krw": 6464018004114,
+      "market_cap_usd": 4388782368
+    },
+    {
+      "ticker": "BANC",
+      "name": "BANC",
+      "market": "US",
+      "market_cap_krw": 4268714327654,
+      "market_cap_usd": 2898268254
+    },
+    {
+      "ticker": "SJM",
+      "name": "SJM",
+      "market": "US",
+      "market_cap_krw": 15398255572948,
+      "market_cap_usd": 10454734581
+    },
+    {
+      "ticker": "NVEC",
+      "name": "NVEC",
+      "market": "US",
+      "market_cap_krw": 589830845772,
+      "market_cap_usd": 400469060
+    },
+    {
+      "ticker": "WAT",
+      "name": "WAT",
+      "market": "US",
+      "market_cap_krw": 44709415363896,
+      "market_cap_usd": 30355715860
+    },
+    {
+      "ticker": "RDW",
+      "name": "RDW",
+      "market": "US",
+      "market_cap_krw": 2692462584466,
+      "market_cap_usd": 1828063026
+    },
+    {
+      "ticker": "PSIX",
+      "name": "PSIX",
+      "market": "US",
+      "market_cap_krw": 2487505741348,
+      "market_cap_usd": 1688906394
+    },
+    {
+      "ticker": "DNTH",
+      "name": "DNTH",
+      "market": "US",
+      "market_cap_krw": 7041109921874,
+      "market_cap_usd": 4780602259
+    },
+    {
+      "ticker": "HTBK",
+      "name": "HTBK",
+      "market": "US",
+      "market_cap_krw": 1220152618939,
+      "market_cap_usd": 828429669
+    },
+    {
+      "ticker": "LSPD",
+      "name": "LSPD",
+      "market": "US",
+      "market_cap_krw": 1870569083050,
+      "market_cap_usd": 1270033685
+    },
+    {
+      "ticker": "NVTS",
+      "name": "NVTS",
+      "market": "US",
+      "market_cap_krw": 5608731451878,
+      "market_cap_usd": 3808080622
+    },
+    {
+      "ticker": "HWKN",
+      "name": "HWKN",
+      "market": "US",
+      "market_cap_krw": 5155056523786,
+      "market_cap_usd": 3500055409
+    },
+    {
+      "ticker": "VRRM",
+      "name": "VRRM",
+      "market": "US",
+      "market_cap_krw": 3317996873278,
+      "market_cap_usd": 2252773146
+    },
+    {
+      "ticker": "HIG",
+      "name": "HIG",
+      "market": "US",
+      "market_cap_krw": 55237525137256,
+      "market_cap_usd": 37503836814
+    },
+    {
+      "ticker": "AURA",
+      "name": "AURA",
+      "market": "US",
+      "market_cap_krw": 666624340327,
+      "market_cap_usd": 452608447
+    },
+    {
+      "ticker": "DHR",
+      "name": "DHR",
+      "market": "US",
+      "market_cap_krw": 186544625996024,
+      "market_cap_usd": 126655551541
+    },
+    {
+      "ticker": "CIM",
+      "name": "CIM",
+      "market": "US",
+      "market_cap_krw": 1693963936571,
+      "market_cap_usd": 1150126601
+    },
+    {
+      "ticker": "DOC",
+      "name": "DOC",
+      "market": "US",
+      "market_cap_krw": 16558221641737,
+      "market_cap_usd": 11242300245
+    },
+    {
+      "ticker": "INVA",
+      "name": "INVA",
+      "market": "US",
+      "market_cap_krw": 2507439883987,
+      "market_cap_usd": 1702440795
+    },
+    {
+      "ticker": "ABT",
+      "name": "ABT",
+      "market": "US",
+      "market_cap_krw": 232915343144157,
+      "market_cap_usd": 158139217846
+    },
+    {
+      "ticker": "MFG",
+      "name": "MFG",
+      "market": "US",
+      "market_cap_krw": 154434955870206,
+      "market_cap_usd": 104854505503
+    },
+    {
+      "ticker": "VSTS",
+      "name": "VSTS",
+      "market": "US",
+      "market_cap_krw": 1888994475782,
+      "market_cap_usd": 1282543712
+    },
+    {
+      "ticker": "WLTH",
+      "name": "WLTH",
+      "market": "US",
+      "market_cap_krw": 2319759968866,
+      "market_cap_usd": 1575014432
+    },
+    {
+      "ticker": "BNTX",
+      "name": "BNTX",
+      "market": "US",
+      "market_cap_krw": 38531045620190,
+      "market_cap_usd": 26160876028
+    },
+    {
+      "ticker": "LH",
+      "name": "LH",
+      "market": "US",
+      "market_cap_krw": 31128152528335,
+      "market_cap_usd": 21134638995
+    },
+    {
+      "ticker": "NBB",
+      "name": "NBB",
+      "market": "US",
+      "market_cap_krw": 688375533756,
+      "market_cap_usd": 467376545
+    },
+    {
+      "ticker": "DRVN",
+      "name": "DRVN",
+      "market": "US",
+      "market_cap_krw": 3286876351494,
+      "market_cap_usd": 2231643688
+    },
+    {
+      "ticker": "BK",
+      "name": "BK",
+      "market": "US",
+      "market_cap_krw": 135839101696979,
+      "market_cap_usd": 92228742878
+    },
+    {
+      "ticker": "GLP",
+      "name": "GLP",
+      "market": "US",
+      "market_cap_krw": 2403335511272,
+      "market_cap_usd": 1631758530
+    },
+    {
+      "ticker": "EMN",
+      "name": "EMN",
+      "market": "US",
+      "market_cap_krw": 12309836451548,
+      "market_cap_usd": 8357834576
+    },
+    {
+      "ticker": "MP",
+      "name": "MP",
+      "market": "US",
+      "market_cap_krw": 17281182299613,
+      "market_cap_usd": 11733158560
+    },
+    {
+      "ticker": "ARHS",
+      "name": "ARHS",
+      "market": "US",
+      "market_cap_krw": 1547288793885,
+      "market_cap_usd": 1050540665
+    },
+    {
+      "ticker": "ASX",
+      "name": "ASX",
+      "market": "US",
+      "market_cap_krw": 101496797292389,
+      "market_cap_usd": 68911836897
+    },
+    {
+      "ticker": "BETA",
+      "name": "BETA",
+      "market": "US",
+      "market_cap_krw": 5390527217977,
+      "market_cap_usd": 3659929597
+    },
+    {
+      "ticker": "CHWY",
+      "name": "CHWY",
+      "market": "US",
+      "market_cap_krw": 15600321568814,
+      "market_cap_usd": 10591928456
+    },
+    {
+      "ticker": "HMC",
+      "name": "HMC",
+      "market": "US",
+      "market_cap_krw": 46514912294339,
+      "market_cap_usd": 31581568432
+    },
+    {
+      "ticker": "GMED",
+      "name": "GMED",
+      "market": "US",
+      "market_cap_krw": 18019313355637,
+      "market_cap_usd": 12234316905
+    },
+    {
+      "ticker": "NXT",
+      "name": "NXT",
+      "market": "US",
+      "market_cap_krw": 26051662509576,
+      "market_cap_usd": 17687926768
+    },
+    {
+      "ticker": "CNQ",
+      "name": "CNQ",
+      "market": "US",
+      "market_cap_krw": 146579412795341,
+      "market_cap_usd": 99520939148
+    },
+    {
+      "ticker": "ROL",
+      "name": "ROL",
+      "market": "US",
+      "market_cap_krw": 39519329442705,
+      "market_cap_usd": 26831877039
+    },
+    {
+      "ticker": "CHKP",
+      "name": "CHKP",
+      "market": "US",
+      "market_cap_krw": 17266313098658,
+      "market_cap_usd": 11723063030
+    },
+    {
+      "ticker": "CWT",
+      "name": "CWT",
+      "market": "US",
+      "market_cap_krw": 3723645788192,
+      "market_cap_usd": 2528190820
+    },
+    {
+      "ticker": "BCS",
+      "name": "BCS",
+      "market": "US",
+      "market_cap_krw": 117550724462547,
+      "market_cap_usd": 79811743498
+    },
+    {
+      "ticker": "RSVR",
+      "name": "RSVR",
+      "market": "US",
+      "market_cap_krw": 971990006926,
+      "market_cap_usd": 659938230
+    },
+    {
+      "ticker": "W",
+      "name": "W",
+      "market": "US",
+      "market_cap_krw": 12392764701607,
+      "market_cap_usd": 8414139190
+    },
+    {
+      "ticker": "CMI",
+      "name": "CMI",
+      "market": "US",
+      "market_cap_krw": 136639403990601,
+      "market_cap_usd": 92772112744
+    },
+    {
+      "ticker": "BRO",
+      "name": "BRO",
+      "market": "US",
+      "market_cap_krw": 30028042820154,
+      "market_cap_usd": 20387713153
+    },
+    {
+      "ticker": "RTO",
+      "name": "RTO",
+      "market": "US",
+      "market_cap_krw": 25104740269816,
+      "market_cap_usd": 17045008443
+    },
+    {
+      "ticker": "TRP",
+      "name": "TRP",
+      "market": "US",
+      "market_cap_krw": 102695140095706,
+      "market_cap_usd": 69725458667
+    },
+    {
+      "ticker": "ACGL",
+      "name": "ACGL",
+      "market": "US",
+      "market_cap_krw": 49139093874399,
+      "market_cap_usd": 33363271676
+    },
+    {
+      "ticker": "THR",
+      "name": "THR",
+      "market": "US",
+      "market_cap_krw": 2928435805845,
+      "market_cap_usd": 1988278408
+    },
+    {
+      "ticker": "MHK",
+      "name": "MHK",
+      "market": "US",
+      "market_cap_krw": 9514646495316,
+      "market_cap_usd": 6460024206
+    },
+    {
+      "ticker": "ALG",
+      "name": "ALG",
+      "market": "US",
+      "market_cap_krw": 3108495835272,
+      "market_cap_usd": 2110531206
+    },
+    {
+      "ticker": "CCOI",
+      "name": "CCOI",
+      "market": "US",
+      "market_cap_krw": 1671417437558,
+      "market_cap_usd": 1134818525
+    },
+    {
+      "ticker": "DRTS",
+      "name": "DRTS",
+      "market": "US",
+      "market_cap_krw": 1081073678970,
+      "market_cap_usd": 734001220
+    },
+    {
+      "ticker": "STZ",
+      "name": "STZ",
+      "market": "US",
+      "market_cap_krw": 39712212754022,
+      "market_cap_usd": 26962836278
+    },
+    {
+      "ticker": "LYFT",
+      "name": "LYFT",
+      "market": "US",
+      "market_cap_krw": 7963777728415,
+      "market_cap_usd": 5407052897
+    },
+    {
+      "ticker": "KOPN",
+      "name": "KOPN",
+      "market": "US",
+      "market_cap_krw": 1169420964712,
+      "market_cap_usd": 793985120
+    },
+    {
+      "ticker": "HCC",
+      "name": "HCC",
+      "market": "US",
+      "market_cap_krw": 6987242562241,
+      "market_cap_usd": 4744028704
+    },
+    {
+      "ticker": "V",
+      "name": "V",
+      "market": "US",
+      "market_cap_krw": 923876324515222,
+      "market_cap_usd": 627271168027
+    },
+    {
+      "ticker": "PHR",
+      "name": "PHR",
+      "market": "US",
+      "market_cap_krw": 824247837178,
+      "market_cap_usd": 559627830
+    },
+    {
+      "ticker": "TREX",
+      "name": "TREX",
+      "market": "US",
+      "market_cap_krw": 5998108022201,
+      "market_cap_usd": 4072450094
+    },
+    {
+      "ticker": "CGNX",
+      "name": "CGNX",
+      "market": "US",
+      "market_cap_krw": 13654702082789,
+      "market_cap_usd": 9270938866
+    },
+    {
+      "ticker": "DOCN",
+      "name": "DOCN",
+      "market": "US",
+      "market_cap_krw": 14820998333833,
+      "market_cap_usd": 10062802443
+    },
+    {
+      "ticker": "MYGN",
+      "name": "MYGN",
+      "market": "US",
+      "market_cap_krw": 660726961545,
+      "market_cap_usd": 448604387
+    },
+    {
+      "ticker": "WAB",
+      "name": "WAB",
+      "market": "US",
+      "market_cap_krw": 67448017867208,
+      "market_cap_usd": 45794221397
+    },
+    {
+      "ticker": "FLYW",
+      "name": "FLYW",
+      "market": "US",
+      "market_cap_krw": 2454214871755,
+      "market_cap_usd": 1666303365
+    },
+    {
+      "ticker": "PSNYW",
+      "name": "PSNYW",
+      "market": "US",
+      "market_cap_krw": 39765278996783,
+      "market_cap_usd": 26998865910
+    },
+    {
+      "ticker": "SOBO",
+      "name": "SOBO",
+      "market": "US",
+      "market_cap_krw": 10548715146835,
+      "market_cap_usd": 7162111091
+    },
+    {
+      "ticker": "TRTX",
+      "name": "TRTX",
+      "market": "US",
+      "market_cap_krw": 963284315369,
+      "market_cap_usd": 654027451
+    },
+    {
+      "ticker": "RKLB",
+      "name": "RKLB",
+      "market": "US",
+      "market_cap_krw": 70246749771372,
+      "market_cap_usd": 47694436592
+    },
+    {
+      "ticker": "LKQ",
+      "name": "LKQ",
+      "market": "US",
+      "market_cap_krw": 11870440301608,
+      "market_cap_usd": 8059504021
+    },
+    {
+      "ticker": "YB",
+      "name": "YB",
+      "market": "US",
+      "market_cap_krw": 1119842178144,
+      "market_cap_usd": 760323316
+    },
+    {
+      "ticker": "CMCO",
+      "name": "CMCO",
+      "market": "US",
+      "market_cap_krw": 653979558128,
+      "market_cap_usd": 444023199
+    },
+    {
+      "ticker": "SYF",
+      "name": "SYF",
+      "market": "US",
+      "market_cap_krw": 37751223675165,
+      "market_cap_usd": 25631411413
+    },
+    {
+      "ticker": "MORN",
+      "name": "MORN",
+      "market": "US",
+      "market_cap_krw": 9449374151786,
+      "market_cap_usd": 6415707172
+    },
+    {
+      "ticker": "AEM",
+      "name": "AEM",
+      "market": "US",
+      "market_cap_krw": 138876836090389,
+      "market_cap_usd": 94291230194
+    },
+    {
+      "ticker": "BRKR",
+      "name": "BRKR",
+      "market": "US",
+      "market_cap_krw": 8230449473809,
+      "market_cap_usd": 5588111219
+    },
+    {
+      "ticker": "HRTG",
+      "name": "HRTG",
+      "market": "US",
+      "market_cap_krw": 1326650919718,
+      "market_cap_usd": 900737306
+    },
+    {
+      "ticker": "AMCR",
+      "name": "AMCR",
+      "market": "US",
+      "market_cap_krw": 25887132945339,
+      "market_cap_usd": 17576218470
+    },
+    {
+      "ticker": "ALIT",
+      "name": "ALIT",
+      "market": "US",
+      "market_cap_krw": 641724423173,
+      "market_cap_usd": 435702504
+    },
+    {
+      "ticker": "CWCO",
+      "name": "CWCO",
+      "market": "US",
+      "market_cap_krw": 755286418421,
+      "market_cap_usd": 512806077
+    },
+    {
+      "ticker": "AXSM",
+      "name": "AXSM",
+      "market": "US",
+      "market_cap_krw": 15739832232835,
+      "market_cap_usd": 10686650028
+    },
+    {
+      "ticker": "CCEC",
+      "name": "CCEC",
+      "market": "US",
+      "market_cap_krw": 1793781642637,
+      "market_cap_usd": 1217898409
+    },
+    {
+      "ticker": "RKT",
+      "name": "RKT",
+      "market": "US",
+      "market_cap_krw": 60918242747085,
+      "market_cap_usd": 41360792855
+    },
+    {
+      "ticker": "CRM",
+      "name": "CRM",
+      "market": "US",
+      "market_cap_krw": 212695776751352,
+      "market_cap_usd": 144411026429
+    },
+    {
+      "ticker": "SPB",
+      "name": "SPB",
+      "market": "US",
+      "market_cap_krw": 2832063356415,
+      "market_cap_usd": 1922845777
+    },
+    {
+      "ticker": "OMAB",
+      "name": "OMAB",
+      "market": "US",
+      "market_cap_krw": 7536908667824,
+      "market_cap_usd": 5117227682
+    },
+    {
+      "ticker": "PDM",
+      "name": "PDM",
+      "market": "US",
+      "market_cap_krw": 1539362145699,
+      "market_cap_usd": 1045158822
+    },
+    {
+      "ticker": "CBZ",
+      "name": "CBZ",
+      "market": "US",
+      "market_cap_krw": 2439215565142,
+      "market_cap_usd": 1656119500
+    },
+    {
+      "ticker": "AESI",
+      "name": "AESI",
+      "market": "US",
+      "market_cap_krw": 3196365782498,
+      "market_cap_usd": 2170191014
+    },
+    {
+      "ticker": "UBSI",
+      "name": "UBSI",
+      "market": "US",
+      "market_cap_krw": 8891493622244,
+      "market_cap_usd": 6036930963
+    },
+    {
+      "ticker": "AGL",
+      "name": "AGL",
+      "market": "US",
+      "market_cap_krw": 685820740227,
+      "market_cap_usd": 465641953
+    },
+    {
+      "ticker": "BMNR",
+      "name": "BMNR",
+      "market": "US",
+      "market_cap_krw": 17952485444695,
+      "market_cap_usd": 12188943709
+    },
+    {
+      "ticker": "PZZA",
+      "name": "PZZA",
+      "market": "US",
+      "market_cap_krw": 1753175358310,
+      "market_cap_usd": 1190328538
+    },
+    {
+      "ticker": "BDX",
+      "name": "BDX",
+      "market": "US",
+      "market_cap_krw": 62444284332605,
+      "market_cap_usd": 42396907606
+    },
+    {
+      "ticker": "KVYO",
+      "name": "KVYO",
+      "market": "US",
+      "market_cap_krw": 9018131080845,
+      "market_cap_usd": 6122912197
+    },
+    {
+      "ticker": "ALSN",
+      "name": "ALSN",
+      "market": "US",
+      "market_cap_krw": 16449433562037,
+      "market_cap_usd": 11168437950
+    },
+    {
+      "ticker": "MAX",
+      "name": "MAX",
+      "market": "US",
+      "market_cap_krw": 677612543872,
+      "market_cap_usd": 460068951
+    },
+    {
+      "ticker": "AUGO",
+      "name": "AUGO",
+      "market": "US",
+      "market_cap_krw": 10461376705305,
+      "market_cap_usd": 7102812152
+    },
+    {
+      "ticker": "FPS",
+      "name": "FPS",
+      "market": "US",
+      "market_cap_krw": 13526287253876,
+      "market_cap_usd": 9183750876
+    },
+    {
+      "ticker": "DRS",
+      "name": "DRS",
+      "market": "US",
+      "market_cap_krw": 15915885377488,
+      "market_cap_usd": 10806182327
+    },
+    {
+      "ticker": "CHW",
+      "name": "CHW",
+      "market": "US",
+      "market_cap_krw": 780720102861,
+      "market_cap_usd": 530074424
+    },
+    {
+      "ticker": "MEC",
+      "name": "MEC",
+      "market": "US",
+      "market_cap_krw": 682610008417,
+      "market_cap_usd": 463462008
+    },
+    {
+      "ticker": "QGEN",
+      "name": "QGEN",
+      "market": "US",
+      "market_cap_krw": 10495625156260,
+      "market_cap_usd": 7126065336
+    },
+    {
+      "ticker": "MS",
+      "name": "MS",
+      "market": "US",
+      "market_cap_krw": 445728987028013,
+      "market_cap_usd": 302630270846
+    },
+    {
+      "ticker": "LPLA",
+      "name": "LPLA",
+      "market": "US",
+      "market_cap_krw": 39462428126076,
+      "market_cap_usd": 26793243561
+    },
+    {
+      "ticker": "MAR",
+      "name": "MAR",
+      "market": "US",
+      "market_cap_krw": 141161276700464,
+      "market_cap_usd": 95842264344
+    },
+    {
+      "ticker": "APG",
+      "name": "APG",
+      "market": "US",
+      "market_cap_krw": 29127012148231,
+      "market_cap_usd": 19775953173
+    },
+    {
+      "ticker": "ARR",
+      "name": "ARR",
+      "market": "US",
+      "market_cap_krw": 3204581301162,
+      "market_cap_usd": 2175768988
+    },
+    {
+      "ticker": "AIP",
+      "name": "AIP",
+      "market": "US",
+      "market_cap_krw": 1966022264979,
+      "market_cap_usd": 1334842175
+    },
+    {
+      "ticker": "RF",
+      "name": "RF",
+      "market": "US",
+      "market_cap_krw": 35923884485225,
+      "market_cap_usd": 24390728913
+    },
+    {
+      "ticker": "RRBI",
+      "name": "RRBI",
+      "market": "US",
+      "market_cap_krw": 878920436091,
+      "market_cap_usd": 596748107
+    },
+    {
+      "ticker": "WTM",
+      "name": "WTM",
+      "market": "US",
+      "market_cap_krw": 8141771281788,
+      "market_cap_usd": 5527902649
+    },
+    {
+      "ticker": "HSTM",
+      "name": "HSTM",
+      "market": "US",
+      "market_cap_krw": 896050154516,
+      "market_cap_usd": 608378429
+    },
+    {
+      "ticker": "SLDE",
+      "name": "SLDE",
+      "market": "US",
+      "market_cap_krw": 3143846329685,
+      "market_cap_usd": 2134532628
+    },
+    {
+      "ticker": "SPHR",
+      "name": "SPHR",
+      "market": "US",
+      "market_cap_krw": 7509471719203,
+      "market_cap_usd": 5098599208
+    },
+    {
+      "ticker": "CLDX",
+      "name": "CLDX",
+      "market": "US",
+      "market_cap_krw": 3800994572798,
+      "market_cap_usd": 2580707224
+    },
+    {
+      "ticker": "LXEO",
+      "name": "LXEO",
+      "market": "US",
+      "market_cap_krw": 621433457992,
+      "market_cap_usd": 421925836
+    },
+    {
+      "ticker": "RJF",
+      "name": "RJF",
+      "market": "US",
+      "market_cap_krw": 45377143042268,
+      "market_cap_usd": 30809073425
+    },
+    {
+      "ticker": "LWAY",
+      "name": "LWAY",
+      "market": "US",
+      "market_cap_krw": 602012700852,
+      "market_cap_usd": 408740001
+    },
+    {
+      "ticker": "DY",
+      "name": "DY",
+      "market": "US",
+      "market_cap_krw": 18308559180103,
+      "market_cap_usd": 12430702029
+    },
+    {
+      "ticker": "APP",
+      "name": "APP",
+      "market": "US",
+      "market_cap_krw": 221060143360917,
+      "market_cap_usd": 150090061462
+    },
+    {
+      "ticker": "CGBD",
+      "name": "CGBD",
+      "market": "US",
+      "market_cap_krw": 1234584505437,
+      "market_cap_usd": 838228282
+    },
+    {
+      "ticker": "MGA",
+      "name": "MGA",
+      "market": "US",
+      "market_cap_krw": 25922514045333,
+      "market_cap_usd": 17600240672
+    },
+    {
+      "ticker": "DCO",
+      "name": "DCO",
+      "market": "US",
+      "market_cap_krw": 3132895173886,
+      "market_cap_usd": 2127097277
+    },
+    {
+      "ticker": "JANX",
+      "name": "JANX",
+      "market": "US",
+      "market_cap_krw": 1290242219522,
+      "market_cap_usd": 876017409
+    },
+    {
+      "ticker": "AAPG",
+      "name": "AAPG",
+      "market": "US",
+      "market_cap_krw": 3144436644545,
+      "market_cap_usd": 2134933426
+    },
+    {
+      "ticker": "DIS",
+      "name": "DIS",
+      "market": "US",
+      "market_cap_krw": 270702733064392,
+      "market_cap_usd": 183795184541
+    },
+    {
+      "ticker": "NOK",
+      "name": "NOK",
+      "market": "US",
+      "market_cap_krw": 106149056693859,
+      "market_cap_usd": 72070515295
+    },
+    {
+      "ticker": "WBTN",
+      "name": "WBTN",
+      "market": "US",
+      "market_cap_krw": 2427530340793,
+      "market_cap_usd": 1648185749
+    },
+    {
+      "ticker": "AU",
+      "name": "AU",
+      "market": "US",
+      "market_cap_krw": 69717410887195,
+      "market_cap_usd": 47335038899
+    },
+    {
+      "ticker": "GFF",
+      "name": "GFF",
+      "market": "US",
+      "market_cap_krw": 6254638754374,
+      "market_cap_usd": 4246623117
+    },
+    {
+      "ticker": "KOF",
+      "name": "KOF",
+      "market": "US",
+      "market_cap_krw": 31430993292448,
+      "market_cap_usd": 21340254481
+    },
+    {
+      "ticker": "HSIC",
+      "name": "HSIC",
+      "market": "US",
+      "market_cap_krw": 12606206457333,
+      "market_cap_usd": 8559056703
+    },
+    {
+      "ticker": "RYAAY",
+      "name": "RYAAY",
+      "market": "US",
+      "market_cap_krw": 41970943442435,
+      "market_cap_usd": 28496414528
+    },
+    {
+      "ticker": "RYZ",
+      "name": "RYZ",
+      "market": "US",
+      "market_cap_krw": 2101147093126,
+      "market_cap_usd": 1426585957
+    },
+    {
+      "ticker": "GCMG",
+      "name": "GCMG",
+      "market": "US",
+      "market_cap_krw": 955653435230,
+      "market_cap_usd": 648846420
+    },
+    {
+      "ticker": "DBRG",
+      "name": "DBRG",
+      "market": "US",
+      "market_cap_krw": 4179527497046,
+      "market_cap_usd": 2837714340
+    },
+    {
+      "ticker": "COHR",
+      "name": "COHR",
+      "market": "US",
+      "market_cap_krw": 88282364339659,
+      "market_cap_usd": 59939821300
+    },
+    {
+      "ticker": "CSX",
+      "name": "CSX",
+      "market": "US",
+      "market_cap_krw": 124330997127001,
+      "market_cap_usd": 84415248795
+    },
+    {
+      "ticker": "APLD",
+      "name": "APLD",
+      "market": "US",
+      "market_cap_krw": 14415676304972,
+      "market_cap_usd": 9787606710
+    },
+    {
+      "ticker": "PRGO",
+      "name": "PRGO",
+      "market": "US",
+      "market_cap_krw": 2400404272569,
+      "market_cap_usd": 1629768348
+    },
+    {
+      "ticker": "ALGM",
+      "name": "ALGM",
+      "market": "US",
+      "market_cap_krw": 13235924187756,
+      "market_cap_usd": 8986607195
+    },
+    {
+      "ticker": "PAM",
+      "name": "PAM",
+      "market": "US",
+      "market_cap_krw": 6688901146980,
+      "market_cap_usd": 4541468077
+    },
+    {
+      "ticker": "ANIP",
+      "name": "ANIP",
+      "market": "US",
+      "market_cap_krw": 2662180987539,
+      "market_cap_usd": 1807503161
+    },
+    {
+      "ticker": "ACRS",
+      "name": "ACRS",
+      "market": "US",
+      "market_cap_krw": 892753862311,
+      "market_cap_usd": 606140392
+    },
+    {
+      "ticker": "GHC",
+      "name": "GHC",
+      "market": "US",
+      "market_cap_krw": 7190300309946,
+      "market_cap_usd": 4881895935
+    },
+    {
+      "ticker": "CDE",
+      "name": "CDE",
+      "market": "US",
+      "market_cap_krw": 27396044005915,
+      "market_cap_usd": 18600702352
+    },
+    {
+      "ticker": "SRPT",
+      "name": "SRPT",
+      "market": "US",
+      "market_cap_krw": 3246640670312,
+      "market_cap_usd": 2204325439
+    },
+    {
+      "ticker": "BLD",
+      "name": "BLD",
+      "market": "US",
+      "market_cap_krw": 18271421462460,
+      "market_cap_usd": 12405487161
+    },
+    {
+      "ticker": "UGP",
+      "name": "UGP",
+      "market": "US",
+      "market_cap_krw": 9526624529097,
+      "market_cap_usd": 6468156762
+    },
+    {
+      "ticker": "ISD",
+      "name": "ISD",
+      "market": "US",
+      "market_cap_krw": 661522005290,
+      "market_cap_usd": 449144187
+    },
+    {
+      "ticker": "AIT",
+      "name": "AIT",
+      "market": "US",
+      "market_cap_krw": 16643763907447,
+      "market_cap_usd": 11300379660
+    },
+    {
+      "ticker": "CCBG",
+      "name": "CCBG",
+      "market": "US",
+      "market_cap_krw": 1162921133644,
+      "market_cap_usd": 789572022
+    },
+    {
+      "ticker": "DT",
+      "name": "DT",
+      "market": "US",
+      "market_cap_krw": 16078941194849,
+      "market_cap_usd": 10916890016
+    },
+    {
+      "ticker": "SAIL",
+      "name": "SAIL",
+      "market": "US",
+      "market_cap_krw": 9483143683539,
+      "market_cap_usd": 6438635190
+    },
+    {
+      "ticker": "WDS",
+      "name": "WDS",
+      "market": "US",
+      "market_cap_krw": 66780842954143,
+      "market_cap_usd": 45341239135
+    },
+    {
+      "ticker": "KW",
+      "name": "KW",
+      "market": "US",
+      "market_cap_krw": 2236383716225,
+      "market_cap_usd": 1518405644
+    },
+    {
+      "ticker": "ORN",
+      "name": "ORN",
+      "market": "US",
+      "market_cap_krw": 812023080400,
+      "market_cap_usd": 551327761
+    },
+    {
+      "ticker": "MUA",
+      "name": "MUA",
+      "market": "US",
+      "market_cap_krw": 596197169588,
+      "market_cap_usd": 404791512
+    },
+    {
+      "ticker": "LXP",
+      "name": "LXP",
+      "market": "US",
+      "market_cap_krw": 4421292083400,
+      "market_cap_usd": 3001861803
+    },
+    {
+      "ticker": "NNN",
+      "name": "NNN",
+      "market": "US",
+      "market_cap_krw": 12270730933012,
+      "market_cap_usd": 8331283658
+    },
+    {
+      "ticker": "SILA",
+      "name": "SILA",
+      "market": "US",
+      "market_cap_krw": 2475841115480,
+      "market_cap_usd": 1680986628
+    },
+    {
+      "ticker": "CHTR",
+      "name": "CHTR",
+      "market": "US",
+      "market_cap_krw": 34344550697538,
+      "market_cap_usd": 23318431114
+    },
+    {
+      "ticker": "KDK",
+      "name": "KDK",
+      "market": "US",
+      "market_cap_krw": 2295675013195,
+      "market_cap_usd": 1558661812
+    },
+    {
+      "ticker": "AIV",
+      "name": "AIV",
+      "market": "US",
+      "market_cap_krw": 900483946382,
+      "market_cap_usd": 611388777
+    },
+    {
+      "ticker": "OSW",
+      "name": "OSW",
+      "market": "US",
+      "market_cap_krw": 3687067951429,
+      "market_cap_usd": 2503356086
+    },
+    {
+      "ticker": "TWI",
+      "name": "TWI",
+      "market": "US",
+      "market_cap_krw": 722454015773,
+      "market_cap_usd": 490514327
+    },
+    {
+      "ticker": "MUX",
+      "name": "MUX",
+      "market": "US",
+      "market_cap_krw": 1898410387809,
+      "market_cap_usd": 1288936700
+    },
+    {
+      "ticker": "GGB",
+      "name": "GGB",
+      "market": "US",
+      "market_cap_krw": 13242434479905,
+      "market_cap_usd": 8991027395
+    },
+    {
+      "ticker": "UNTY",
+      "name": "UNTY",
+      "market": "US",
+      "market_cap_krw": 773162973649,
+      "market_cap_usd": 524943467
+    },
+    {
+      "ticker": "MLI",
+      "name": "MLI",
+      "market": "US",
+      "market_cap_krw": 22055305823597,
+      "market_cap_usd": 14974577308
+    },
+    {
+      "ticker": "AAL",
+      "name": "AAL",
+      "market": "US",
+      "market_cap_krw": 11406957917723,
+      "market_cap_usd": 7744819979
+    },
+    {
+      "ticker": "AMBP",
+      "name": "AMBP",
+      "market": "US",
+      "market_cap_krw": 3389238925540,
+      "market_cap_usd": 2301143349
+    },
+    {
+      "ticker": "NAVI",
+      "name": "NAVI",
+      "market": "US",
+      "market_cap_krw": 1279114517647,
+      "market_cap_usd": 868462191
+    },
+    {
+      "ticker": "IQV",
+      "name": "IQV",
+      "market": "US",
+      "market_cap_krw": 39155703769144,
+      "market_cap_usd": 26584991287
+    },
+    {
+      "ticker": "KODK",
+      "name": "KODK",
+      "market": "US",
+      "market_cap_krw": 1916357767119,
+      "market_cap_usd": 1301122177
+    },
+    {
+      "ticker": "UVE",
+      "name": "UVE",
+      "market": "US",
+      "market_cap_krw": 1629145333402,
+      "market_cap_usd": 1106117636
+    },
+    {
+      "ticker": "VIST",
+      "name": "VIST",
+      "market": "US",
+      "market_cap_krw": 11517524387266,
+      "market_cap_usd": 7819889722
+    },
+    {
+      "ticker": "CRK",
+      "name": "CRK",
+      "market": "US",
+      "market_cap_krw": 7535367673423,
+      "market_cap_usd": 5116181415
+    },
+    {
+      "ticker": "CCAP",
+      "name": "CCAP",
+      "market": "US",
+      "market_cap_krw": 741611860910,
+      "market_cap_usd": 503521657
+    },
+    {
+      "ticker": "XYZ",
+      "name": "XYZ",
+      "market": "US",
+      "market_cap_krw": 61859198103176,
+      "market_cap_usd": 41999659930
+    },
+    {
+      "ticker": "SEZL",
+      "name": "SEZL",
+      "market": "US",
+      "market_cap_krw": 3962869701436,
+      "market_cap_usd": 2690613278
+    },
+    {
+      "ticker": "THRM",
+      "name": "THRM",
+      "market": "US",
+      "market_cap_krw": 1359552758631,
+      "market_cap_usd": 923076199
+    },
+    {
+      "ticker": "PAHC",
+      "name": "PAHC",
+      "market": "US",
+      "market_cap_krw": 3174928738166,
+      "market_cap_usd": 2155636209
+    },
+    {
+      "ticker": "CVGW",
+      "name": "CVGW",
+      "market": "US",
+      "market_cap_krw": 741335560799,
+      "market_cap_usd": 503334061
+    },
+    {
+      "ticker": "IAS",
+      "name": "IAS",
+      "market": "US",
+      "market_cap_krw": 2556301770359,
+      "market_cap_usd": 1735615855
+    },
+    {
+      "ticker": "PEB",
+      "name": "PEB",
+      "market": "US",
+      "market_cap_krw": 2346011075625,
+      "market_cap_usd": 1592837773
+    },
+    {
+      "ticker": "REZI",
+      "name": "REZI",
+      "market": "US",
+      "market_cap_krw": 9226367965838,
+      "market_cap_usd": 6264295833
+    },
+    {
+      "ticker": "IEP",
+      "name": "IEP",
+      "market": "US",
+      "market_cap_krw": 7761510596159,
+      "market_cap_usd": 5269722459
+    },
+    {
+      "ticker": "CCC",
+      "name": "CCC",
+      "market": "US",
+      "market_cap_krw": 4529325211263,
+      "market_cap_usd": 3075211519
+    },
+    {
+      "ticker": "ATEC",
+      "name": "ATEC",
+      "market": "US",
+      "market_cap_krw": 2209469543797,
+      "market_cap_usd": 1500132111
+    },
+    {
+      "ticker": "AFYA",
+      "name": "AFYA",
+      "market": "US",
+      "market_cap_krw": 1907330805363,
+      "market_cap_usd": 1294993269
+    },
+    {
+      "ticker": "ROST",
+      "name": "ROST",
+      "market": "US",
+      "market_cap_krw": 108515930554472,
+      "market_cap_usd": 73677517977
+    },
+    {
+      "ticker": "DLR",
+      "name": "DLR",
+      "market": "US",
+      "market_cap_krw": 103265620173527,
+      "market_cap_usd": 70112789411
+    },
+    {
+      "ticker": "HBM",
+      "name": "HBM",
+      "market": "US",
+      "market_cap_krw": 13519588255376,
+      "market_cap_usd": 9179202552
+    },
+    {
+      "ticker": "METCB",
+      "name": "METCB",
+      "market": "US",
+      "market_cap_krw": 969260495248,
+      "market_cap_usd": 658085012
+    },
+    {
+      "ticker": "ARX",
+      "name": "ARX",
+      "market": "US",
+      "market_cap_krw": 4256980792535,
+      "market_cap_usd": 2890301702
+    },
+    {
+      "ticker": "GSHD",
+      "name": "GSHD",
+      "market": "US",
+      "market_cap_krw": 1561528957392,
+      "market_cap_usd": 1060209107
+    },
+    {
+      "ticker": "AVNT",
+      "name": "AVNT",
+      "market": "US",
+      "market_cap_krw": 5008573622390,
+      "market_cap_usd": 3400599996
+    },
+    {
+      "ticker": "CERS",
+      "name": "CERS",
+      "market": "US",
+      "market_cap_krw": 599080271638,
+      "market_cap_usd": 406749011
+    },
+    {
+      "ticker": "PDI",
+      "name": "PDI",
+      "market": "US",
+      "market_cap_krw": 11236964672519,
+      "market_cap_usd": 7629402083
+    },
+    {
+      "ticker": "TBBK",
+      "name": "TBBK",
+      "market": "US",
+      "market_cap_krw": 3718146322061,
+      "market_cap_usd": 2524456926
+    },
+    {
+      "ticker": "LTM",
+      "name": "LTM",
+      "market": "US",
+      "market_cap_krw": 20493409922705,
+      "market_cap_usd": 13914119063
+    },
+    {
+      "ticker": "ASIC",
+      "name": "ASIC",
+      "market": "US",
+      "market_cap_krw": 1345104992920,
+      "market_cap_usd": 913266806
+    },
+    {
+      "ticker": "VRTX",
+      "name": "VRTX",
+      "market": "US",
+      "market_cap_krw": 160110965136478,
+      "market_cap_usd": 108708264786
+    },
+    {
+      "ticker": "NB",
+      "name": "NB",
+      "market": "US",
+      "market_cap_krw": 1254991008693,
+      "market_cap_usd": 852083395
+    },
+    {
+      "ticker": "PFN",
+      "name": "PFN",
+      "market": "US",
+      "market_cap_krw": 1022430158574,
+      "market_cap_usd": 694184863
+    },
+    {
+      "ticker": "QSR",
+      "name": "QSR",
+      "market": "US",
+      "market_cap_krw": 41267468054446,
+      "market_cap_usd": 28018785849
+    },
+    {
+      "ticker": "TOYO",
+      "name": "TOYO",
+      "market": "US",
+      "market_cap_krw": 652900573155,
+      "market_cap_usd": 443290616
+    },
+    {
+      "ticker": "SWMR",
+      "name": "SWMR",
+      "market": "US",
+      "market_cap_krw": 697312750819,
+      "market_cap_usd": 473444520
+    },
+    {
+      "ticker": "SFNC",
+      "name": "SFNC",
+      "market": "US",
+      "market_cap_krw": 4542181175020,
+      "market_cap_usd": 3083940150
+    },
+    {
+      "ticker": "NBTX",
+      "name": "NBTX",
+      "market": "US",
+      "market_cap_krw": 2472789288798,
+      "market_cap_usd": 1678914573
+    },
+    {
+      "ticker": "CURB",
+      "name": "CURB",
+      "market": "US",
+      "market_cap_krw": 4290243977748,
+      "market_cap_usd": 2912885934
+    },
+    {
+      "ticker": "APLS",
+      "name": "APLS",
+      "market": "US",
+      "market_cap_krw": 7721373859982,
+      "market_cap_usd": 5242471390
+    },
+    {
+      "ticker": "WEC",
+      "name": "WEC",
+      "market": "US",
+      "market_cap_krw": 56576604615133,
+      "market_cap_usd": 38413012562
+    },
+    {
+      "ticker": "NMG",
+      "name": "NMG",
+      "market": "US",
+      "market_cap_krw": 1071266651212,
+      "market_cap_usd": 727342681
+    },
+    {
+      "ticker": "TCBK",
+      "name": "TCBK",
+      "market": "US",
+      "market_cap_krw": 2380438225030,
+      "market_cap_usd": 1616212285
+    },
+    {
+      "ticker": "TEN",
+      "name": "TEN",
+      "market": "US",
+      "market_cap_krw": 1805111526015,
+      "market_cap_usd": 1225590899
+    },
+    {
+      "ticker": "AVPT",
+      "name": "AVPT",
+      "market": "US",
+      "market_cap_krw": 3101229141043,
+      "market_cap_usd": 2105597442
+    },
+    {
+      "ticker": "CCD",
+      "name": "CCD",
+      "market": "US",
+      "market_cap_krw": 1002229702581,
+      "market_cap_usd": 680469646
+    },
+    {
+      "ticker": "HLX",
+      "name": "HLX",
+      "market": "US",
+      "market_cap_krw": 2245381303746,
+      "market_cap_usd": 1524514608
+    },
+    {
+      "ticker": "LRCX",
+      "name": "LRCX",
+      "market": "US",
+      "market_cap_krw": 474941047722465,
+      "market_cap_usd": 322463968221
+    },
+    {
+      "ticker": "PGR",
+      "name": "PGR",
+      "market": "US",
+      "market_cap_krw": 173248443008721,
+      "market_cap_usd": 117628031286
+    },
+    {
+      "ticker": "ENVA",
+      "name": "ENVA",
+      "market": "US",
+      "market_cap_krw": 6209167759557,
+      "market_cap_usd": 4215750322
+    },
+    {
+      "ticker": "AVK",
+      "name": "AVK",
+      "market": "US",
+      "market_cap_krw": 812805993353,
+      "market_cap_usd": 551859325
+    },
+    {
+      "ticker": "BME",
+      "name": "BME",
+      "market": "US",
+      "market_cap_krw": 748466605655,
+      "market_cap_usd": 508175726
+    },
+    {
+      "ticker": "TFC",
+      "name": "TFC",
+      "market": "US",
+      "market_cap_krw": 94502132018751,
+      "market_cap_usd": 64162768500
+    },
+    {
+      "ticker": "EAT",
+      "name": "EAT",
+      "market": "US",
+      "market_cap_krw": 9616587123371,
+      "market_cap_usd": 6529237385
+    },
+    {
+      "ticker": "NXE",
+      "name": "NXE",
+      "market": "US",
+      "market_cap_krw": 12238859320250,
+      "market_cap_usd": 8309644242
+    },
+    {
+      "ticker": "HAYW",
+      "name": "HAYW",
+      "market": "US",
+      "market_cap_krw": 4796504674568,
+      "market_cap_usd": 3256614559
+    },
+    {
+      "ticker": "BNS",
+      "name": "BNS",
+      "market": "US",
+      "market_cap_krw": 141107190941014,
+      "market_cap_usd": 95805542506
+    },
+    {
+      "ticker": "ETB",
+      "name": "ETB",
+      "market": "US",
+      "market_cap_krw": 671465808964,
+      "market_cap_usd": 455895590
+    },
+    {
+      "ticker": "ASPI",
+      "name": "ASPI",
+      "market": "US",
+      "market_cap_krw": 975398077742,
+      "market_cap_usd": 662252160
+    },
+    {
+      "ticker": "EMD",
+      "name": "EMD",
+      "market": "US",
+      "market_cap_krw": 936654555867,
+      "market_cap_usd": 635947022
+    },
+    {
+      "ticker": "EYE",
+      "name": "EYE",
+      "market": "US",
+      "market_cap_krw": 2716717999701,
+      "market_cap_usd": 1844531381
+    },
+    {
+      "ticker": "NTST",
+      "name": "NTST",
+      "market": "US",
+      "market_cap_krw": 2959144770404,
+      "market_cap_usd": 2009128437
+    },
+    {
+      "ticker": "AEVA",
+      "name": "AEVA",
+      "market": "US",
+      "market_cap_krw": 1482472889067,
+      "market_cap_usd": 1006533532
+    },
+    {
+      "ticker": "HPQ",
+      "name": "HPQ",
+      "market": "US",
+      "market_cap_krw": 28203836496496,
+      "market_cap_usd": 19149157730
+    },
+    {
+      "ticker": "SEDG",
+      "name": "SEDG",
+      "market": "US",
+      "market_cap_krw": 3839213924180,
+      "market_cap_usd": 2606656474
+    },
+    {
+      "ticker": "OMF",
+      "name": "OMF",
+      "market": "US",
+      "market_cap_krw": 10000504523027,
+      "market_cap_usd": 6789900321
+    },
+    {
+      "ticker": "GBLI",
+      "name": "GBLI",
+      "market": "US",
+      "market_cap_krw": 591825761621,
+      "market_cap_usd": 401823520
+    },
+    {
+      "ticker": "WFC",
+      "name": "WFC",
+      "market": "US",
+      "market_cap_krw": 371129757304850,
+      "market_cap_usd": 251980692844
+    },
+    {
+      "ticker": "SWKS",
+      "name": "SWKS",
+      "market": "US",
+      "market_cap_krw": 15544438240870,
+      "market_cap_usd": 10553986148
+    },
+    {
+      "ticker": "TTAN",
+      "name": "TTAN",
+      "market": "US",
+      "market_cap_krw": 8342564305152,
+      "market_cap_usd": 5664232232
+    },
+    {
+      "ticker": "SEI",
+      "name": "SEI",
+      "market": "US",
+      "market_cap_krw": 10129922464266,
+      "market_cap_usd": 6877769380
+    },
+    {
+      "ticker": "STGW",
+      "name": "STGW",
+      "market": "US",
+      "market_cap_krw": 2288874514749,
+      "market_cap_usd": 1554044575
+    },
+    {
+      "ticker": "ACEL",
+      "name": "ACEL",
+      "market": "US",
+      "market_cap_krw": 1500613011795,
+      "market_cap_usd": 1018849873
+    },
+    {
+      "ticker": "FMC",
+      "name": "FMC",
+      "market": "US",
+      "market_cap_krw": 2832574206139,
+      "market_cap_usd": 1923192621
+    },
+    {
+      "ticker": "IPX",
+      "name": "IPX",
+      "market": "US",
+      "market_cap_krw": 1673537347845,
+      "market_cap_usd": 1136257850
+    },
+    {
+      "ticker": "SARO",
+      "name": "SARO",
+      "market": "US",
+      "market_cap_krw": 12180173077148,
+      "market_cap_usd": 8269798879
+    },
+    {
+      "ticker": "COF",
+      "name": "COF",
+      "market": "US",
+      "market_cap_krw": 178688631589713,
+      "market_cap_usd": 121321678753
+    },
+    {
+      "ticker": "BTO",
+      "name": "BTO",
+      "market": "US",
+      "market_cap_krw": 1082550954646,
+      "market_cap_usd": 735004224
+    },
+    {
+      "ticker": "SSB",
+      "name": "SSB",
+      "market": "US",
+      "market_cap_krw": 14088650114170,
+      "market_cap_usd": 9565570389
+    },
+    {
+      "ticker": "CRMD",
+      "name": "CRMD",
+      "market": "US",
+      "market_cap_krw": 876900989706,
+      "market_cap_usd": 595376993
+    },
+    {
+      "ticker": "DV",
+      "name": "DV",
+      "market": "US",
+      "market_cap_krw": 2629195559255,
+      "market_cap_usd": 1785107514
+    },
+    {
+      "ticker": "ATKR",
+      "name": "ATKR",
+      "market": "US",
+      "market_cap_krw": 3884787117272,
+      "market_cap_usd": 2637598656
+    },
+    {
+      "ticker": "WAL",
+      "name": "WAL",
+      "market": "US",
+      "market_cap_krw": 13050881852110,
+      "market_cap_usd": 8860971632
+    },
+    {
+      "ticker": "TRMB",
+      "name": "TRMB",
+      "market": "US",
+      "market_cap_krw": 23012122177590,
+      "market_cap_usd": 15624213300
+    },
+    {
+      "ticker": "TRAX",
+      "name": "TRAX",
+      "market": "US",
+      "market_cap_krw": 1190954658650,
+      "market_cap_usd": 808605545
+    },
+    {
+      "ticker": "PRM",
+      "name": "PRM",
+      "market": "US",
+      "market_cap_krw": 7279929046630,
+      "market_cap_usd": 4942749884
+    },
+    {
+      "ticker": "MDLZ",
+      "name": "MDLZ",
+      "market": "US",
+      "market_cap_krw": 116159906872643,
+      "market_cap_usd": 78867439860
+    },
+    {
+      "ticker": "WSFS",
+      "name": "WSFS",
+      "market": "US",
+      "market_cap_krw": 5527846907289,
+      "market_cap_usd": 3753163593
+    },
+    {
+      "ticker": "CLX",
+      "name": "CLX",
+      "market": "US",
+      "market_cap_krw": 17174521158833,
+      "market_cap_usd": 11660740362
+    },
+    {
+      "ticker": "NKTR",
+      "name": "NKTR",
+      "market": "US",
+      "market_cap_krw": 4226243163053,
+      "market_cap_usd": 2869432211
+    },
+    {
+      "ticker": "GUG",
+      "name": "GUG",
+      "market": "US",
+      "market_cap_krw": 769423484163,
+      "market_cap_usd": 522404519
+    },
+    {
+      "ticker": "RIOT",
+      "name": "RIOT",
+      "market": "US",
+      "market_cap_krw": 9626738248121,
+      "market_cap_usd": 6536129549
+    },
+    {
+      "ticker": "MLAB",
+      "name": "MLAB",
+      "market": "US",
+      "market_cap_krw": 813722069216,
+      "market_cap_usd": 552481300
+    },
+    {
+      "ticker": "MRP",
+      "name": "MRP",
+      "market": "US",
+      "market_cap_krw": 7498761238920,
+      "market_cap_usd": 5091327265
+    },
+    {
+      "ticker": "FSCO",
+      "name": "FSCO",
+      "market": "US",
+      "market_cap_krw": 1564042418925,
+      "market_cap_usd": 1061915636
+    },
+    {
+      "ticker": "USLM",
+      "name": "USLM",
+      "market": "US",
+      "market_cap_krw": 4546547772760,
+      "market_cap_usd": 3086904877
+    },
+    {
+      "ticker": "ODD",
+      "name": "ODD",
+      "market": "US",
+      "market_cap_krw": 1211455401585,
+      "market_cap_usd": 822524643
+    },
+    {
+      "ticker": "VELO",
+      "name": "VELO",
+      "market": "US",
+      "market_cap_krw": 614450099130,
+      "market_cap_usd": 417184444
+    },
+    {
+      "ticker": "BRSL",
+      "name": "BRSL",
+      "market": "US",
+      "market_cap_krw": 3568510259934,
+      "market_cap_usd": 2422860657
+    },
+    {
+      "ticker": "DSGX",
+      "name": "DSGX",
+      "market": "US",
+      "market_cap_krw": 9136400378724,
+      "market_cap_usd": 6203211820
+    },
+    {
+      "ticker": "LU",
+      "name": "LU",
+      "market": "US",
+      "market_cap_krw": 2438120140029,
+      "market_cap_usd": 1655375754
+    },
+    {
+      "ticker": "XRAY",
+      "name": "XRAY",
+      "market": "US",
+      "market_cap_krw": 3466744046140,
+      "market_cap_usd": 2353765898
+    },
+    {
+      "ticker": "NRGV",
+      "name": "NRGV",
+      "market": "US",
+      "market_cap_krw": 1182427548403,
+      "market_cap_usd": 802816015
+    },
+    {
+      "ticker": "CNI",
+      "name": "CNI",
+      "market": "US",
+      "market_cap_krw": 100180392610821,
+      "market_cap_usd": 68018056333
+    },
+    {
+      "ticker": "EPR",
+      "name": "EPR",
+      "market": "US",
+      "market_cap_krw": 6288574206890,
+      "market_cap_usd": 4269663788
+    },
+    {
+      "ticker": "TPB",
+      "name": "TPB",
+      "market": "US",
+      "market_cap_krw": 2298249030443,
+      "market_cap_usd": 1560409456
+    },
+    {
+      "ticker": "ACP",
+      "name": "ACP",
+      "market": "US",
+      "market_cap_krw": 1007157158160,
+      "market_cap_usd": 683815171
+    },
+    {
+      "ticker": "GLOO",
+      "name": "GLOO",
+      "market": "US",
+      "market_cap_krw": 754746900962,
+      "market_cap_usd": 512439768
+    },
+    {
+      "ticker": "IGD",
+      "name": "IGD",
+      "market": "US",
+      "market_cap_krw": 709746712806,
+      "market_cap_usd": 481886631
+    },
+    {
+      "ticker": "NXDR",
+      "name": "NXDR",
+      "market": "US",
+      "market_cap_krw": 889874149120,
+      "market_cap_usd": 604185194
+    },
+    {
+      "ticker": "DRUG",
+      "name": "DRUG",
+      "market": "US",
+      "market_cap_krw": 1267800950928,
+      "market_cap_usd": 860780780
+    },
+    {
+      "ticker": "AFG",
+      "name": "AFG",
+      "market": "US",
+      "market_cap_krw": 16308678628878,
+      "market_cap_usd": 11072871574
+    },
+    {
+      "ticker": "SNN",
+      "name": "SNN",
+      "market": "US",
+      "market_cap_krw": 19442338408366,
+      "market_cap_usd": 13200487986
+    },
+    {
+      "ticker": "ACTG",
+      "name": "ACTG",
+      "market": "US",
+      "market_cap_krw": 721836961338,
+      "market_cap_usd": 490095375
+    },
+    {
+      "ticker": "AWK",
+      "name": "AWK",
+      "market": "US",
+      "market_cap_krw": 36936019970969,
+      "market_cap_usd": 25077924149
+    },
+    {
+      "ticker": "MSC",
+      "name": "MSC",
+      "market": "US",
+      "market_cap_krw": 666585671738,
+      "market_cap_usd": 452582192
+    },
+    {
+      "ticker": "SOLS",
+      "name": "SOLS",
+      "market": "US",
+      "market_cap_krw": 19166628690984,
+      "market_cap_usd": 13013293280
+    },
+    {
+      "ticker": "ATEX",
+      "name": "ATEX",
+      "market": "US",
+      "market_cap_krw": 1333184311916,
+      "market_cap_usd": 905173190
+    },
+    {
+      "ticker": "DX",
+      "name": "DX",
+      "market": "US",
+      "market_cap_krw": 4315973774360,
+      "market_cap_usd": 2930355328
+    },
+    {
+      "ticker": "POOL",
+      "name": "POOL",
+      "market": "US",
+      "market_cap_krw": 11449967622263,
+      "market_cap_usd": 7774021666
+    },
+    {
+      "ticker": "UXIN",
+      "name": "UXIN",
+      "market": "US",
+      "market_cap_krw": 914071379315,
+      "market_cap_usd": 620614043
+    },
+    {
+      "ticker": "TSM",
+      "name": "TSM",
+      "market": "US",
+      "market_cap_krw": 3025418797595462,
+      "market_cap_usd": 2054125571337
+    },
+    {
+      "ticker": "EWTX",
+      "name": "EWTX",
+      "market": "US",
+      "market_cap_krw": 4903406214375,
+      "market_cap_usd": 3329195977
+    },
+    {
+      "ticker": "TSAT",
+      "name": "TSAT",
+      "market": "US",
+      "market_cap_krw": 1099911433201,
+      "market_cap_usd": 746791222
+    },
+    {
+      "ticker": "UBS",
+      "name": "UBS",
+      "market": "US",
+      "market_cap_krw": 200662277519916,
+      "market_cap_usd": 136240812605
+    },
+    {
+      "ticker": "TPH",
+      "name": "TPH",
+      "market": "US",
+      "market_cap_krw": 5879643246667,
+      "market_cap_usd": 3992017750
+    },
+    {
+      "ticker": "ENTA",
+      "name": "ENTA",
+      "market": "US",
+      "market_cap_krw": 593674450689,
+      "market_cap_usd": 403078698
+    },
+    {
+      "ticker": "ARWR",
+      "name": "ARWR",
+      "market": "US",
+      "market_cap_krw": 15154986724474,
+      "market_cap_usd": 10289565791
+    },
+    {
+      "ticker": "VET",
+      "name": "VET",
+      "market": "US",
+      "market_cap_krw": 3040297264074,
+      "market_cap_usd": 2064227392
+    },
+    {
+      "ticker": "ONB",
+      "name": "ONB",
+      "market": "US",
+      "market_cap_krw": 13640594652152,
+      "market_cap_usd": 9261360544
+    },
+    {
+      "ticker": "UMBF",
+      "name": "UMBF",
+      "market": "US",
+      "market_cap_krw": 14118812762292,
+      "market_cap_usd": 9586049493
+    },
+    {
+      "ticker": "RYN",
+      "name": "RYN",
+      "market": "US",
+      "market_cap_krw": 9496113967962,
+      "market_cap_usd": 6447441440
+    },
+    {
+      "ticker": "IBN",
+      "name": "IBN",
+      "market": "US",
+      "market_cap_krw": 140330514123613,
+      "market_cap_usd": 95278213293
+    },
+    {
+      "ticker": "WDFC",
+      "name": "WDFC",
+      "market": "US",
+      "market_cap_krw": 4160943008025,
+      "market_cap_usd": 2825096294
+    },
+    {
+      "ticker": "RYTM",
+      "name": "RYTM",
+      "market": "US",
+      "market_cap_krw": 8212036385687,
+      "market_cap_usd": 5575609547
+    },
+    {
+      "ticker": "H",
+      "name": "H",
+      "market": "US",
+      "market_cap_krw": 23315162198374,
+      "market_cap_usd": 15829964072
+    },
+    {
+      "ticker": "ADTN",
+      "name": "ADTN",
+      "market": "US",
+      "market_cap_krw": 2102568908012,
+      "market_cap_usd": 1427551307
+    },
+    {
+      "ticker": "RIO",
+      "name": "RIO",
+      "market": "US",
+      "market_cap_krw": 240658997153548,
+      "market_cap_usd": 163396816473
+    },
+    {
+      "ticker": "BR",
+      "name": "BR",
+      "market": "US",
+      "market_cap_krw": 26477374872261,
+      "market_cap_usd": 17976966636
+    },
+    {
+      "ticker": "OSIS",
+      "name": "OSIS",
+      "market": "US",
+      "market_cap_krw": 6961136701950,
+      "market_cap_usd": 4726303980
+    },
+    {
+      "ticker": "FTRE",
+      "name": "FTRE",
+      "market": "US",
+      "market_cap_krw": 1602054848619,
+      "market_cap_usd": 1087724395
+    },
+    {
+      "ticker": "SHOO",
+      "name": "SHOO",
+      "market": "US",
+      "market_cap_krw": 4040609657481,
+      "market_cap_usd": 2743395270
+    },
+    {
+      "ticker": "ELVR",
+      "name": "ELVR",
+      "market": "US",
+      "market_cap_krw": 2615636209913,
+      "market_cap_usd": 1775901316
     }
   ]
 }
