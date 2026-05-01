@@ -14,7 +14,8 @@ RESULTS_PATH  = os.path.join(DATA_DIR, "results.json")
 USERS_PATH    = os.path.join(DATA_DIR, "users.json")
 REFRESH_FLAG  = os.path.join(DATA_DIR, ".refreshing")
 KST          = timezone(timedelta(hours=9))
-PAGE_SIZE    = 15
+PAGE_SIZE    = 15   # 모바일에서는 set_page_config 이후 8로 덮어씀
+IS_MOBILE    = False
 
 INDICES = [
     {"label_en": "KOSPI",     "label_ko": "코스피",       "ticker": "^KS11", "unit": ""},
@@ -88,6 +89,15 @@ def t(key: str) -> str:
 
 # ── 페이지 설정 ───────────────────────────────────────────────
 st.set_page_config(page_title="STOCKal", page_icon="▣", layout="wide")
+
+# ── 모바일 감지 ───────────────────────────────────────────────
+try:
+    _ua = st.context.headers.get("user-agent", "")
+    IS_MOBILE = any(x in _ua for x in ["iPhone", "Android", "Mobile", "iPod"])
+    if IS_MOBILE:
+        PAGE_SIZE = 8
+except Exception:
+    pass
 
 # ── CSS ──────────────────────────────────────────────────────
 st.markdown("""
@@ -205,9 +215,13 @@ hr { border-color:#1f1f1f !important; margin:14px 0 !important; }
 /* ── 테이블 래퍼 ─────────────────────────── */
 .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 
-/* ── 모바일 반응형 ─────────────────────────── */
+/* 데스크탑: 모바일 테이블 숨김 */
+.stock-table-m { display: none; }
+
+/* ── 모바일 반응형 (iPhone 12 Pro 기준 390px) ── */
 @media (max-width: 768px) {
-    /* 헤더·콘텐츠 컬럼 세로 스택 */
+
+    /* ① 헤더·콘텐츠 컬럼 세로 스택 */
     [data-testid="stHorizontalBlock"] {
         flex-wrap: wrap !important;
     }
@@ -216,7 +230,7 @@ hr { border-color:#1f1f1f !important; margin:14px 0 !important; }
         width: 100% !important;
         flex: 1 1 100% !important;
     }
-    /* 중첩 컬럼(버튼행·페이지 네비·관심종목행)은 가로 유지 */
+    /* 중첩 컬럼(페이지 네비·관심종목행)은 가로 유지 */
     [data-testid="stHorizontalBlock"] [data-testid="stHorizontalBlock"] {
         flex-wrap: nowrap !important;
     }
@@ -226,7 +240,24 @@ hr { border-color:#1f1f1f !important; margin:14px 0 !important; }
         flex: 1 1 0 !important;
     }
 
-    /* 지수 띠: 가로 스크롤 */
+    /* ② 헤더 버튼 영역: 우측 정렬·compact */
+    [data-testid="column"]:has(.btn-area-marker) [data-testid="stHorizontalBlock"] {
+        justify-content: flex-end !important;
+        gap: 4px !important;
+        flex-wrap: nowrap !important;
+    }
+    [data-testid="column"]:has(.btn-area-marker) [data-testid="stHorizontalBlock"] [data-testid="column"] {
+        flex: 0 0 52px !important;
+        max-width: 52px !important;
+        min-width: 0 !important;
+        width: 52px !important;
+    }
+    /* 빈 첫 번째 스페이서 컬럼 숨김 */
+    [data-testid="column"]:has(.btn-area-marker) [data-testid="stHorizontalBlock"] [data-testid="column"]:first-child {
+        display: none !important;
+    }
+
+    /* ③ 지수 띠: 가로 스크롤 */
     .hdr-idx-strip {
         overflow-x: auto !important;
         overflow-y: hidden !important;
@@ -239,11 +270,18 @@ hr { border-color:#1f1f1f !important; margin:14px 0 !important; }
         min-width: 70px !important;
     }
 
-    /* 테이블 */
-    .stock-table { min-width: 540px; font-size: 0.74rem; }
-    .stock-table th, .stock-table td { padding: 7px 8px; }
+    /* ④ 테이블: 모바일 버전 표시 */
+    .stock-table-d { display: none !important; }
+    .stock-table-m { display: table !important; min-width: 400px; font-size: 0.74rem; }
+    .stock-table-m th, .stock-table-m td { padding: 7px 8px; }
 
-    /* 간격·크기 조정 */
+    /* ⑤ 버튼 패딩 축소 */
+    div[data-testid="stButton"] > button {
+        padding: 6px 4px !important;
+        font-size: 0.74rem !important;
+    }
+
+    /* ⑥ 간격·크기 조정 */
     .section-label { margin: 8px 0 6px 0; }
     .site-logo { font-size: 1.15rem; }
 }
@@ -358,14 +396,16 @@ def _pill(val, mode: str = "dist") -> str:
 
 def _render_table(rows: list, dist_key: str, ref_key: str,
                   ref_label: str, tab_id: str, total: int = None):
-    """이미 필터·페이지네이션된 rows 렌더링."""
+    """이미 필터·페이지네이션된 rows 렌더링 (데스크탑·모바일 테이블 각각 생성)."""
     if not rows:
         st.markdown(
             f'<div style="color:#2e2e2e;font-size:0.8rem;padding:12px 0">{t("no_signal")}</div>',
             unsafe_allow_html=True)
         return
 
-    tbody = ""
+    tbody_d = ""   # 데스크탑 행
+    tbody_m = ""   # 모바일 행 (컬럼 순서 다름)
+
     for r in rows:
         mkt   = r["market"]
         flag  = "🇰🇷" if mkt == "KR" else "🇺🇸"
@@ -384,7 +424,9 @@ def _render_table(rows: list, dist_key: str, ref_key: str,
                  else (f"${r['market_cap_usd']//1_000_000:,}M"
                        if r.get("market_cap_usd") else "—"))
         url   = f"https://tossinvest.com/stocks/{tk}"
-        tbody += f"""
+
+        # 데스크탑: 기존 순서 (flag / ticker / price / mktcap / ref / dist / 1d / 5d / link)
+        tbody_d += f"""
         <tr>
           <td>{flag}</td>
           <td><span class="tk-name">{name}</span><span class="tk-code">{tk}</span></td>
@@ -397,16 +439,37 @@ def _render_table(rows: list, dist_key: str, ref_key: str,
           <td class="toss-link"><a href="{url}" target="_blank">TOSS ↗</a></td>
         </tr>"""
 
+        # 모바일: TICKER / PRICE / ref / DIST% / 1D / 5D / MKTCAP / link
+        tbody_m += f"""
+        <tr>
+          <td><span class="tk-name">{flag}&nbsp;{name}</span><br><span class="tk-code">{tk}</span></td>
+          <td style="font-family:'DM Mono',monospace;font-size:0.78rem">{cur}</td>
+          <td style="font-family:'DM Mono',monospace;color:#555;font-size:0.74rem">{ref}</td>
+          <td>{dist}</td>
+          <td>{c1d}</td>
+          <td>{c5d}</td>
+          <td style="color:#333;font-size:0.72rem">{cap}</td>
+          <td class="toss-link"><a href="{url}" target="_blank">↗</a></td>
+        </tr>"""
+
     count_label = f"{total if total is not None else len(rows)} {t('results')}"
     st.markdown(f"""
     <div class="table-wrap">
-    <table class="stock-table">
-      <thead><tr>
-        <th></th><th>{t('ticker')}</th><th>{t('price')}</th><th>{t('mktcap')}</th>
-        <th>{ref_label}</th><th>{t('dist')}</th><th>{t('chg1d')}</th><th>{t('chg5d')}</th><th></th>
-      </tr></thead>
-      <tbody>{tbody}</tbody>
-    </table>
+      <table class="stock-table stock-table-d">
+        <thead><tr>
+          <th></th><th>{t('ticker')}</th><th>{t('price')}</th><th>{t('mktcap')}</th>
+          <th>{ref_label}</th><th>{t('dist')}</th><th>{t('chg1d')}</th><th>{t('chg5d')}</th><th></th>
+        </tr></thead>
+        <tbody>{tbody_d}</tbody>
+      </table>
+      <table class="stock-table stock-table-m">
+        <thead><tr>
+          <th>{t('ticker')}</th><th>{t('price')}</th><th>{ref_label}</th>
+          <th>{t('dist')}</th><th>{t('chg1d')}</th><th>{t('chg5d')}</th>
+          <th>{t('mktcap')}</th><th></th>
+        </tr></thead>
+        <tbody>{tbody_m}</tbody>
+      </table>
     </div>
     <div class="count-txt">{count_label}</div>
     """, unsafe_allow_html=True)
@@ -544,7 +607,7 @@ with col_idx:
                 unsafe_allow_html=True)
 
 with col_btns:
-    # 빈 공간 + 3개 버튼 → 우측 정렬
+    st.markdown('<span class="btn-area-marker"></span>', unsafe_allow_html=True)
     _, bn1, bn2, bn3 = st.columns([1, 1, 1, 1])
     with bn1:
         if st.button("KO" if lang == "en" else "EN", key="lang_toggle"):
