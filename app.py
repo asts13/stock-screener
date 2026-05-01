@@ -1,7 +1,7 @@
 """
 STOCKal — Ichimoku Cloud Breakout Screener
 """
-import hashlib, json, os, subprocess, sys
+import hashlib, json, os, subprocess, sys, threading
 from datetime import datetime, timezone, timedelta
 
 import yfinance as yf
@@ -9,9 +9,10 @@ import pandas as pd
 import streamlit as st
 
 # ── 상수 ─────────────────────────────────────────────────────
-DATA_DIR     = os.path.join(os.path.dirname(__file__), "data")
-RESULTS_PATH = os.path.join(DATA_DIR, "results.json")
-USERS_PATH   = os.path.join(DATA_DIR, "users.json")
+DATA_DIR      = os.path.join(os.path.dirname(__file__), "data")
+RESULTS_PATH  = os.path.join(DATA_DIR, "results.json")
+USERS_PATH    = os.path.join(DATA_DIR, "users.json")
+REFRESH_FLAG  = os.path.join(DATA_DIR, ".refreshing")
 KST          = timezone(timedelta(hours=9))
 PAGE_SIZE    = 15
 
@@ -183,6 +184,18 @@ button[data-baseweb="tab"][aria-selected="true"] {
 .ret-neg { color:#ff5555; font-family:'DM Mono',monospace; font-size:0.8rem; }
 .watch-name { font-family:'DM Mono',monospace; font-size:0.82rem; color:#E0E0E0; }
 .watch-sub  { font-size:0.68rem; color:#383838; letter-spacing:0.04em; margin-top:2px; }
+
+/* 새로고침 스피닝 아이콘 */
+@keyframes spin { to { transform: rotate(-360deg); } }
+.spin-icon {
+    display: inline-block;
+    animation: spin 1s linear infinite;
+    color: #D1FF00; font-size: 1rem; line-height: 1;
+}
+.spin-wrap {
+    text-align: center; padding: 6px 0;
+    border: 1px solid #2a2a2a; border-radius: 2px;
+}
 
 hr { border-color:#1f1f1f !important; margin:14px 0 !important; }
 .stAlert { background:#1e1e1e !important; border:1px solid #2a2a2a !important; border-radius:2px !important; }
@@ -387,17 +400,30 @@ def _get_page(signal_key: str, page_key: str, mf: str):
     return display, page, n_pages, total
 
 
-def manual_refresh():
-    python = sys.executable
-    base   = os.path.dirname(__file__)
-    try:
-        subprocess.run([python, os.path.join(base, "fetch_data.py"), "--market", "all"],
-                       check=True, capture_output=True, text=True)
-        subprocess.run([python, os.path.join(base, "signals.py")],
-                       check=True, capture_output=True, text=True)
-        st.cache_data.clear()
-    except subprocess.CalledProcessError as e:
-        st.error(e.stderr[-400:] if e.stderr else "갱신 실패")
+def is_refreshing() -> bool:
+    return os.path.exists(REFRESH_FLAG)
+
+def start_background_refresh():
+    """백그라운드 스레드로 데이터 갱신 시작. 이미 실행 중이면 무시."""
+    if is_refreshing():
+        return
+    os.makedirs(DATA_DIR, exist_ok=True)
+    with open(REFRESH_FLAG, "w") as f:
+        f.write(datetime.now().isoformat())
+
+    def _run():
+        try:
+            python = sys.executable
+            base   = os.path.dirname(__file__)
+            subprocess.run([python, os.path.join(base, "fetch_data.py"), "--market", "all"],
+                           capture_output=True, text=True)
+            subprocess.run([python, os.path.join(base, "signals.py")],
+                           capture_output=True, text=True)
+        finally:
+            if os.path.exists(REFRESH_FLAG):
+                os.remove(REFRESH_FLAG)
+
+    threading.Thread(target=_run, daemon=True).start()
 
 
 # ── 로고 클릭 → 메인 화면 리디렉션 ─────────────────────────
@@ -406,12 +432,18 @@ if st.query_params.get("go") == "main":
     st.query_params.clear()
     st.rerun()
 
-# ── 5분마다 지수 자동 새로고침 ───────────────────────────────
+# ── 자동 새로고침 (갱신 중 3초, 평상시 5분) ─────────────────
+_refreshing = is_refreshing()
 try:
     from streamlit_autorefresh import st_autorefresh
-    st_autorefresh(interval=300_000, key="idx_refresh")
+    st_autorefresh(interval=3_000 if _refreshing else 300_000, key="idx_refresh")
 except ImportError:
     pass
+
+# 갱신 완료 감지 → 캐시 비워서 새 데이터 즉시 반영
+if not _refreshing and st.session_state.get("_was_refreshing"):
+    st.cache_data.clear()
+st.session_state["_was_refreshing"] = _refreshing
 
 # ── 데이터 로드 ───────────────────────────────────────────────
 results      = load_results()
@@ -471,10 +503,13 @@ with col_btns:
             st.session_state.lang = "ko" if lang == "en" else "en"
             st.rerun()
     with bn2:
-        if st.button("↺", key="refresh_btn"):
-            with st.spinner(""):
-                manual_refresh()
-            st.rerun()
+        if _refreshing:
+            st.markdown('<div class="spin-wrap"><span class="spin-icon">↺</span></div>',
+                        unsafe_allow_html=True)
+        else:
+            if st.button("↺", key="refresh_btn"):
+                start_background_refresh()
+                st.rerun()
     with bn3:
         # 프로필 아이콘: 로그인 여부에 따라 색감 표현
         if st.session_state.page == "main":
