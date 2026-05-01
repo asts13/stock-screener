@@ -11,6 +11,7 @@ prices.parquet, universe.json 저장.
 
 import os
 import json
+import re
 import time
 import logging
 import argparse
@@ -32,8 +33,9 @@ DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 PRICES_PATH = os.path.join(DATA_DIR, "prices.parquet")
 UNIVERSE_PATH = os.path.join(DATA_DIR, "universe.json")
 
-KR_MKTCAP_MIN = 500_000_000_000   # 5,000억원 (KRW)
-DAYS_HISTORY = 120                 # 안전하게 120일치 (최소 78일 필요)
+KR_MKTCAP_MIN = 100_000_000_000    # 1,000억원 (KRW)
+US_MKTCAP_MIN_USD = 400_000_000    # 4억 달러
+DAYS_HISTORY = 220                 # 200MA 계산을 위해 220일치 필요
 
 
 # ─────────────────────────────────────────────
@@ -157,98 +159,74 @@ def fetch_korea() -> tuple[pd.DataFrame, list[dict]]:
 # 미국 종목
 # ─────────────────────────────────────────────
 
-def _fetch_nasdaq_symbols() -> list[str]:
-    """NASDAQ Trader에서 NYSE+NASDAQ 보통주 목록을 가져온다."""
-    urls = [
-        "https://ftp.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
-        "https://ftp.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
-    ]
+_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0.0.0 Safari/537.36"
+    )
+}
+
+def _fetch_us_symbols() -> list[str]:
+    """
+    Wikipedia에서 S&P500 + NASDAQ-100 종목 목록을 가져온다.
+    (ftp.nasdaqtrader.com은 GitHub Actions IP를 차단하므로 Wikipedia 사용)
+    requests로 User-Agent 헤더를 붙여 403 방지.
+    """
+    from io import StringIO
     all_symbols = []
-    for url in urls:
+
+    wiki_sources = [
+        ("S&P500",     "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"),
+        ("NASDAQ-100", "https://en.wikipedia.org/wiki/NASDAQ-100"),
+    ]
+
+    for name, url in wiki_sources:
         try:
-            resp = requests.get(url, timeout=30)
+            resp = requests.get(url, headers=_HEADERS, timeout=30)
             resp.raise_for_status()
-            lines = resp.text.splitlines()
-            rows = [l.split("|") for l in lines[1:-1]]
-            df = pd.DataFrame(rows, columns=lines[0].split("|"))
-
-            # otherlisted 컬럼명 통일
-            if "ACT Symbol" in df.columns:
-                df = df.rename(columns={"ACT Symbol": "Symbol"})
-
-            # ETF 제외
-            if "ETF" in df.columns:
-                df = df[df["ETF"].str.strip() != "Y"]
-            if "Test Issue" in df.columns:
-                df = df[df["Test Issue"].str.strip() != "Y"]
-
-            # 보통주만: 1~5자리 알파벳
-            df = df[df["Symbol"].str.match(r"^[A-Z]{1,5}$", na=False)]
-            all_symbols.extend(df["Symbol"].tolist())
+            tables = pd.read_html(StringIO(resp.text))
+            for df in tables:
+                col = next(
+                    (c for c in df.columns
+                     if "ticker" in str(c).lower() or "symbol" in str(c).lower()),
+                    None,
+                )
+                if col and len(df) >= 90:
+                    syms = df[col].dropna().astype(str).str.strip()
+                    syms = [s.replace(".", "-") for s in syms
+                            if re.match(r"^[A-Z]{1,5}$", s.replace(".", "-"))]
+                    all_symbols.extend(syms)
+                    log.info(f"{name}: {len(syms)}종목")
+                    break
         except Exception as e:
-            log.warning(f"NASDAQ Trader 목록 조회 실패 ({url}): {e}")
+            log.warning(f"{name} 목록 조회 실패: {e}")
 
     symbols = list(set(all_symbols))
-    log.info(f"NASDAQ Trader 보통주 종목 수: {len(symbols)}")
+    log.info(f"US 유니버스 (S&P500+NQ100 합산): {len(symbols)}종목")
     return symbols
 
 
 def fetch_usa(usd_krw: float) -> tuple[pd.DataFrame, list[dict]]:
     """
-    NASDAQ Trader 목록 → yfinance 시총 필터 → 일봉 수집.
+    Wikipedia(S&P500+NASDAQ-100) → 일봉 수집.
+    S&P500/NQ100은 전부 대형주이므로 시총 필터 생략 → 속도 대폭 개선.
     """
     log.info("=== 미국 종목 수집 시작 ===")
-    us_mktcap_min_usd = KR_MKTCAP_MIN / usd_krw
-    log.info(f"미국 시총 기준: ${us_mktcap_min_usd/1e6:.0f}M (환율 {usd_krw:.0f})")
 
-    all_symbols = _fetch_nasdaq_symbols()
+    all_symbols = _fetch_us_symbols()
     if not all_symbols:
         return pd.DataFrame(), []
 
-    # 시총 확인 (배치당 100개)
-    universe = []
-    BATCH = 100
-    for i in range(0, len(all_symbols), BATCH):
-        batch = all_symbols[i:i+BATCH]
-        try:
-            raw = yf.download(
-                batch,
-                period="2d",
-                auto_adjust=True,
-                progress=False,
-                threads=True,
-            )
-            # fast_info로 시총 확인
-            tickers_obj = yf.Tickers(" ".join(batch))
-            for sym in batch:
-                try:
-                    info = tickers_obj.tickers[sym].fast_info
-                    cap = getattr(info, "market_cap", None)
-                    if cap and cap >= us_mktcap_min_usd:
-                        universe.append({
-                            "ticker": sym,
-                            "name": sym,
-                            "market": "US",
-                            "market_cap_krw": int(cap * usd_krw),
-                            "market_cap_usd": int(cap),
-                        })
-                except Exception:
-                    pass
-        except Exception as e:
-            log.warning(f"[US] 배치 {i}~{i+BATCH} 시총 조회 실패: {e}")
-        time.sleep(0.5)
-        if (i // BATCH + 1) % 10 == 0:
-            log.info(f"[US] 시총 확인 {min(i+BATCH, len(all_symbols))}/{len(all_symbols)}...")
-
-    log.info(f"미국 유니버스: {len(universe)}종목")
+    log.info(f"미국 유니버스: {len(all_symbols)}종목 (시총 필터 생략 — 모두 대형주)")
 
     # 일봉 수집 (배치당 50개)
-    us_tickers = [u["ticker"] for u in universe]
     all_frames = []
-    OHLCV_BATCH = 50
+    universe   = []
+    BATCH      = 50
 
-    for i in range(0, len(us_tickers), OHLCV_BATCH):
-        batch = us_tickers[i:i+OHLCV_BATCH]
+    for i in range(0, len(all_symbols), BATCH):
+        batch = all_symbols[i:i+BATCH]
         try:
             raw = yf.download(
                 batch,
@@ -260,7 +238,6 @@ def fetch_usa(usd_krw: float) -> tuple[pd.DataFrame, list[dict]]:
             if raw.empty:
                 continue
 
-            # yfinance는 단일 종목도 멀티인덱스를 반환할 수 있음
             if isinstance(raw.columns, pd.MultiIndex):
                 for sym in batch:
                     try:
@@ -273,23 +250,29 @@ def fetch_usa(usd_krw: float) -> tuple[pd.DataFrame, list[dict]]:
                         sym_df["ticker"] = sym
                         sym_df["market"] = "US"
                         all_frames.append(sym_df)
+                        universe.append({
+                            "ticker": sym, "name": sym, "market": "US",
+                            "market_cap_krw": None, "market_cap_usd": None,
+                        })
                     except Exception:
                         pass
             else:
-                # 단일 종목 flat 컬럼 케이스
-                raw.columns = [c[0] if isinstance(c, tuple) else c
-                               for c in raw.columns]
+                raw.columns = [c[0] if isinstance(c, tuple) else c for c in raw.columns]
                 sym_df = raw[["Open", "High", "Low", "Close", "Volume"]].dropna(how="all")
                 if len(sym_df) >= 30:
                     sym_df.index.name = "Date"
                     sym_df["ticker"] = batch[0]
                     sym_df["market"] = "US"
                     all_frames.append(sym_df)
+                    universe.append({
+                        "ticker": batch[0], "name": batch[0], "market": "US",
+                        "market_cap_krw": None, "market_cap_usd": None,
+                    })
         except Exception as e:
-            log.warning(f"[US] 일봉 배치 {i}~{i+OHLCV_BATCH} 실패: {e}")
-        time.sleep(1)
-        if (i // OHLCV_BATCH + 1) % 5 == 0:
-            log.info(f"[US] 일봉 {min(i+OHLCV_BATCH, len(us_tickers))}/{len(us_tickers)}...")
+            log.warning(f"[US] 배치 {i}~{i+BATCH} 실패: {e}")
+        time.sleep(0.5)
+        if (i // BATCH + 1) % 5 == 0:
+            log.info(f"[US] 일봉 {min(i+BATCH, len(all_symbols))}/{len(all_symbols)}...")
 
     if not all_frames:
         log.warning("미국 데이터 없음")
