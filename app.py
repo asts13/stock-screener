@@ -221,7 +221,10 @@ hr { border-color:#1f1f1f !important; margin:14px 0 !important; }
 /* ── 모바일 반응형 (iPhone 12 Pro 기준 390px) ── */
 @media (max-width: 768px) {
 
-    /* ① 헤더·콘텐츠 컬럼 세로 스택 */
+    /* 가로 스크롤 방지 */
+    html, body, .stApp { overflow-x: hidden !important; max-width: 100vw !important; }
+
+    /* ① 콘텐츠 컬럼 세로 스택 */
     [data-testid="stHorizontalBlock"] {
         flex-wrap: wrap !important;
     }
@@ -230,7 +233,7 @@ hr { border-color:#1f1f1f !important; margin:14px 0 !important; }
         width: 100% !important;
         flex: 1 1 100% !important;
     }
-    /* 중첩 컬럼(페이지 네비·관심종목행)은 가로 유지 */
+    /* 중첩 컬럼은 가로 유지 */
     [data-testid="stHorizontalBlock"] [data-testid="stHorizontalBlock"] {
         flex-wrap: nowrap !important;
     }
@@ -240,52 +243,86 @@ hr { border-color:#1f1f1f !important; margin:14px 0 !important; }
         flex: 1 1 0 !important;
     }
 
-    /* ② 헤더 버튼 영역: 우측 정렬·compact */
+    /* ② 헤더 (JS가 .hdr-main-block 추가): 가로 유지, 열 너비 재조정 */
+    .hdr-main-block { flex-wrap: nowrap !important; align-items: flex-end !important; }
+    .hdr-main-block > [data-testid="column"]:nth-child(1) {
+        flex: 0 0 auto !important; min-width: 0 !important; max-width: 110px !important;
+    }
+    .hdr-main-block > [data-testid="column"]:nth-child(2) {
+        flex: 1 1 0 !important; min-width: 0 !important; overflow: hidden;
+    }
+    .hdr-main-block > [data-testid="column"]:nth-child(3) {
+        flex: 0 0 128px !important; max-width: 128px !important; min-width: 0 !important;
+    }
+
+    /* ③ 버튼 3개: 우측 정렬, 간격 4px(≈1mm), 38px씩 */
     [data-testid="column"]:has(.btn-area-marker) [data-testid="stHorizontalBlock"] {
-        justify-content: flex-end !important;
-        gap: 4px !important;
-        flex-wrap: nowrap !important;
+        justify-content: flex-end !important; gap: 4px !important; flex-wrap: nowrap !important;
     }
     [data-testid="column"]:has(.btn-area-marker) [data-testid="stHorizontalBlock"] [data-testid="column"] {
-        flex: 0 0 52px !important;
-        max-width: 52px !important;
-        min-width: 0 !important;
-        width: 52px !important;
+        flex: 0 0 38px !important; max-width: 38px !important; min-width: 0 !important; width: 38px !important;
     }
-    /* 빈 첫 번째 스페이서 컬럼 숨김 */
     [data-testid="column"]:has(.btn-area-marker) [data-testid="stHorizontalBlock"] [data-testid="column"]:first-child {
         display: none !important;
     }
 
-    /* ③ 지수 띠: 가로 스크롤 */
+    /* ④ 지수 띠: 가로 스크롤 */
     .hdr-idx-strip {
-        overflow-x: auto !important;
-        overflow-y: hidden !important;
-        height: auto !important;
-        padding-bottom: 6px !important;
+        overflow-x: auto !important; overflow-y: hidden !important;
+        height: auto !important; padding-bottom: 6px !important;
         -webkit-overflow-scrolling: touch;
     }
-    .hdr-idx {
-        flex: 0 0 auto !important;
-        min-width: 70px !important;
-    }
+    .hdr-idx { flex: 0 0 auto !important; min-width: 68px !important; }
 
-    /* ④ 테이블: 모바일 버전 표시 */
+    /* ⑤ 페이지 네비 (JS가 .nav-btn-block 추가): 160px 고정 폭, 중앙 배치 */
+    .nav-btn-block { max-width: 160px !important; margin: 0 auto !important; }
+    .nav-btn-block > [data-testid="column"]:first-child,
+    .nav-btn-block > [data-testid="column"]:last-child {
+        flex: 0 0 44px !important; max-width: 44px !important; min-width: 0 !important;
+    }
+    .nav-btn-block > [data-testid="column"]:nth-child(2) { flex: 1 1 0 !important; }
+
+    /* ⑥ 테이블 */
     .stock-table-d { display: none !important; }
-    .stock-table-m { display: table !important; min-width: 400px; font-size: 0.74rem; }
-    .stock-table-m th, .stock-table-m td { padding: 7px 8px; }
+    .stock-table-m { display: table !important; min-width: 380px; font-size: 0.74rem; }
+    .stock-table-m th, .stock-table-m td { padding: 7px 6px; }
 
-    /* ⑤ 버튼 패딩 축소 */
-    div[data-testid="stButton"] > button {
-        padding: 6px 4px !important;
-        font-size: 0.74rem !important;
-    }
+    /* ⑦ 버튼 패딩 축소 */
+    div[data-testid="stButton"] > button { padding: 6px 2px !important; font-size: 0.74rem !important; }
 
-    /* ⑥ 간격·크기 조정 */
+    /* ⑧ 기타 */
     .section-label { margin: 8px 0 6px 0; }
     .site-logo { font-size: 1.15rem; }
 }
 </style>
+""", unsafe_allow_html=True)
+
+# ── 모바일 DOM 태깅 (헤더·네비 블록에 클래스 부여) ─────────────
+st.markdown("""
+<script>
+(function() {
+    function tagBlocks() {
+        // 헤더 stHorizontalBlock → .hdr-main-block
+        var strip = document.querySelector('.hdr-idx-strip');
+        if (strip) {
+            var el = strip;
+            while (el && (!el.getAttribute || el.getAttribute('data-testid') !== 'stHorizontalBlock'))
+                el = el.parentElement;
+            if (el && !el.classList.contains('hdr-main-block'))
+                el.classList.add('hdr-main-block');
+        }
+        // 페이지 네비 stHorizontalBlock → .nav-btn-block
+        document.querySelectorAll('.nav-btn-marker').forEach(function(m) {
+            var col = m.closest('[data-testid="column"]');
+            var blk = col && col.closest('[data-testid="stHorizontalBlock"]');
+            if (blk && !blk.classList.contains('nav-btn-block'))
+                blk.classList.add('nav-btn-block');
+        });
+    }
+    tagBlocks();
+    new MutationObserver(tagBlocks).observe(document.body, {childList:true, subtree:true});
+})();
+</script>
 """, unsafe_allow_html=True)
 
 # ── 세션 초기화 ───────────────────────────────────────────────
@@ -476,14 +513,15 @@ def _render_table(rows: list, dist_key: str, ref_key: str,
 
 
 def _page_nav(page: int, n_pages: int, page_key: str):
-    """이전/다음 페이지 네비게이션 버튼 (중앙 압축)."""
+    """이전/다음 페이지 네비게이션 버튼."""
     if n_pages <= 1:
         return
-    # 좌우 여백으로 가운데 압축
-    _, nav_area, _ = st.columns([3, 2, 3])
-    with nav_area:
+    if IS_MOBILE:
+        # 모바일: [1,2,1] 직접 사용 → JS가 .nav-btn-block 추가 → CSS로 160px 고정 중앙 배치
         c_prev, c_info, c_next = st.columns([1, 2, 1])
         with c_prev:
+            st.markdown('<span class="nav-btn-marker" style="display:none;height:0"></span>',
+                        unsafe_allow_html=True)
             if st.button("‹", key=f"{page_key}_prev", disabled=(page == 0)):
                 st.session_state[page_key] = page - 1
                 st.rerun()
@@ -496,6 +534,24 @@ def _page_nav(page: int, n_pages: int, page_key: str):
             if st.button("›", key=f"{page_key}_next", disabled=(page == n_pages - 1)):
                 st.session_state[page_key] = page + 1
                 st.rerun()
+    else:
+        # 데스크탑: 좌우 여백으로 가운데 압축
+        _, nav_area, _ = st.columns([3, 2, 3])
+        with nav_area:
+            c_prev, c_info, c_next = st.columns([1, 2, 1])
+            with c_prev:
+                if st.button("‹", key=f"{page_key}_prev", disabled=(page == 0)):
+                    st.session_state[page_key] = page - 1
+                    st.rerun()
+            with c_info:
+                st.markdown(
+                    f'<div style="text-align:center;color:#444;font-size:0.7rem;'
+                    f'padding-top:8px;letter-spacing:0.08em">{page + 1}&thinsp;/&thinsp;{n_pages}</div>',
+                    unsafe_allow_html=True)
+            with c_next:
+                if st.button("›", key=f"{page_key}_next", disabled=(page == n_pages - 1)):
+                    st.session_state[page_key] = page + 1
+                    st.rerun()
 
 
 def _get_page(signal_key: str, page_key: str, mf: str):
