@@ -13,9 +13,9 @@ DATA_DIR      = os.path.join(os.path.dirname(__file__), "data")
 RESULTS_PATH  = os.path.join(DATA_DIR, "results.json")
 USERS_PATH    = os.path.join(DATA_DIR, "users.json")
 REFRESH_FLAG  = os.path.join(DATA_DIR, ".refreshing")
-KST          = timezone(timedelta(hours=9))
-PAGE_SIZE    = 15
-IS_MOBILE    = False
+KST           = timezone(timedelta(hours=9))
+PAGE_SIZE     = 15
+IS_MOBILE     = False
 
 INDICES = [
     {"label_en": "KOSPI",     "label_ko": "코스피",        "ticker": "^KS11",  "unit": ""},
@@ -29,52 +29,44 @@ INDICES = [
     {"label_en": "USD/KRW",   "label_ko": "달러/원",       "ticker": "KRW=X",  "unit": "₩"},
 ]
 
-# ── i18n ─────────────────────────────────────────────────────
 T = {
-    "site":        {"en": "STOCKal",                       "ko": "STOCKal"},
-    "last_update": {"en": "LAST UPDATE",                   "ko": "마지막 갱신"},
-    "no_data":     {"en": "NO DATA",                       "ko": "데이터 없음"},
-    "refresh":     {"en": "REFRESH",                       "ko": "새로고침"},
-    "kr":          {"en": "KR",                            "ko": "한국"},
-    "us":          {"en": "US",                            "ko": "미국"},
-    "a1":          {"en": "BREAKOUT",                      "ko": "돌파 완료"},
-    "a2":          {"en": "APPROACHING 1%",                "ko": "돌파 임박 1%"},
-    "c1":          {"en": "ABOVE MA200 2%",                "ko": "200MA 위 2%"},
-    "c2":          {"en": "BELOW MA200 2%",                "ko": "200MA 아래 2%"},
-    "ticker":      {"en": "TICKER",                        "ko": "종목"},
-    "price":       {"en": "PRICE",                         "ko": "현재가"},
-    "mktcap":      {"en": "MKTCAP",                        "ko": "시총"},
-    "ma20":        {"en": "MA20",                          "ko": "MA20"},
-    "ma200":       {"en": "MA200",                         "ko": "MA200"},
-    "dist":        {"en": "DIST%",                         "ko": "거리%"},
-    "chg1d":       {"en": "1D",                            "ko": "1일"},
-    "chg5d":       {"en": "5D",                            "ko": "5일"},
-    "no_signal":   {"en": "No signals found.",             "ko": "해당 종목 없음"},
-    "results":     {"en": "results",                       "ko": "종목"},
-    "my":          {"en": "MY",                            "ko": "MY"},
-    "login":       {"en": "Log In",                        "ko": "로그인"},
-    "signup":      {"en": "Sign Up",                       "ko": "회원가입"},
-    "logout":      {"en": "LOG OUT",                       "ko": "로그아웃"},
-    "username":    {"en": "USERNAME",                      "ko": "아이디"},
-    "password":    {"en": "PASSWORD",                      "ko": "비밀번호"},
-    "watchlist":   {"en": "WATCHLIST",                     "ko": "관심종목"},
-    "entry_price": {"en": "ENTRY",                         "ko": "진입가"},
-    "current":     {"en": "NOW",                           "ko": "현재가"},
-    "return_pct":  {"en": "RETURN",                        "ko": "수익률"},
-    "added_at":    {"en": "ADDED",                         "ko": "추가일"},
-    "welcome":     {"en": "Welcome",                       "ko": "환영합니다"},
-    "login_req":   {"en": "Log in to use watchlist.",      "ko": "로그인 후 이용 가능합니다."},
-    "no_watch":    {"en": "No stocks in watchlist.",       "ko": "관심종목이 없습니다."},
-    "remove":      {"en": "✕",                             "ko": "✕"},
-    "err_pw":      {"en": "Wrong password",                "ko": "비밀번호 오류"},
-    "err_user":    {"en": "Username not found",            "ko": "존재하지 않는 아이디"},
-    "err_dup":     {"en": "Username already taken",        "ko": "이미 사용 중인 아이디"},
-    "ok_signup":   {"en": "Account created! Please log in.", "ko": "가입 완료! 로그인해주세요."},
+    "a1": {"en":"BREAKOUT",        "ko":"돌파 완료"},
+    "a2": {"en":"APPROACHING 1%",  "ko":"돌파 임박 1%"},
+    "c1": {"en":"ABOVE MA200 2%",  "ko":"200MA 위 2%"},
+    "c2": {"en":"BELOW MA200 2%",  "ko":"200MA 아래 2%"},
+    "ticker":      {"en":"TICKER",  "ko":"종목"},
+    "price":       {"en":"PRICE",   "ko":"현재가"},
+    "mktcap":      {"en":"MKTCAP",  "ko":"시총"},
+    "ma20":        {"en":"MA20",    "ko":"MA20"},
+    "ma200":       {"en":"MA200",   "ko":"MA200"},
+    "dist":        {"en":"DIST%",   "ko":"거리%"},
+    "chg1d":       {"en":"1D",      "ko":"1일"},
+    "chg5d":       {"en":"5D",      "ko":"5일"},
+    "no_signal":   {"en":"No signals found.", "ko":"해당 종목 없음"},
+    "results":     {"en":"results", "ko":"종목"},
+    "no_data":     {"en":"NO DATA", "ko":"데이터 없음"},
+    "login":       {"en":"Log In",  "ko":"로그인"},
+    "signup":      {"en":"Sign Up", "ko":"회원가입"},
+    "logout":      {"en":"LOG OUT", "ko":"로그아웃"},
+    "username":    {"en":"USERNAME","ko":"아이디"},
+    "password":    {"en":"PASSWORD","ko":"비밀번호"},
+    "watchlist":   {"en":"WATCHLIST","ko":"관심종목"},
+    "entry_price": {"en":"ENTRY",   "ko":"진입가"},
+    "current":     {"en":"NOW",     "ko":"현재가"},
+    "added_at":    {"en":"ADDED",   "ko":"추가일"},
+    "welcome":     {"en":"Welcome", "ko":"환영합니다"},
+    "login_req":   {"en":"Log in to use watchlist.", "ko":"로그인 후 이용 가능합니다."},
+    "no_watch":    {"en":"No stocks in watchlist.",  "ko":"관심종목이 없습니다."},
+    "remove":      {"en":"✕",       "ko":"✕"},
+    "err_pw":      {"en":"Wrong password",        "ko":"비밀번호 오류"},
+    "err_user":    {"en":"Username not found",    "ko":"존재하지 않는 아이디"},
+    "err_dup":     {"en":"Username already taken","ko":"이미 사용 중인 아이디"},
+    "ok_signup":   {"en":"Account created! Please log in.", "ko":"가입 완료! 로그인해주세요."},
+    "login_sub":   {"en":"Please log in to continue", "ko":"로그인 후 이용 가능합니다"},
 }
 
 def t(key: str) -> str:
-    lang = st.session_state.get("lang", "en")
-    return T.get(key, {}).get(lang, key)
+    return T.get(key, {}).get(st.session_state.get("lang","en"), key)
 
 # ── 페이지 설정 ───────────────────────────────────────────────
 st.set_page_config(page_title="STOCKal", page_icon="▣", layout="wide")
@@ -82,411 +74,13 @@ st.set_page_config(page_title="STOCKal", page_icon="▣", layout="wide")
 # ── 모바일 감지 ───────────────────────────────────────────────
 try:
     _ua = st.context.headers.get("user-agent", "")
-    IS_MOBILE = any(x in _ua for x in ["iPhone", "Android", "Mobile", "iPod"])
-    if IS_MOBILE:
-        PAGE_SIZE = 8
+    IS_MOBILE = any(x in _ua for x in ["iPhone","Android","Mobile","iPod"])
+    if IS_MOBILE: PAGE_SIZE = 8
 except Exception:
     pass
 
-# ── 쿼리 파라미터 처리 ─────────────────────────────────────────
-_qp = st.query_params
-if _qp.get("go") == "main":
-    st.session_state["page"] = "main"
-    st.session_state["menu"] = st.session_state.get("menu", "MA20")
-    st.query_params.clear()
-    st.rerun()
-if _qp.get("menu") in ["MA20", "MA200", "WatchList"]:
-    st.session_state["menu"] = _qp.get("menu")
-    st.session_state["page"] = "main"
-    st.query_params.clear()
-    st.rerun()
-if _qp.get("page") == "my":
-    st.session_state["page"] = "my"
-    st.query_params.clear()
-    st.rerun()
 
-# ── CSS ──────────────────────────────────────────────────────
-st.markdown("""
-<style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
-
-:root {
-    --bg:      #0A0E1A;
-    --bg2:     #111827;
-    --bg3:     #1A2236;
-    --border:  rgba(255,255,255,0.07);
-    --text:    #F0F2F7;
-    --muted:   #8892A4;
-    --accent:  #C6F135;
-    --red:     #FF4D4D;
-    --green:   #22C55E;
-    --fn:      'JetBrains Mono', monospace;
-}
-
-html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
-.stApp { background: var(--bg) !important; }
-.stMainBlockContainer { padding-top: 16px !important; padding-bottom: 80px !important; }
-
-/* ── Sidebar ─────────────────────────────────────────── */
-[data-testid="stSidebar"] {
-    background: var(--bg) !important;
-    border-right: 1px solid var(--border) !important;
-    min-width: 200px !important; max-width: 200px !important;
-}
-[data-testid="stSidebar"] > div:first-child { padding: 12px !important; }
-
-/* Hide sidebar toggle button */
-[data-testid="stSidebarNavLink"], button[kind="header"] { display: none !important; }
-[data-testid="collapsedControl"] { display: none !important; }
-[data-testid="stSidebarCollapseButton"] { display: none !important; }
-
-.sb-logo {
-    font-size: 18px; font-weight: 700; letter-spacing: -0.03em;
-    color: var(--text); padding: 4px 8px 4px; cursor: pointer;
-    display: block; text-decoration: none;
-}
-.sb-logo em { font-style: normal; color: var(--accent); }
-.sb-update { font-size: 10px; color: #2a3347; letter-spacing: 0.04em; padding: 0 8px 12px; }
-.sb-section {
-    font-size: 10px; font-weight: 600; letter-spacing: 0.08em;
-    color: var(--muted); padding: 12px 8px 4px; text-transform: uppercase;
-}
-
-/* Sidebar nav anchor links */
-.sb-item {
-    display: flex; align-items: center; gap: 10px;
-    padding: 8px 10px; border-radius: 8px;
-    font-size: 13px; font-weight: 500; color: var(--muted);
-    cursor: pointer; transition: all 0.15s;
-    text-decoration: none; margin-bottom: 2px;
-}
-.sb-item:hover { color: var(--text); background: var(--bg3); }
-.sb-item.active { color: var(--text); background: var(--bg3); }
-.sb-dot {
-    width: 6px; height: 6px; border-radius: 50%;
-    background: rgba(255,255,255,0.1); flex-shrink: 0;
-}
-.sb-item.active .sb-dot { background: var(--accent); }
-
-/* Sidebar indices */
-.sb-idx-item {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 6px 8px; border-bottom: 1px solid rgba(255,255,255,0.03);
-    border-radius: 4px;
-}
-.sb-idx-left { display: flex; flex-direction: column; gap: 1px; }
-.sb-idx-name  { font-size: 9px; font-weight: 700; color: var(--muted); letter-spacing: 0.05em; }
-.sb-idx-price { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; color: var(--text); }
-.sb-idx-up  { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; color: var(--green); }
-.sb-idx-dn  { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; color: var(--red); }
-
-/* ── Top controls bar ────────────────────────────────── */
-.top-ctrl-bar {
-    display: flex; align-items: center; justify-content: flex-end;
-    gap: 10px; padding-bottom: 10px; border-bottom: 1px solid var(--border);
-    margin-bottom: 16px; flex-wrap: wrap;
-}
-.ctrl-label { font-size: 10px; font-weight: 600; letter-spacing: 0.06em; color: var(--muted); }
-.toggle-group {
-    display: inline-flex; background: var(--bg3); border-radius: 8px; padding: 3px; gap: 2px;
-}
-.t-btn {
-    padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 600;
-    letter-spacing: 0.04em; border: none; cursor: pointer; transition: all 0.15s;
-    color: var(--muted); background: none; font-family: 'DM Sans', sans-serif;
-}
-.t-btn.active { background: var(--accent); color: #000; }
-.t-btn:hover:not(.active) { color: var(--text); background: rgba(255,255,255,0.05); }
-
-/* Streamlit buttons (top controls) */
-div[data-testid="stButton"] > button {
-    background: var(--bg3) !important; border: 1px solid var(--border) !important;
-    color: var(--muted) !important; font-family: 'DM Sans', sans-serif !important;
-    font-size: 12px !important; font-weight: 600 !important;
-    padding: 5px 14px !important; border-radius: 8px !important;
-    letter-spacing: 0.04em !important; transition: all 0.15s !important;
-    width: auto !important;
-}
-div[data-testid="stButton"] > button:hover {
-    color: var(--text) !important; border-color: rgba(255,255,255,0.2) !important;
-}
-
-/* ── Mobile header ───────────────────────────────────── */
-.mob-header {
-    display: none;
-    align-items: center; justify-content: space-between;
-    padding: 12px 4px 8px;
-}
-.mob-logo { font-size: 18px; font-weight: 700; letter-spacing: -0.03em; color: var(--text); }
-.mob-logo em { font-style: normal; color: var(--accent); }
-.mob-avatar {
-    width: 30px; height: 30px; border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent), #00D4AA);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 11px; font-weight: 700; color: #000; cursor: pointer;
-    text-decoration: none;
-}
-
-/* Mobile market+lang row */
-.mob-mkt-row {
-    display: none;
-    align-items: center; justify-content: space-between;
-    padding: 4px 4px 8px;
-}
-
-/* ── Ticker strip (mobile) ───────────────────────────── */
-.mob-ticker-strip {
-    display: none; overflow-x: auto; scrollbar-width: none;
-    background: var(--bg2); border-radius: 10px; margin-bottom: 12px;
-    border: 1px solid var(--border);
-}
-.mob-ticker-strip::-webkit-scrollbar { display: none; }
-.mob-ticker-cell {
-    display: flex; flex-direction: column; gap: 2px;
-    padding: 10px 14px; border-right: 1px solid var(--border);
-    flex-shrink: 0; min-width: 90px;
-}
-.mob-ticker-cell:last-child { border-right: none; }
-.mob-ticker-name  { font-size: 9px; font-weight: 700; color: var(--muted); letter-spacing: 0.05em; }
-.mob-ticker-price { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; color: var(--text); }
-.mob-ticker-up    { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; color: var(--green); }
-.mob-ticker-dn    { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; color: var(--red); }
-
-/* ── Panel / breadcrumb ──────────────────────────────── */
-.panel {
-    background: var(--bg2); border: 1px solid var(--border);
-    border-radius: 12px; overflow: hidden; margin-bottom: 16px;
-}
-.panel-bc {
-    padding: 12px 16px 0; display: flex; align-items: center; gap: 8px;
-    font-size: 11px; color: var(--muted); font-weight: 600; letter-spacing: 0.05em;
-}
-.bc-dot    { font-size: 9px; color: var(--accent); }
-.bc-label  { color: var(--accent); }
-.bc-sep    { opacity: 0.4; }
-.bc-sub    { opacity: 0.6; }
-
-/* ── Signal tab radio ────────────────────────────────── */
-div[data-testid="stRadio"][data-role="signal-tabs"] > div {
-    gap: 0 !important; flex-direction: row !important;
-    border-bottom: 1px solid var(--border);
-    padding: 0 4px;
-}
-div[data-testid="stRadio"][data-role="signal-tabs"] label {
-    padding: 8px 16px !important; font-size: 12px !important;
-    font-weight: 600 !important; letter-spacing: 0.04em !important;
-    color: var(--muted) !important; background: none !important;
-    border: none !important; border-radius: 0 !important;
-    border-bottom: 2px solid transparent !important;
-    text-transform: uppercase !important; cursor: pointer !important;
-    margin-bottom: -1px !important;
-}
-div[data-testid="stRadio"][data-role="signal-tabs"] label:has(input:checked) {
-    color: var(--accent) !important;
-    border-bottom-color: var(--accent) !important;
-    background: none !important;
-}
-
-/* Market radio (top bar) */
-div[data-testid="stRadio"][data-role="market-filter"] > div {
-    gap: 4px !important; flex-direction: row !important;
-}
-div[data-testid="stRadio"][data-role="market-filter"] label {
-    padding: 4px 12px !important; font-size: 12px !important; font-weight: 600 !important;
-    letter-spacing: 0.04em !important; color: var(--muted) !important;
-    background: var(--bg3) !important; border: none !important;
-    border-radius: 20px !important; cursor: pointer !important;
-}
-div[data-testid="stRadio"][data-role="market-filter"] label:has(input:checked) {
-    color: #000 !important; background: var(--accent) !important; font-weight: 700 !important;
-}
-
-/* ── Stock table ─────────────────────────────────────── */
-.tbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-.stock-table { width: 100%; border-collapse: collapse; }
-.stock-table-d { min-width: 680px; }
-.stock-table-m { min-width: 340px; display: none; }
-.stock-table th {
-    padding: 8px 10px; font-size: 10px; font-weight: 600; letter-spacing: 0.07em;
-    color: var(--muted); text-align: left; border-bottom: 1px solid var(--border);
-    white-space: nowrap; background: transparent;
-}
-.stock-table td { padding: 10px 10px; font-size: 13px; vertical-align: middle; border-bottom: 1px solid rgba(255,255,255,0.04); }
-.stock-table tbody tr:hover td { background: var(--bg3); }
-.stock-table tbody tr:last-child td { border-bottom: none; }
-.mkt-badge {
-    font-size: 9px; font-weight: 700; padding: 2px 5px; border-radius: 3px;
-    background: var(--bg3); color: var(--muted); letter-spacing: 0.05em; white-space: nowrap;
-}
-.tk-main { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 14px; color: var(--text); }
-.tk-sub  { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); margin-left: 6px; }
-.num { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; color: var(--text); }
-.num-muted { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted); }
-a.toss-lnk {
-    font-size: 10px; color: var(--muted); font-weight: 600; letter-spacing: 0.04em;
-    opacity: 0.6; text-decoration: none; white-space: nowrap;
-}
-a.toss-lnk:hover { opacity: 1; color: var(--accent); }
-.count-txt {
-    color: var(--muted); font-size: 11px; letter-spacing: 0.05em;
-    padding: 8px 16px 12px; opacity: 0.35;
-}
-
-/* ── Page nav ────────────────────────────────────────── */
-.nav-wrap { padding: 6px 0 4px; }
-
-/* ── Spin ─────────────────────────────────────────────── */
-@keyframes spin { to { transform: rotate(-360deg); } }
-.spin-icon { display: inline-block; animation: spin 1s linear infinite; color: var(--accent); }
-
-/* ── Login card ──────────────────────────────────────── */
-.login-outer {
-    min-height: 60vh; background: var(--bg);
-    display: flex; align-items: center; justify-content: center;
-    position: relative; overflow: hidden; padding: 32px 16px;
-}
-.login-glow {
-    position: fixed; width: 500px; height: 500px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(198,241,53,0.06) 0%, transparent 70%);
-    top: -100px; right: -100px; pointer-events: none; z-index: 0;
-}
-.login-grid {
-    position: fixed; inset: 0; z-index: 0; opacity: 0.03; pointer-events: none;
-    background-image:
-        linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px);
-    background-size: 40px 40px;
-}
-.login-card {
-    width: 100%; max-width: 380px; background: var(--bg2);
-    border: 1px solid var(--border); border-radius: 16px;
-    padding: 36px; position: relative; z-index: 1;
-}
-.login-logo { font-size: 24px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 6px; color: var(--text); }
-.login-logo em { font-style: normal; color: var(--accent); }
-.login-sub { font-size: 13px; color: var(--muted); margin-bottom: 24px; }
-
-/* Form fields inside login card */
-.login-card div[data-testid="stTextInput"] input,
-.mob-login-form div[data-testid="stTextInput"] input {
-    background: var(--bg3) !important; border: 1px solid var(--border) !important;
-    border-radius: 8px !important; color: var(--text) !important;
-    font-family: 'DM Sans', sans-serif !important; font-size: 14px !important;
-}
-.login-card div[data-testid="stTextInput"] input:focus,
-.mob-login-form div[data-testid="stTextInput"] input:focus {
-    border-color: var(--accent) !important;
-    box-shadow: 0 0 0 2px rgba(198,241,53,0.12) !important;
-}
-.login-card div[data-testid="stTextInput"] label,
-.mob-login-form div[data-testid="stTextInput"] label {
-    font-size: 11px !important; font-weight: 600 !important;
-    letter-spacing: 0.06em !important; color: var(--muted) !important;
-    text-transform: uppercase !important;
-}
-.login-card div[data-testid="stFormSubmitButton"] > button,
-.mob-login-form div[data-testid="stFormSubmitButton"] > button {
-    background: var(--accent) !important; color: #000 !important;
-    border: none !important; border-radius: 8px !important;
-    font-size: 14px !important; font-weight: 700 !important;
-    width: 100% !important; padding: 12px !important;
-    letter-spacing: 0.02em !important;
-}
-.login-card div[data-testid="stFormSubmitButton"] > button:hover,
-.mob-login-form div[data-testid="stFormSubmitButton"] > button:hover {
-    background: #d4f55a !important;
-}
-
-/* Tab styles in login */
-div[data-baseweb="tab-list"] { background: var(--bg3) !important; border-radius: 8px !important; padding: 3px !important; gap: 2px !important; }
-button[data-baseweb="tab"] {
-    background: none !important; border-radius: 6px !important;
-    font-size: 13px !important; font-weight: 600 !important;
-    color: var(--muted) !important; padding: 7px 16px !important;
-}
-button[data-baseweb="tab"][aria-selected="true"] {
-    background: var(--bg2) !important; color: var(--text) !important;
-    border-bottom: none !important;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.4) !important;
-}
-div[data-baseweb="tab-border"] { display: none !important; }
-
-/* Watchlist */
-.wl-ticker { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; color: var(--text); }
-.wl-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
-.ret-pos { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: var(--green); }
-.ret-neg { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: var(--red); }
-
-/* Welcome / My page */
-.my-welcome { font-size: 13px; color: var(--muted); letter-spacing: 0.04em; padding: 8px 0 16px; }
-.my-welcome em { font-style: normal; color: var(--accent); }
-
-/* Misc */
-hr { border-color: rgba(255,255,255,0.06) !important; margin: 10px 0 !important; }
-.stAlert { background: var(--bg2) !important; border: 1px solid var(--border) !important; border-radius: 8px !important; }
-::-webkit-scrollbar { width: 3px; height: 3px; }
-::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 2px; }
-
-/* ── Mobile bottom nav ───────────────────────────────── */
-.mob-bottom-nav {
-    display: none;
-    position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
-    background: var(--bg2); border-top: 1px solid var(--border);
-    padding: 8px 0 max(4px, env(safe-area-inset-bottom));
-    justify-content: space-around; align-items: stretch;
-}
-.mob-nav-item {
-    display: flex; flex-direction: column; align-items: center; gap: 3px;
-    padding: 4px 8px; cursor: pointer; text-decoration: none; flex: 1;
-}
-.mob-nav-icon { font-size: 18px; line-height: 1; }
-.mob-nav-label {
-    font-size: 9px; font-weight: 600; letter-spacing: 0.04em;
-    color: var(--muted); text-transform: uppercase;
-}
-.mob-nav-item.active .mob-nav-label { color: var(--accent); }
-
-/* ── Responsive breakpoint ───────────────────────────── */
-@media (max-width: 768px) {
-    html, body, .stApp { overflow-x: hidden !important; max-width: 100vw !important; }
-
-    /* Show mobile elements */
-    .mob-header       { display: flex !important; }
-    .mob-mkt-row      { display: flex !important; }
-    .mob-ticker-strip { display: flex !important; }
-    .mob-bottom-nav   { display: flex !important; }
-
-    /* Hide desktop sidebar & top controls */
-    [data-testid="stSidebar"]  { display: none !important; }
-    .desktop-ctrl-bar          { display: none !important; }
-
-    /* Content padding for bottom nav */
-    .stMainBlockContainer { padding-bottom: 90px !important; padding-left: 12px !important; padding-right: 12px !important; }
-
-    /* Table: hide desktop, show mobile */
-    .stock-table-d { display: none !important; }
-    .stock-table-m { display: table !important; }
-
-    /* Sidebar occupy full width when toggled (mobile) */
-    [data-testid="stSidebar"] { width: 100% !important; }
-}
-</style>
-""", unsafe_allow_html=True)
-
-# ── 세션 초기화 ───────────────────────────────────────────────
-_defaults = {
-    "lang": "en", "page": "main", "user": None, "watchlist": [],
-    "menu": "MA20", "market": "KR",
-    "page_a1": 0, "page_a2": 0,
-    "page_c1": 0, "page_c2": 0,
-    "page_watch": 0, "_prev_market": "BOOT",
-}
-for _k, _v in _defaults.items():
-    if _k not in st.session_state:
-        st.session_state[_k] = _v
-
-
-# ── 유저 DB ──────────────────────────────────────────────────
+# ── 함수 정의 ─────────────────────────────────────────────────
 def load_users() -> dict:
     if os.path.exists(USERS_PATH):
         with open(USERS_PATH, encoding="utf-8") as f:
@@ -508,8 +102,6 @@ def save_watchlist(username: str, wl: list):
     users[username]["watchlist"] = wl
     save_users(users)
 
-
-# ── 데이터 로드 ───────────────────────────────────────────────
 @st.cache_data(ttl=300)
 def load_results() -> dict:
     if not os.path.exists(RESULTS_PATH):
@@ -531,8 +123,7 @@ def fetch_indices() -> list:
                     close = raw["Close"][sym].dropna()
                 else:
                     close = raw["Close"].dropna()
-                if len(close) < 2:
-                    raise ValueError
+                if len(close) < 2: raise ValueError
                 val  = float(close.iloc[-1])
                 prev = float(close.iloc[-2])
                 chg  = (val - prev) / prev * 100
@@ -545,8 +136,7 @@ def fetch_indices() -> list:
 
 @st.cache_data(ttl=300)
 def fetch_current_prices(yf_syms: tuple) -> dict:
-    if not yf_syms:
-        return {}
+    if not yf_syms: return {}
     try:
         raw = yf.download(list(yf_syms), period="2d", auto_adjust=True,
                           progress=False, threads=True)
@@ -564,29 +154,643 @@ def fetch_current_prices(yf_syms: tuple) -> dict:
     except Exception:
         return {}
 
+def is_refreshing() -> bool:
+    return os.path.exists(REFRESH_FLAG)
 
-# ── UI 헬퍼 ──────────────────────────────────────────────────
+def start_background_refresh():
+    if is_refreshing(): return
+    os.makedirs(DATA_DIR, exist_ok=True)
+    with open(REFRESH_FLAG, "w") as f:
+        f.write(datetime.now().isoformat())
+    def _run():
+        try:
+            py   = sys.executable
+            base = os.path.dirname(__file__)
+            subprocess.run([py, os.path.join(base,"fetch_data.py"),"--market","all"],
+                           capture_output=True, text=True)
+            subprocess.run([py, os.path.join(base,"signals.py")],
+                           capture_output=True, text=True)
+        finally:
+            if os.path.exists(REFRESH_FLAG): os.remove(REFRESH_FLAG)
+    threading.Thread(target=_run, daemon=True).start()
+
+
+# ── 세션 초기화 ───────────────────────────────────────────────
+_defaults = {
+    "lang": "en", "page": "main", "user": None, "watchlist": [],
+    "menu": "MA20", "market": "KR", "sigtab": "A1",
+    "page_a1": 0, "page_a2": 0,
+    "page_c1": 0, "page_c2": 0,
+    "page_watch": 0, "_prev_market": "BOOT",
+}
+for _k, _v in _defaults.items():
+    if _k not in st.session_state:
+        st.session_state[_k] = _v
+
+
+# ── 쿼리 파라미터 처리 ─────────────────────────────────────────
+_qp = st.query_params
+_rerun = False
+
+if _qp.get("go") == "main":
+    st.session_state["page"] = "main"
+    _rerun = True
+
+if _qp.get("menu") in ["MA20","MA200","WatchList"]:
+    st.session_state["menu"] = _qp["menu"]
+    st.session_state["page"] = "main"
+    if _qp["menu"] == "MA20":      st.session_state["sigtab"] = "A1"
+    elif _qp["menu"] == "MA200":   st.session_state["sigtab"] = "C1"
+    _rerun = True
+
+if _qp.get("mkt") in ["KR","US"]:
+    st.session_state["market"] = _qp["mkt"]
+    st.session_state["_prev_market"] = "RESET"
+    _rerun = True
+
+if _qp.get("lang") in ["en","ko"]:
+    st.session_state["lang"] = _qp["lang"]
+    _rerun = True
+
+if _qp.get("page") in ["my","main"]:
+    st.session_state["page"] = _qp["page"]
+    _rerun = True
+
+if _qp.get("sigtab") in ["A1","A2","C1","C2"]:
+    st.session_state["sigtab"] = _qp["sigtab"]
+    _rerun = True
+
+# Page nav (prev/next)
+for _pk in ["page_a1","page_a2","page_c1","page_c2","page_watch"]:
+    if _qp.get(_pk) is not None:
+        try: st.session_state[_pk] = int(_qp[_pk])
+        except Exception: pass
+        _rerun = True
+
+if _qp.get("refresh") == "1":
+    start_background_refresh()
+    _rerun = True
+
+if _rerun:
+    st.query_params.clear()
+    st.rerun()
+
+
+# ── CSS ──────────────────────────────────────────────────────
+st.markdown("""
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --bg:     #0A0E1A;
+  --bg2:    #111827;
+  --bg3:    #1A2236;
+  --bd:     rgba(255,255,255,0.07);
+  --text:   #F0F2F7;
+  --muted:  #8892A4;
+  --accent: #C6F135;
+  --red:    #FF4D4D;
+  --green:  #22C55E;
+  --fn:     'JetBrains Mono', monospace;
+}
+
+/* ── Global ── */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { font-family: 'DM Sans', sans-serif !important; }
+.stApp { background: var(--bg) !important; }
+.stApp > header { display: none !important; }
+
+/* Remove ALL Streamlit default padding */
+.stMainBlockContainer, .block-container {
+  padding-top: 0 !important;
+  padding-bottom: 80px !important;
+  max-width: 100% !important;
+}
+
+/* ── Sidebar ── */
+section[data-testid="stSidebar"] {
+  background: var(--bg) !important;
+  border-right: 1px solid var(--bd) !important;
+  width: 200px !important; min-width: 200px !important;
+}
+section[data-testid="stSidebar"] > div:first-child { padding: 0 !important; }
+[data-testid="stSidebarCollapseButton"],
+[data-testid="collapsedControl"] { display: none !important; }
+
+/* ── Nav ── */
+.s-nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 24px; height: 56px;
+  background: var(--bg); border-bottom: 1px solid var(--bd);
+}
+.s-nav-logo {
+  font-size: 20px; font-weight: 700; letter-spacing: -0.03em;
+  color: var(--text); text-decoration: none;
+}
+.s-nav-logo em { font-style: normal; color: var(--accent); }
+.s-nav-right { display: flex; align-items: center; gap: 12px; }
+.s-nav-update { font-size: 10px; color: #2a3347; letter-spacing: 0.04em; margin-left: 8px; }
+
+/* Toggle group */
+.tg {
+  display: inline-flex; background: var(--bg3); border-radius: 8px;
+  padding: 3px; gap: 2px;
+}
+.tb {
+  padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 600;
+  letter-spacing: 0.04em; border: none; cursor: pointer; transition: all 0.15s;
+  color: var(--muted); background: none; font-family: 'DM Sans', sans-serif;
+  text-decoration: none; display: inline-flex; align-items: center;
+}
+.tb.active { background: var(--accent) !important; color: #000 !important; }
+.tb:hover:not(.active) { color: var(--text); background: rgba(255,255,255,0.06); }
+.s-ctrl-label { font-size: 11px; color: var(--muted); font-weight: 600; letter-spacing: 0.05em; }
+.s-avatar {
+  width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--accent), #00D4AA);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; color: #000; cursor: pointer;
+  text-decoration: none;
+}
+.s-refresh-btn {
+  background: none; border: none; cursor: pointer;
+  color: var(--muted); font-size: 18px; line-height: 1;
+  padding: 4px; border-radius: 6px; transition: color 0.15s;
+}
+.s-refresh-btn:hover { color: var(--accent); }
+@keyframes spin { to { transform: rotate(-360deg); } }
+.spin { display: inline-block; animation: spin 1s linear infinite; color: var(--accent); }
+
+/* ── Sidebar inner ── */
+.sb-inner { padding: 12px; }
+.sb-logo {
+  display: block; font-size: 18px; font-weight: 700; letter-spacing: -0.03em;
+  color: var(--text); text-decoration: none; padding: 4px 8px 2px;
+}
+.sb-logo em { font-style: normal; color: var(--accent); }
+.sb-update { font-size: 10px; color: #2a3347; letter-spacing: 0.04em; padding: 0 8px 12px; }
+.sb-section {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.08em;
+  color: var(--muted); padding: 10px 8px 4px; text-transform: uppercase;
+}
+.sb-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 10px; border-radius: 8px; margin-bottom: 2px;
+  font-size: 13px; font-weight: 500; color: var(--muted);
+  text-decoration: none; transition: all 0.15s; cursor: pointer;
+}
+.sb-item:hover { color: var(--text); background: var(--bg3); }
+.sb-item.active { color: var(--text); background: var(--bg3); }
+.sb-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: rgba(255,255,255,0.1); flex-shrink: 0;
+}
+.sb-item.active .sb-dot { background: var(--accent); }
+.sb-idx {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 6px 8px; border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.sb-idx-l { display: flex; flex-direction: column; gap: 1px; }
+.sb-idx-name  { font-size: 9px; font-weight: 700; color: var(--muted); letter-spacing: 0.05em; }
+.sb-idx-price { font-family: var(--fn); font-size: 12px; font-weight: 500; color: var(--text); }
+.idx-up { font-family: var(--fn); font-size: 10px; font-weight: 600; color: var(--green); }
+.idx-dn { font-family: var(--fn); font-size: 10px; font-weight: 600; color: var(--red); }
+
+/* ── Mobile header ── */
+.mob-hd {
+  display: none; align-items: center; justify-content: space-between;
+  padding: 12px 16px 8px;
+}
+.mob-logo { font-size: 18px; font-weight: 700; letter-spacing: -0.03em; color: var(--text); }
+.mob-logo em { font-style: normal; color: var(--accent); }
+.mob-avatar {
+  width: 30px; height: 30px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), #00D4AA);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700; color: #000; text-decoration: none;
+}
+
+/* Mobile mkt+lang row */
+.mob-row {
+  display: none; align-items: center; justify-content: space-between;
+  padding: 4px 16px 10px;
+}
+
+/* ── Ticker strip (mobile) ── */
+.mob-strip {
+  display: none; overflow-x: auto; scrollbar-width: none;
+  background: var(--bg2); border-radius: 10px;
+  margin: 0 16px 12px; border: 1px solid var(--bd);
+}
+.mob-strip::-webkit-scrollbar { display: none; }
+.mob-tick-cell {
+  display: flex; flex-direction: column; gap: 2px;
+  padding: 10px 14px; border-right: 1px solid var(--bd);
+  flex-shrink: 0; min-width: 88px;
+}
+.mob-tick-cell:last-child { border-right: none; }
+.mob-tick-name  { font-size: 9px; font-weight: 700; color: var(--muted); letter-spacing: 0.05em; }
+.mob-tick-price { font-family: var(--fn); font-size: 13px; font-weight: 500; color: var(--text); }
+
+/* ── Main content wrapper ── */
+.s-content { padding: 20px 24px 0; }
+
+/* ── Panel ── */
+.panel {
+  background: var(--bg2); border: 1px solid var(--bd);
+  border-radius: 12px; overflow: hidden; margin-bottom: 16px;
+}
+.panel-bc {
+  padding: 12px 16px 0; display: flex; align-items: center; gap: 8px;
+  font-size: 11px; color: var(--muted); font-weight: 600; letter-spacing: 0.05em;
+}
+.bc-dot   { font-size: 9px; color: var(--accent); }
+.bc-label { color: var(--accent); }
+.bc-sep   { opacity: 0.4; margin: 0 2px; }
+.bc-sub   { opacity: 0.6; }
+
+/* Signal tabs */
+.sig-tabs {
+  display: flex; border-bottom: 1px solid var(--bd);
+  padding: 0; margin: 10px 0 0;
+}
+.sig-tab {
+  padding: 8px 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
+  color: var(--muted); border: none; background: none; cursor: pointer;
+  border-bottom: 2px solid transparent; margin-bottom: -1px;
+  transition: all 0.15s; text-transform: uppercase; text-decoration: none;
+  font-family: 'DM Sans', sans-serif; display: inline-flex; align-items: center;
+}
+.sig-tab:hover { color: var(--text); }
+.sig-tab.active { color: var(--accent) !important; border-bottom-color: var(--accent) !important; }
+
+/* ── Table ── */
+.tbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.stock-table { width: 100%; border-collapse: collapse; }
+.stock-table-d { min-width: 680px; }
+.stock-table-m { min-width: 320px; display: none; }
+.stock-table th {
+  padding: 8px 10px; font-size: 10px; font-weight: 600; letter-spacing: 0.07em;
+  color: var(--muted); text-align: left; border-bottom: 1px solid var(--bd);
+  white-space: nowrap; font-family: 'DM Sans', sans-serif;
+}
+.stock-table td {
+  padding: 10px 10px; font-size: 13px; vertical-align: middle;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.stock-table tbody tr { cursor: default; transition: background 0.12s; }
+.stock-table tbody tr:hover td { background: var(--bg3); }
+.stock-table tbody tr:last-child td { border-bottom: none; }
+.mkt-badge {
+  font-size: 9px; font-weight: 700; padding: 2px 5px; border-radius: 3px;
+  background: var(--bg3); color: var(--muted); letter-spacing: 0.05em;
+  white-space: nowrap; font-family: 'DM Sans', sans-serif;
+}
+.tk-main { font-family: var(--fn); font-weight: 700; font-size: 14px; color: var(--text); }
+.tk-sub  { font-family: var(--fn); font-size: 10px; color: var(--muted); margin-left: 6px; }
+.num       { font-family: var(--fn); font-size: 13px; font-weight: 500; color: var(--text); }
+.num-muted { font-family: var(--fn); font-size: 12px; color: var(--muted); }
+a.toss-lnk {
+  font-size: 10px; color: var(--muted); font-weight: 600; letter-spacing: 0.04em;
+  opacity: 0.5; text-decoration: none; white-space: nowrap;
+}
+a.toss-lnk:hover { opacity: 1; color: var(--accent); }
+.count-txt {
+  font-family: 'DM Sans', sans-serif; color: var(--muted); font-size: 11px;
+  letter-spacing: 0.04em; padding: 8px 16px 12px; opacity: 0.35;
+}
+
+/* Page nav */
+.page-nav {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 12px 0;
+}
+.page-btn {
+  width: 32px; height: 32px; border-radius: 6px; background: var(--bg3);
+  border: 1px solid var(--bd); color: var(--text); font-size: 16px;
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; cursor: pointer; transition: all 0.15s;
+  font-family: 'DM Sans', sans-serif;
+}
+.page-btn:hover { border-color: var(--accent); color: var(--accent); }
+.page-btn.disabled { opacity: 0.25; pointer-events: none; }
+.page-info { font-family: var(--fn); font-size: 12px; color: var(--muted); min-width: 60px; text-align: center; }
+
+/* ── Login ── */
+.login-outer {
+  min-height: 70vh; display: flex; align-items: center; justify-content: center;
+  position: relative; padding: 32px 16px;
+}
+.login-glow {
+  position: fixed; width: 600px; height: 600px; border-radius: 50%;
+  background: radial-gradient(circle,rgba(198,241,53,0.06) 0%,transparent 70%);
+  top: -100px; right: -100px; pointer-events: none; z-index: 0;
+}
+.login-grid {
+  position: fixed; inset: 0; z-index: 0; opacity: 0.025; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);
+  background-size: 40px 40px;
+}
+.login-card {
+  width: 100%; max-width: 380px; background: var(--bg2);
+  border: 1px solid var(--bd); border-radius: 16px;
+  padding: 36px; position: relative; z-index: 1;
+}
+.login-logo { font-size: 24px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 6px; color: var(--text); }
+.login-logo em { font-style: normal; color: var(--accent); }
+.login-sub { font-size: 13px; color: var(--muted); margin-bottom: 24px; }
+
+/* Login Streamlit form styling */
+.login-card [data-testid="stTextInput"] label,
+.login-card [data-testid="stTextInput"] p {
+  font-size: 11px !important; font-weight: 600 !important;
+  letter-spacing: 0.06em !important; color: var(--muted) !important;
+  text-transform: uppercase !important; font-family: 'DM Sans',sans-serif !important;
+}
+.login-card [data-testid="stTextInput"] input {
+  background: var(--bg3) !important; border: 1px solid var(--bd) !important;
+  border-radius: 8px !important; color: var(--text) !important;
+  font-family: 'DM Sans',sans-serif !important; font-size: 14px !important;
+  padding: 10px 14px !important;
+}
+.login-card [data-testid="stTextInput"] input:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px rgba(198,241,53,.12) !important;
+}
+.login-card [data-testid="stFormSubmitButton"] > button {
+  background: var(--accent) !important; color: #000 !important;
+  border: none !important; border-radius: 8px !important;
+  font-size: 14px !important; font-weight: 700 !important;
+  width: 100% !important; padding: 12px !important;
+  font-family: 'DM Sans',sans-serif !important; letter-spacing: .02em !important;
+}
+.login-card [data-testid="stFormSubmitButton"] > button:hover {
+  background: #d4f55a !important; transform: translateY(-1px) !important;
+}
+
+/* Login tab override */
+div[data-baseweb="tab-list"] {
+  background: var(--bg3) !important; border-radius: 8px !important; padding: 3px !important; gap: 2px !important;
+}
+button[data-baseweb="tab"] {
+  background: none !important; border-radius: 6px !important;
+  font-size: 13px !important; font-weight: 600 !important;
+  color: var(--muted) !important; padding: 7px 20px !important;
+  font-family: 'DM Sans',sans-serif !important;
+}
+button[data-baseweb="tab"][aria-selected="true"] {
+  background: var(--bg2) !important; color: var(--text) !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,.4) !important;
+}
+div[data-baseweb="tab-border"], div[data-baseweb="tab-highlight"] { display: none !important; }
+
+/* Watchlist */
+.wl-ticker { font-family: var(--fn); font-size: 13px; font-weight: 700; color: var(--text); }
+.wl-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.ret-pos { font-family: var(--fn); font-size: 13px; font-weight: 600; color: var(--green); }
+.ret-neg { font-family: var(--fn); font-size: 13px; font-weight: 600; color: var(--red); }
+.my-welcome { font-size: 13px; color: var(--muted); padding: 4px 0 16px; }
+.my-welcome em { font-style: normal; color: var(--accent); }
+
+/* Watchlist delete button */
+[data-testid="stButton"] > button {
+  background: var(--bg3) !important; border: 1px solid var(--bd) !important;
+  color: var(--muted) !important; font-size: 12px !important;
+  padding: 4px 10px !important; border-radius: 6px !important;
+  font-family: 'DM Sans',sans-serif !important; width: auto !important;
+}
+[data-testid="stButton"] > button:hover {
+  border-color: var(--red) !important; color: var(--red) !important;
+}
+
+/* Misc */
+.stAlert { background: var(--bg2) !important; border: 1px solid var(--bd) !important; border-radius: 8px !important; }
+hr { border-color: rgba(255,255,255,.05) !important; margin: 8px 0 !important; }
+::-webkit-scrollbar { width: 3px; height: 3px; }
+::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 2px; }
+
+/* ── Mobile bottom nav ── */
+.mob-bottom-nav {
+  display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
+  background: var(--bg2); border-top: 1px solid var(--bd);
+  padding: 8px 0 max(4px,env(safe-area-inset-bottom));
+}
+.mob-bottom-nav-inner { display: flex; justify-content: space-around; }
+.mob-nav-item {
+  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px;
+  padding: 4px 0; cursor: pointer; text-decoration: none;
+}
+.mob-nav-icon { font-size: 20px; line-height: 1; }
+.mob-nav-label {
+  font-size: 9px; font-weight: 600; letter-spacing: 0.04em;
+  color: var(--muted); text-transform: uppercase; font-family: 'DM Sans',sans-serif;
+}
+.mob-nav-item.active .mob-nav-label { color: var(--accent); }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  html, body, .stApp { overflow-x: hidden !important; max-width: 100vw !important; }
+
+  .mob-hd       { display: flex !important; }
+  .mob-row      { display: flex !important; }
+  .mob-strip    { display: flex !important; }
+  .mob-bottom-nav { display: block !important; }
+
+  /* Hide desktop nav + sidebar */
+  .s-nav { display: none !important; }
+  section[data-testid="stSidebar"] { display: none !important; }
+
+  /* Content padding */
+  .s-content { padding: 0 0 0 !important; }
+  .stMainBlockContainer, .block-container {
+    padding-left: 0 !important; padding-right: 0 !important;
+    padding-bottom: 90px !important;
+  }
+
+  .panel { border-radius: 8px; margin: 0 12px 12px; }
+  .panel-bc { padding: 10px 12px 0; }
+  .sig-tab { padding: 7px 12px; font-size: 11px; }
+
+  .stock-table-d { display: none !important; }
+  .stock-table-m { display: table !important; }
+
+  .page-nav { padding: 8px 0; }
+  .count-txt { padding: 6px 12px 10px; }
+}
+</style>
+""", unsafe_allow_html=True)
+
+
+# ── 자동새로고침 ─────────────────────────────────────────────
+_refreshing = is_refreshing()
+try:
+    from streamlit_autorefresh import st_autorefresh
+    st_autorefresh(interval=3_000 if _refreshing else 300_000, key="ar")
+except ImportError:
+    pass
+if not _refreshing and st.session_state.get("_was_refreshing"):
+    st.cache_data.clear()
+st.session_state["_was_refreshing"] = _refreshing
+
+# ── 데이터 ───────────────────────────────────────────────────
+results      = load_results()
+indices_data = fetch_indices()
+lang         = st.session_state.lang
+menu         = st.session_state.menu
+mkt_code     = st.session_state.market
+sigtab       = st.session_state.sigtab
+signals      = results.get("signals", {})
+
+gen_str = ""
+if results:
+    try:
+        dt = datetime.fromisoformat(results["generated_at"]).astimezone(KST)
+        gen_str = dt.strftime("%Y.%m.%d %H:%M KST")
+    except Exception:
+        pass
+
+# 시장 변경 → 페이지 초기화
+if st.session_state.get("_prev_market") != mkt_code:
+    for pk in ("page_a1","page_a2","page_c1","page_c2","page_watch"):
+        st.session_state[pk] = 0
+    st.session_state["_prev_market"] = mkt_code
+
+
+# ════════════════════════════════════════════════════════════
+# HTML 빌더 함수들
+# ════════════════════════════════════════════════════════════
+
+def _a(v: bool) -> str:
+    """Returns 'active' css class if True."""
+    return " active" if v else ""
+
+
+def _nav_html() -> str:
+    en_a  = _a(lang == "en");   ko_a  = _a(lang == "ko")
+    kr_a  = _a(mkt_code == "KR"); us_a  = _a(mkt_code == "US")
+    avatar_label = (st.session_state.user or "?")[:2].upper()
+    ref_btn = (f'<span class="spin">↺</span>' if _refreshing
+               else f'<a href="?refresh=1" class="s-refresh-btn" title="Refresh">↺</a>')
+    return f"""
+<div class="s-nav">
+  <div style="display:flex;align-items:center">
+    <a class="s-nav-logo" href="?go=main">STOCK<em>al</em></a>
+    <span class="s-nav-update">{gen_str or t("no_data")}</span>
+  </div>
+  <div class="s-nav-right">
+    <div style="display:flex;align-items:center;gap:6px">
+      <span class="s-ctrl-label">LANGUAGE</span>
+      <div class="tg">
+        <a class="tb{en_a}" href="?lang=en">EN</a>
+        <a class="tb{ko_a}" href="?lang=ko">KO</a>
+      </div>
+    </div>
+    <div class="tg">
+      <a class="tb{kr_a}" href="?mkt=KR">KR</a>
+      <a class="tb{us_a}" href="?mkt=US">US</a>
+    </div>
+    {ref_btn}
+    <a href="?page=my" class="s-avatar">{avatar_label}</a>
+  </div>
+</div>"""
+
+
+def _sidebar_html() -> str:
+    # Indices
+    idx_rows = ""
+    for d in indices_data:
+        name = d["label_en"] if lang == "en" else d["label_ko"]
+        if d["val"] is None:
+            idx_rows += (f'<div class="sb-idx">'
+                         f'<div class="sb-idx-l"><span class="sb-idx-name">{name}</span>'
+                         f'<span class="sb-idx-price" style="color:#2a3347">—</span></div></div>')
+            continue
+        val, chg, unit = d["val"], d["chg"], d["unit"]
+        val_str = (f'{unit}{val:,.2f}' if unit in ("$","₩") else f'{val:,.2f}')
+        sign    = "+" if chg >= 0 else ""
+        cls     = "idx-up" if chg >= 0 else "idx-dn"
+        idx_rows += (f'<div class="sb-idx">'
+                     f'<div class="sb-idx-l"><span class="sb-idx-name">{name}</span>'
+                     f'<span class="sb-idx-price">{val_str}</span></div>'
+                     f'<span class="{cls}">{sign}{chg:.2f}%</span></div>')
+
+    menu_items = [("MA20","MA20"), ("MA200","MA200"), ("WatchList","WatchList")]
+    nav_rows   = "".join(
+        f'<a class="sb-item{_a(menu==k)}" href="?menu={k}">'
+        f'<span class="sb-dot"></span>{label}</a>'
+        for k, label in menu_items
+    )
+    return f"""
+<div class="sb-inner">
+  <a class="sb-logo" href="?go=main">STOCK<em>al</em></a>
+  <div class="sb-update">{gen_str or "—"}</div>
+  <div class="sb-section">MENU</div>
+  {nav_rows}
+  <div class="sb-section" style="margin-top:14px">MARKET</div>
+  {idx_rows}
+</div>"""
+
+
+def _mob_ticker_strip_html() -> str:
+    cells = ""
+    for d in indices_data:
+        name = d["label_en"] if lang == "en" else d["label_ko"]
+        if d["val"] is None:
+            cells += (f'<div class="mob-tick-cell">'
+                      f'<span class="mob-tick-name">{name}</span>'
+                      f'<span class="mob-tick-price" style="color:#2a3347">—</span>'
+                      f'<span class="idx-dn" style="font-size:10px">—</span></div>')
+            continue
+        val, chg, unit = d["val"], d["chg"], d["unit"]
+        val_str = (f'{unit}{val:,.2f}' if unit in ("$","₩") else f'{val:,.2f}')
+        sign    = "+" if chg >= 0 else ""
+        cls     = "idx-up" if chg >= 0 else "idx-dn"
+        cells += (f'<div class="mob-tick-cell">'
+                  f'<span class="mob-tick-name">{name}</span>'
+                  f'<span class="mob-tick-price">{val_str}</span>'
+                  f'<span class="{cls}" style="font-size:10px">{sign}{chg:.2f}%</span></div>')
+    return f'<div class="mob-strip">{cells}</div>'
+
+
+def _breadcrumb_html(label: str, subtitle: str = "") -> str:
+    sub = (f'<span class="bc-sep">→</span><span class="bc-sub">{subtitle}</span>'
+           if subtitle else "")
+    return (f'<div class="panel-bc">'
+            f'<span class="bc-dot">◆</span>'
+            f'<span class="bc-label">{label}</span>{sub}</div>')
+
+
+def _signal_tabs_html(current: str, tabs: list[tuple[str,str,str]]) -> str:
+    """tabs: list of (key, icon+label, href)"""
+    items = "".join(
+        f'<a class="sig-tab{_a(current==key)}" href="{href}">{label}</a>'
+        for key, label, href in tabs
+    )
+    return f'<div class="sig-tabs">{items}</div>'
+
+
 def _dist_badge(val) -> str:
-    """DIST% colored badge (transparent background)."""
     if val is None:
         return ('<span style="display:inline-block;min-width:52px;padding:3px 8px;'
                 'border-radius:4px;background:#1A2236;color:#8892A4;'
                 'font-family:JetBrains Mono,monospace;font-size:12px;'
                 'font-weight:600;text-align:center">—</span>')
     n = float(val)
-    if n >= 3:     color = '#22C55E'
-    elif n >= 0:   color = '#86efac'
-    elif n >= -3:  color = '#fca5a5'
-    else:          color = '#FF4D4D'
+    if n >= 3:      color = '#22C55E'
+    elif n >= 0:    color = '#86efac'
+    elif n >= -3:   color = '#fca5a5'
+    else:           color = '#FF4D4D'
     sign = "+" if n > 0 else ""
-    bg   = color + "22"   # ~13% opacity
+    bg   = color + "22"
     return (f'<span style="display:inline-block;min-width:52px;padding:3px 8px;'
             f'border-radius:4px;background:{bg};color:{color};'
             f'font-family:JetBrains Mono,monospace;font-size:12px;'
             f'font-weight:600;text-align:center">{sign}{n:.2f}%</span>')
 
+
 def _chg_html(val) -> str:
-    """1D / 5D change with green/red color."""
     if val is None:
         return '<span style="font-family:JetBrains Mono,monospace;font-size:12px;color:#8892A4">—</span>'
     color = '#22C55E' if val >= 0 else '#FF4D4D'
@@ -595,12 +799,22 @@ def _chg_html(val) -> str:
             f'font-weight:600;color:{color}">{sign}{val:.2f}%</span>')
 
 
-def _render_table(rows: list, dist_key: str, ref_key: str, ref_label: str,
-                  total: int = None):
-    """데스크탑·모바일 이중 테이블 렌더링."""
+def _fmt_cap(r) -> str:
+    is_kr = r["market"] == "KR"
+    if is_kr and r.get("market_cap_krw"):
+        v = r["market_cap_krw"]
+        return f"₩{v//1_000_000_000_000:.0f}T" if v >= 1_000_000_000_000 else f"₩{v//100_000_000:,}억"
+    elif r.get("market_cap_usd"):
+        return f"${r['market_cap_usd']//1_000_000:,}M"
+    return "—"
+
+
+def _render_panel(rows: list, dist_key: str, ref_key: str,
+                  ref_label: str, total: int = None):
+    """테이블 + 카운트 렌더링."""
     if not rows:
         st.markdown(
-            '<div style="color:#8892A4;font-size:13px;padding:20px 16px;opacity:0.5">'
+            '<div style="color:#8892A4;font-size:13px;padding:20px 16px;opacity:.6">'
             + t("no_signal") + '</div>',
             unsafe_allow_html=True)
         return
@@ -621,90 +835,81 @@ def _render_table(rows: list, dist_key: str, ref_key: str, ref_label: str,
         dist  = _dist_badge(r.get(dist_key))
         c1d   = _chg_html(r.get("chg1d"))
         c5d   = _chg_html(r.get("chg5d"))
-        if is_kr and r.get("market_cap_krw"):
-            cap = f"₩{r['market_cap_krw']//1_000_000_000_000:.0f}T" if r['market_cap_krw'] >= 1_000_000_000_000 else f"₩{r['market_cap_krw']//100_000_000:,}억"
-        elif r.get("market_cap_usd"):
-            cap = f"${r['market_cap_usd']//1_000_000:,}M"
-        else:
-            cap = "—"
-        url = f"https://tossinvest.com/stocks/{tk}"
+        cap   = _fmt_cap(r)
+        url   = f"https://tossinvest.com/stocks/{tk}"
 
-        # Desktop row
         td_d += f"""<tr>
-  <td style="padding-left:14px"><span class="mkt-badge">{mkt}</span></td>
-  <td><span class="tk-main">{flag}&nbsp;{name}</span><span class="tk-sub">{tk}</span></td>
-  <td class="num">{price}</td>
-  <td class="num-muted">{ref}</td>
-  <td>{dist}</td>
-  <td>{c1d}</td>
-  <td>{c5d}</td>
-  <td class="num-muted" style="font-size:12px">{cap}</td>
-  <td style="text-align:right;padding-right:14px"><a href="{url}" target="_blank" class="toss-lnk">TOSS →</a></td>
+<td style="padding-left:14px;width:40px"><span class="mkt-badge">{mkt}</span></td>
+<td><span class="tk-main">{flag} {name}</span><span class="tk-sub">{tk}</span></td>
+<td class="num">{price}</td>
+<td class="num-muted">{ref}</td>
+<td>{dist}</td>
+<td>{c1d}</td>
+<td>{c5d}</td>
+<td class="num-muted" style="font-size:12px">{cap}</td>
+<td style="text-align:right;padding-right:14px"><a href="{url}" target="_blank" class="toss-lnk">TOSS →</a></td>
 </tr>"""
 
-        # Mobile row (TICKER+sub | PRICE | DIST% | 1D | 5D)
-        ma_sub = f"{ref_label}: {ref}"
         td_m += f"""<tr>
-  <td style="padding-left:12px">
-    <div style="display:flex;align-items:center;gap:5px">
-      <span class="mkt-badge">{mkt}</span>
-      <span class="tk-main" style="font-size:13px">{flag}&nbsp;{name}</span>
-    </div>
-    <div style="font-family:JetBrains Mono,monospace;font-size:10px;color:#8892A4;margin-top:2px">{tk} · {ma_sub} · {cap}</div>
-  </td>
-  <td class="num" style="font-size:12px;text-align:right">{price}</td>
-  <td style="text-align:right">{dist}</td>
-  <td style="text-align:right">{c1d}</td>
-  <td style="text-align:right">{c5d}</td>
+<td style="padding-left:12px">
+  <div style="display:flex;align-items:center;gap:5px">
+    <span class="mkt-badge">{mkt}</span>
+    <span class="tk-main" style="font-size:13px">{flag} {name}</span>
+  </div>
+  <div style="font-family:JetBrains Mono,monospace;font-size:10px;color:#8892A4;margin-top:2px">{tk} · {ref_label}: {ref} · {cap}</div>
+</td>
+<td class="num" style="font-size:12px;text-align:right;padding-right:6px">{price}</td>
+<td style="text-align:right;padding-right:6px">{dist}</td>
+<td style="text-align:right;padding-right:6px">{c1d}</td>
+<td style="text-align:right;padding-right:12px">{c5d}</td>
 </tr>"""
 
     count_label = f"{total if total is not None else len(rows)} {t('results')}"
     st.markdown(f"""
 <div class="tbl-wrap">
-  <table class="stock-table stock-table-d">
-    <thead><tr>
-      <th></th><th>{t('ticker')}</th><th>{t('price')}</th>
-      <th>{ref_label}</th><th>{t('dist')}</th>
-      <th>{t('chg1d')}</th><th>{t('chg5d')}</th>
-      <th>{t('mktcap')}</th><th></th>
-    </tr></thead>
-    <tbody>{td_d}</tbody>
-  </table>
-  <table class="stock-table stock-table-m">
-    <thead><tr>
-      <th style="padding-left:12px">{t('ticker')}</th>
-      <th style="text-align:right">{t('price')}</th>
-      <th style="text-align:right">{t('dist')}</th>
-      <th style="text-align:right">{t('chg1d')}</th>
-      <th style="text-align:right">{t('chg5d')}</th>
-    </tr></thead>
-    <tbody>{td_m}</tbody>
-  </table>
+<table class="stock-table stock-table-d">
+<thead><tr>
+<th></th><th>{t('ticker')}</th><th>{t('price')}</th>
+<th>{ref_label}</th><th>{t('dist')}</th>
+<th>{t('chg1d')}</th><th>{t('chg5d')}</th>
+<th>{t('mktcap')}</th><th></th>
+</tr></thead>
+<tbody>{td_d}</tbody>
+</table>
+<table class="stock-table stock-table-m">
+<thead><tr>
+<th style="padding-left:12px">{t('ticker')}</th>
+<th style="text-align:right">{t('price')}</th>
+<th style="text-align:right">{t('dist')}</th>
+<th style="text-align:right">{t('chg1d')}</th>
+<th style="text-align:right;padding-right:12px">{t('chg5d')}</th>
+</tr></thead>
+<tbody>{td_m}</tbody>
+</table>
 </div>
 <div class="count-txt">{count_label}</div>
 """, unsafe_allow_html=True)
 
 
-def _page_nav(page: int, n_pages: int, page_key: str):
+def _page_nav_html(page: int, n_pages: int, page_key: str):
     if n_pages <= 1:
         return
-    _, nav_c, _ = st.columns([3, 2, 3])
-    with nav_c:
-        cl, cm, cr = st.columns([1, 2, 1])
-        with cl:
-            if st.button("‹", key=f"{page_key}_p", disabled=(page == 0)):
-                st.session_state[page_key] = page - 1; st.rerun()
-        with cm:
-            st.markdown(
-                f'<div style="text-align:center;color:#8892A4;font-size:11px;padding-top:8px">'
-                f'{page+1} / {n_pages}</div>', unsafe_allow_html=True)
-        with cr:
-            if st.button("›", key=f"{page_key}_n", disabled=(page == n_pages - 1)):
-                st.session_state[page_key] = page + 1; st.rerun()
+    prev_href = f"?{page_key}={page-1}"
+    next_href = f"?{page_key}={page+1}"
+    prev_dis  = " disabled" if page == 0 else ""
+    next_dis  = " disabled" if page == n_pages - 1 else ""
+    p_link    = f'href="{prev_href}"' if not prev_dis else ""
+    n_link    = f'href="{next_href}"' if not next_dis else ""
+    st.markdown(f"""
+<div class="page-nav">
+  <a class="page-btn{prev_dis}" {p_link}>‹</a>
+  <span class="page-info">{page+1} / {n_pages}</span>
+  <a class="page-btn{next_dis}" {n_link}>›</a>
+</div>""", unsafe_allow_html=True)
 
 
 def _get_page(signal_key: str, page_key: str, mf: str):
-    rows = signals.get(signal_key, [])
+    rows    = signals.get(signal_key, [])
     if mf:
         rows = [r for r in rows if r["market"] == mf]
     total   = len(rows)
@@ -715,216 +920,63 @@ def _get_page(signal_key: str, page_key: str, mf: str):
     return display, page, n_pages, total
 
 
-def is_refreshing() -> bool:
-    return os.path.exists(REFRESH_FLAG)
-
-def start_background_refresh():
-    if is_refreshing():
-        return
-    os.makedirs(DATA_DIR, exist_ok=True)
-    with open(REFRESH_FLAG, "w") as f:
-        f.write(datetime.now().isoformat())
-    def _run():
-        try:
-            py   = sys.executable
-            base = os.path.dirname(__file__)
-            subprocess.run([py, os.path.join(base, "fetch_data.py"), "--market", "all"],
-                           capture_output=True, text=True)
-            subprocess.run([py, os.path.join(base, "signals.py")],
-                           capture_output=True, text=True)
-        finally:
-            if os.path.exists(REFRESH_FLAG):
-                os.remove(REFRESH_FLAG)
-    threading.Thread(target=_run, daemon=True).start()
-
-
-# ── 자동 새로고침 ────────────────────────────────────────────
-_refreshing = is_refreshing()
-try:
-    from streamlit_autorefresh import st_autorefresh
-    st_autorefresh(interval=3_000 if _refreshing else 300_000, key="ar")
-except ImportError:
-    pass
-
-if not _refreshing and st.session_state.get("_was_refreshing"):
-    st.cache_data.clear()
-st.session_state["_was_refreshing"] = _refreshing
-
-# ── 데이터 ───────────────────────────────────────────────────
-results      = load_results()
-indices_data = fetch_indices()
-lang         = st.session_state.lang
-menu         = st.session_state.menu
-mkt_code     = st.session_state.market      # "KR" or "US"
-signals      = results.get("signals", {})
-
-gen_str = ""
-if results:
-    try:
-        dt = datetime.fromisoformat(results["generated_at"]).astimezone(KST)
-        gen_str = dt.strftime("%Y.%m.%d %H:%M KST")
-    except Exception:
-        pass
-
-# Market filter 변경 → 페이지 초기화
-if st.session_state.get("_prev_market") != mkt_code:
-    for pk in ("page_a1","page_a2","page_c1","page_c2","page_watch"):
-        st.session_state[pk] = 0
-    st.session_state["_prev_market"] = mkt_code
-
-
-# ── 사이드바 (데스크탑) ──────────────────────────────────────
-def _sb_indices_html(data: list) -> str:
+def _mob_bottom_nav_html() -> str:
+    page = st.session_state.page
+    nav = [
+        ("MA20",      "📈", "MA20",  "?menu=MA20"),
+        ("MA200",     "📊", "MA200", "?menu=MA200"),
+        ("WatchList", "⭐", "Watch", "?menu=WatchList"),
+        ("my",        "👤", "Login", "?page=my"),
+    ]
     items = ""
-    for d in data:
-        name = d["label_en"] if lang == "en" else d["label_ko"]
-        if d["val"] is None:
-            items += (f'<div class="sb-idx-item">'
-                      f'<div class="sb-idx-left"><span class="sb-idx-name">{name}</span>'
-                      f'<span class="sb-idx-price" style="color:#2a3347">—</span></div></div>')
-            continue
-        val, chg, unit = d["val"], d["chg"], d["unit"]
-        val_str = f'{unit}{val:,.2f}' if unit in ("$","₩") else f'{val:,.2f}'
-        sign    = "+" if chg >= 0 else ""
-        cls     = "sb-idx-up" if chg >= 0 else "sb-idx-dn"
-        items += (f'<div class="sb-idx-item">'
-                  f'<div class="sb-idx-left"><span class="sb-idx-name">{name}</span>'
-                  f'<span class="sb-idx-price">{val_str}</span></div>'
-                  f'<span class="{cls}">{sign}{chg:.2f}%</span></div>')
-    return items
+    for key, icon, label, href in nav:
+        is_active = (key == page) or (page == "main" and key == menu and key != "my")
+        items += (f'<a class="mob-nav-item{_a(is_active)}" href="{href}">'
+                  f'<span class="mob-nav-icon">{icon}</span>'
+                  f'<span class="mob-nav-label">{label}</span></a>')
+    return f'<div class="mob-bottom-nav"><div class="mob-bottom-nav-inner">{items}</div></div>'
 
+
+# ════════════════════════════════════════════════════════════
+# RENDER
+# ════════════════════════════════════════════════════════════
+
+# ── Sidebar ──────────────────────────────────────────────────
 with st.sidebar:
-    # Logo
-    st.markdown(
-        f'<a class="sb-logo" href="?go=main">STOCK<em>al</em></a>'
-        f'<div class="sb-update">{gen_str or t("no_data")}</div>',
-        unsafe_allow_html=True)
+    st.markdown(_sidebar_html(), unsafe_allow_html=True)
 
-    # MENU nav
-    menu_items = [("MA20", "📈"), ("MA200", "📊"), ("WatchList", "⭐")]
-    st.markdown('<div class="sb-section">MENU</div>', unsafe_allow_html=True)
-    for item, icon in menu_items:
-        active_cls = " active" if menu == item else ""
-        st.markdown(
-            f'<a class="sb-item{active_cls}" href="?menu={item}">'
-            f'<span class="sb-dot"></span>{item}</a>',
-            unsafe_allow_html=True)
+# ── Desktop nav bar (HTML) ────────────────────────────────────
+st.markdown(_nav_html(), unsafe_allow_html=True)
 
-    # MARKET indices
-    st.markdown('<div class="sb-section" style="margin-top:16px">MARKET</div>',
-                unsafe_allow_html=True)
-    st.markdown(_sb_indices_html(indices_data), unsafe_allow_html=True)
-
-
-# ════════════════════════════════════════════════════════════
-# MOBILE header / ticker strip / mkt-lang row
-# (CSS hides these on desktop, shows on mobile)
-# ════════════════════════════════════════════════════════════
-
-# Mobile: logo + avatar
-user_initials = (st.session_state.user or "?")[:2].upper()
-st.markdown(
-    f'<div class="mob-header">'
-    f'  <div class="mob-logo">STOCK<em>al</em></div>'
-    f'  <a class="mob-avatar" href="?page=my">{user_initials}</a>'
-    f'</div>',
-    unsafe_allow_html=True)
-
-# Mobile: KR/US + LANG row (HTML with JS onclick → query param)
-_m_kr_active = "active" if mkt_code == "KR" else ""
-_m_us_active = "active" if mkt_code == "US" else ""
-_l_en_active = "active" if lang == "en" else ""
-_l_ko_active = "active" if lang == "ko" else ""
+# ── Mobile header ─────────────────────────────────────────────
+avatar_label = (st.session_state.user or "?")[:2].upper()
+en_a = _a(lang=="en"); ko_a = _a(lang=="ko")
+kr_a = _a(mkt_code=="KR"); us_a = _a(mkt_code=="US")
 st.markdown(f"""
-<div class="mob-mkt-row">
-  <div style="display:flex;gap:8px">
-    <button class="t-btn {_m_kr_active}" onclick="location.href='?mkt=KR'">KR</button>
-    <button class="t-btn {_m_us_active}" onclick="location.href='?mkt=US'">US</button>
+<div class="mob-hd">
+  <div class="mob-logo">STOCK<em>al</em></div>
+  <a href="?page=my" class="mob-avatar">{avatar_label}</a>
+</div>
+<div class="mob-row">
+  <div style="display:flex;gap:6px">
+    <a class="tb{kr_a}" href="?mkt=KR" style="border-radius:20px;padding:5px 14px">KR</a>
+    <a class="tb{us_a}" href="?mkt=US" style="border-radius:20px;padding:5px 14px">US</a>
   </div>
   <div style="display:flex;align-items:center;gap:6px">
-    <span class="ctrl-label">LANG</span>
-    <div class="toggle-group">
-      <button class="t-btn {_l_en_active}" onclick="location.href='?lang=en'">EN</button>
-      <button class="t-btn {_l_ko_active}" onclick="location.href='?lang=ko'">KO</button>
+    <span style="font-size:10px;color:var(--muted);font-weight:600;letter-spacing:.05em">LANG</span>
+    <div class="tg">
+      <a class="tb{en_a}" href="?lang=en">EN</a>
+      <a class="tb{ko_a}" href="?lang=ko">KO</a>
     </div>
   </div>
 </div>
 """, unsafe_allow_html=True)
 
-# Handle mobile KR/US & LANG from query params
-if st.query_params.get("mkt") in ("KR", "US"):
-    st.session_state["market"] = st.query_params.get("mkt")
-    st.query_params.clear(); st.rerun()
-if st.query_params.get("lang") in ("en", "ko"):
-    st.session_state["lang"] = st.query_params.get("lang")
-    st.query_params.clear(); st.rerun()
+# ── Mobile ticker strip ───────────────────────────────────────
+st.markdown(_mob_ticker_strip_html(), unsafe_allow_html=True)
 
-# Mobile ticker strip
-def _mob_ticker_strip(data: list) -> str:
-    cells = ""
-    for d in data:
-        name = d["label_en"] if lang == "en" else d["label_ko"]
-        if d["val"] is None:
-            cells += (f'<div class="mob-ticker-cell">'
-                      f'<span class="mob-ticker-name">{name}</span>'
-                      f'<span class="mob-ticker-price" style="color:#2a3347">—</span>'
-                      f'<span class="mob-ticker-dn">—</span></div>')
-            continue
-        val, chg, unit = d["val"], d["chg"], d["unit"]
-        val_str = f'{unit}{val:,.2f}' if unit in ("$","₩") else f'{val:,.2f}'
-        sign    = "+" if chg >= 0 else ""
-        cls     = "mob-ticker-up" if chg >= 0 else "mob-ticker-dn"
-        cells += (f'<div class="mob-ticker-cell">'
-                  f'<span class="mob-ticker-name">{name}</span>'
-                  f'<span class="mob-ticker-price">{val_str}</span>'
-                  f'<span class="{cls}">{sign}{chg:.2f}%</span></div>')
-    return f'<div class="mob-ticker-strip">{cells}</div>'
-
-st.markdown(_mob_ticker_strip(indices_data), unsafe_allow_html=True)
-
-
-# ════════════════════════════════════════════════════════════
-# DESKTOP top control bar (hidden on mobile via CSS)
-# ════════════════════════════════════════════════════════════
-st.markdown('<div class="desktop-ctrl-bar">', unsafe_allow_html=True)
-ctrl_space, ctrl_lang, ctrl_mkt, ctrl_ref, ctrl_my = st.columns([4, 1, 1, 1, 1])
-
-with ctrl_lang:
-    if st.button("EN" if lang == "ko" else "KO", key="lang_btn"):
-        st.session_state.lang = "ko" if lang == "en" else "en"
-        st.rerun()
-
-with ctrl_mkt:
-    other_mkt = "US" if mkt_code == "KR" else "KR"
-    if st.button(f"→ {other_mkt}", key="mkt_btn"):
-        st.session_state.market = other_mkt
-        st.session_state["_prev_market"] = "RESET"
-        st.rerun()
-
-with ctrl_ref:
-    if _refreshing:
-        st.markdown('<div style="text-align:center;padding:5px 0"><span class="spin-icon">↺</span></div>',
-                    unsafe_allow_html=True)
-    else:
-        if st.button("↺", key="ref_btn"):
-            start_background_refresh(); st.rerun()
-
-with ctrl_my:
-    if st.session_state.page == "main":
-        if st.button("◉", key="my_btn"):
-            if st.session_state.user:
-                st.session_state.watchlist = load_watchlist(st.session_state.user)
-            st.session_state.page = "my"; st.rerun()
-    else:
-        if st.button("←", key="back_btn"):
-            st.session_state.page = "main"; st.rerun()
-
-st.markdown('</div>', unsafe_allow_html=True)
-
-# Market badge display (desktop)
-st.markdown(
-    f'<div style="display:none" class="desktop-ctrl-bar"></div>',
-    unsafe_allow_html=True)
+# ── Content wrapper open ──────────────────────────────────────
+st.markdown('<div class="s-content">', unsafe_allow_html=True)
 
 
 # ════════════════════════════════════════════════════════════
@@ -933,59 +985,48 @@ st.markdown(
 if st.session_state.page == "my":
 
     st.markdown(
-        '<div class="login-glow"></div><div class="login-grid"></div>',
+        '<div class="login-glow"></div><div class="login-grid"></div>'
+        '<div class="login-outer"><div class="login-card">',
         unsafe_allow_html=True)
-
-    st.markdown('<div class="login-outer"><div class="login-card">', unsafe_allow_html=True)
     st.markdown(
         '<div class="login-logo">STOCK<em>al</em></div>'
-        '<div class="login-sub">Please log in to continue</div>',
+        f'<div class="login-sub">{t("login_sub")}</div>',
         unsafe_allow_html=True)
 
     if not st.session_state.user:
-        tab_login, tab_signup = st.tabs([t("login"), t("signup")])
+        tab_l, tab_s = st.tabs([t("login"), t("signup")])
 
-        with tab_login:
+        with tab_l:
             with st.form("login_form"):
                 uname = st.text_input(t("username"), placeholder="Enter your username")
                 pw    = st.text_input(t("password"), type="password", placeholder="Enter your password")
                 if st.form_submit_button(t("login")):
-                    users = load_users()
-                    hw = hashlib.sha256(pw.encode()).hexdigest()
-                    if uname not in users:
-                        st.error(t("err_user"))
-                    elif users[uname].get("pw") != hw:
-                        st.error(t("err_pw"))
+                    users = load_users(); hw = hashlib.sha256(pw.encode()).hexdigest()
+                    if uname not in users:         st.error(t("err_user"))
+                    elif users[uname].get("pw") != hw: st.error(t("err_pw"))
                     else:
                         st.session_state.user      = uname
                         st.session_state.watchlist = load_watchlist(uname)
                         st.session_state.page      = "main"
                         st.rerun()
 
-        with tab_signup:
+        with tab_s:
             with st.form("signup_form"):
                 new_u = st.text_input(t("username"), placeholder="Choose a username", key="su_u")
-                new_p = st.text_input(t("password"), type="password",
-                                      placeholder="8+ characters", key="su_p")
+                new_p = st.text_input(t("password"), type="password", placeholder="8+ characters", key="su_p")
                 if st.form_submit_button(t("signup")):
                     users = load_users()
-                    if new_u in users:
-                        st.error(t("err_dup"))
-                    elif len(new_u) < 2 or len(new_p) < 4:
-                        st.error("아이디 2자 이상, 비밀번호 4자 이상")
+                    if new_u in users:                    st.error(t("err_dup"))
+                    elif len(new_u) < 2 or len(new_p) < 4: st.error("아이디 2자 이상, 비밀번호 4자 이상")
                     else:
-                        users[new_u] = {
-                            "pw": hashlib.sha256(new_p.encode()).hexdigest(),
-                            "watchlist": [],
-                        }
+                        users[new_u] = {"pw": hashlib.sha256(new_p.encode()).hexdigest(), "watchlist": []}
                         save_users(users)
                         st.success(t("ok_signup"))
     else:
-        st.markdown(
-            f'<div class="my-welcome">{t("welcome")}, <em>{st.session_state.user}</em></div>',
-            unsafe_allow_html=True)
-        col_logout, _ = st.columns([2, 5])
-        with col_logout:
+        st.markdown(f'<div class="my-welcome">Welcome, <em>{st.session_state.user}</em></div>',
+                    unsafe_allow_html=True)
+        c1, _ = st.columns([2, 5])
+        with c1:
             if st.button(t("logout")):
                 st.session_state.user      = None
                 st.session_state.watchlist = []
@@ -993,6 +1034,7 @@ if st.session_state.page == "my":
                 st.rerun()
 
     st.markdown('</div></div>', unsafe_allow_html=True)
+    st.markdown(_mob_bottom_nav_html(), unsafe_allow_html=True)
     st.stop()
 
 
@@ -1000,137 +1042,122 @@ if st.session_state.page == "my":
 # MAIN CONTENT
 # ════════════════════════════════════════════════════════════
 
-# Breadcrumb helper
-def _bc(label: str, subtitle: str = "") -> str:
-    sub_part = f'<span class="bc-sep">→</span><span class="bc-sub">{subtitle}</span>' if subtitle else ""
-    return (f'<div class="panel-bc">'
-            f'<span class="bc-dot">◆</span>'
-            f'<span class="bc-label">{label}</span>'
-            f'{sub_part}</div>')
-
-# Signal tab helper (using st.radio styled as tabs)
-def _sig_tabs(key: str, labels: list[str], icons: list[str]) -> int:
-    """Render signal tabs, return selected index (0 or 1)."""
-    options = [f"{icons[i]} {labels[i]}" for i in range(len(labels))]
-    st.markdown(f'<div data-role="signal-tabs" style="height:0;overflow:hidden"></div>',
-                unsafe_allow_html=True)
-    sel = st.radio("", options, horizontal=True,
-                   key=key, label_visibility="collapsed",
-                   index=0 if key not in st.session_state else None)
-    return options.index(sel) if sel in options else 0
-
-
 # ── MA20 ─────────────────────────────────────────────────────
 if menu == "MA20":
-    st.markdown(_bc("MA20", "ICHIMOKU"), unsafe_allow_html=True)
+    tabs = [
+        ("A1", f"▲ {t('a1')}", "?sigtab=A1"),
+        ("A2", f"▼ {t('a2')}", "?sigtab=A2"),
+    ]
+    st.markdown(
+        '<div class="panel">'
+        + _breadcrumb_html("MA20", "ICHIMOKU")
+        + _signal_tabs_html(sigtab, tabs),
+        unsafe_allow_html=True)
+    st.markdown('<div style="padding:0 16px 16px">', unsafe_allow_html=True)
 
-    # Signal tabs as radio
-    sig_options = [f"▲ {t('a1')}", f"▼ {t('a2')}"]
-    sig_sel = st.radio("", sig_options, horizontal=True,
-                       key="sig_ma20", label_visibility="collapsed")
-    sig_idx = sig_options.index(sig_sel) if sig_sel in sig_options else 0
-
-    st.markdown('<div style="margin-top:0">', unsafe_allow_html=True)
-    if sig_idx == 0:
+    if sigtab == "A1":
         rows, pg, np_, tot = _get_page("A1", "page_a1", mkt_code)
-        _render_table(rows, "dist_a_pct", "ma20", t("ma20"), total=tot)
-        _page_nav(pg, np_, "page_a1")
+        _render_panel(rows, "dist_a_pct", "ma20", t("ma20"), total=tot)
+        _page_nav_html(pg, np_, "page_a1")
     else:
         rows, pg, np_, tot = _get_page("A2", "page_a2", mkt_code)
-        _render_table(rows, "dist_a_pct", "ma20", t("ma20"), total=tot)
-        _page_nav(pg, np_, "page_a2")
-    st.markdown('</div>', unsafe_allow_html=True)
+        _render_panel(rows, "dist_a_pct", "ma20", t("ma20"), total=tot)
+        _page_nav_html(pg, np_, "page_a2")
+
+    st.markdown('</div></div>', unsafe_allow_html=True)
 
 
 # ── MA200 ────────────────────────────────────────────────────
 elif menu == "MA200":
-    st.markdown(_bc("MA200"), unsafe_allow_html=True)
+    tabs = [
+        ("C1", f"▲ {t('c1')}", "?sigtab=C1"),
+        ("C2", f"▼ {t('c2')}", "?sigtab=C2"),
+    ]
+    st.markdown(
+        '<div class="panel">'
+        + _breadcrumb_html("MA200")
+        + _signal_tabs_html(sigtab, tabs),
+        unsafe_allow_html=True)
+    st.markdown('<div style="padding:0 16px 16px">', unsafe_allow_html=True)
 
-    sig_options = [f"▲ {t('c1')}", f"▼ {t('c2')}"]
-    sig_sel = st.radio("", sig_options, horizontal=True,
-                       key="sig_ma200", label_visibility="collapsed")
-    sig_idx = sig_options.index(sig_sel) if sig_sel in sig_options else 0
-
-    if sig_idx == 0:
+    if sigtab == "C1":
         rows, pg, np_, tot = _get_page("C1", "page_c1", mkt_code)
-        _render_table(rows, "dist_200_pct", "ma200", t("ma200"), total=tot)
-        _page_nav(pg, np_, "page_c1")
+        _render_panel(rows, "dist_200_pct", "ma200", t("ma200"), total=tot)
+        _page_nav_html(pg, np_, "page_c1")
     else:
         rows, pg, np_, tot = _get_page("C2", "page_c2", mkt_code)
-        _render_table(rows, "dist_200_pct", "ma200", t("ma200"), total=tot)
-        _page_nav(pg, np_, "page_c2")
+        _render_panel(rows, "dist_200_pct", "ma200", t("ma200"), total=tot)
+        _page_nav_html(pg, np_, "page_c2")
+
+    st.markdown('</div></div>', unsafe_allow_html=True)
 
 
 # ── WatchList ────────────────────────────────────────────────
 elif menu == "WatchList":
-    st.markdown(_bc("WatchList"), unsafe_allow_html=True)
+    st.markdown(
+        '<div class="panel">' + _breadcrumb_html("WatchList"),
+        unsafe_allow_html=True)
+    st.markdown('<div style="padding:8px 16px 16px">', unsafe_allow_html=True)
 
     if not st.session_state.user:
         st.markdown(
-            f'<div style="color:#8892A4;font-size:13px;padding:20px 0;opacity:0.7">'
+            f'<div style="color:#8892A4;font-size:13px;padding:12px 0;opacity:.7">'
             f'{t("login_req")}</div>',
             unsafe_allow_html=True)
     else:
-        wl = st.session_state.watchlist
+        wl      = st.session_state.watchlist
         yf_syms = tuple(
-            (w["ticker"] + ".KS" if w["market"] == "KR" else w["ticker"])
-            for w in wl
+            (w["ticker"]+".KS" if w["market"]=="KR" else w["ticker"]) for w in wl
         )
-        raw_prices = fetch_current_prices(yf_syms) if yf_syms else {}
+        raw_prices    = fetch_current_prices(yf_syms) if yf_syms else {}
         current_prices = {
             w["ticker"]: raw_prices.get(
-                w["ticker"] + ".KS" if w["market"] == "KR" else w["ticker"]
-            )
-            for w in wl
+                w["ticker"]+".KS" if w["market"]=="KR" else w["ticker"]
+            ) for w in wl
         }
 
         if not wl:
             st.markdown(
-                f'<div style="color:#8892A4;font-size:13px;padding:20px 0;opacity:0.7">'
+                f'<div style="color:#8892A4;font-size:13px;padding:12px 0;opacity:.7">'
                 f'{t("no_watch")}</div>',
                 unsafe_allow_html=True)
         else:
-            wl_total   = len(wl)
-            wl_pages   = max(1, (wl_total + PAGE_SIZE - 1) // PAGE_SIZE)
-            wl_page    = min(st.session_state.get("page_watch", 0), wl_pages - 1)
+            wl_pages = max(1, (len(wl) + PAGE_SIZE - 1) // PAGE_SIZE)
+            wl_page  = min(st.session_state.get("page_watch",0), wl_pages-1)
             st.session_state["page_watch"] = wl_page
-            wl_display = wl[wl_page * PAGE_SIZE: (wl_page + 1) * PAGE_SIZE]
+            wl_disp  = wl[wl_page*PAGE_SIZE: (wl_page+1)*PAGE_SIZE]
 
             to_remove = None
-            for idx_w, w in enumerate(wl_display):
+            for idx_w, w in enumerate(wl_disp):
                 real_idx = wl_page * PAGE_SIZE + idx_w
-                cur      = current_prices.get(w["ticker"])
-                entry    = w.get("entry_price", 0)
-                is_kr    = w["market"] == "KR"
-                flag     = "🇰🇷" if is_kr else "🇺🇸"
-                cur_str  = (f"{cur:,.0f}" if is_kr else f"${cur:,.2f}") if cur else "—"
-                entry_str = (f"{entry:,.0f}" if is_kr else f"${entry:,.2f}") if entry else "—"
-
-                ret_str = "—"
-                ret_cls = "ret-pos"
+                cur   = current_prices.get(w["ticker"])
+                entry = w.get("entry_price", 0)
+                is_kr = w["market"] == "KR"
+                flag  = "🇰🇷" if is_kr else "🇺🇸"
+                cur_s   = (f"{cur:,.0f}" if is_kr else f"${cur:,.2f}") if cur else "—"
+                entry_s = (f"{entry:,.0f}" if is_kr else f"${entry:,.2f}") if entry else "—"
+                ret_s, ret_cls = "—", "ret-pos"
                 if cur and entry:
-                    ret     = (cur - entry) / entry * 100
-                    sign    = "+" if ret >= 0 else ""
-                    ret_str = f"{sign}{ret:.2f}%"
+                    ret   = (cur - entry) / entry * 100
+                    sign  = "+" if ret >= 0 else ""
+                    ret_s = f"{sign}{ret:.2f}%"
                     ret_cls = "ret-pos" if ret >= 0 else "ret-neg"
 
-                c_info, c_ret, c_del = st.columns([5, 2, 1])
-                with c_info:
+                ci, cr, cd = st.columns([5, 2, 1])
+                with ci:
                     st.markdown(
-                        f'<div style="padding:6px 0">'
-                        f'{flag} <span class="wl-ticker">{w.get("name", w["ticker"])}</span>'
-                        f' <span style="font-family:JetBrains Mono,monospace;font-size:10px;'
-                        f'color:#2a3347">{w["ticker"]}</span>'
-                        f'<br><span class="wl-sub">'
-                        f'{t("entry_price")}: {entry_str} → {t("current")}: {cur_str}'
-                        f' · {t("added_at")}: {w.get("added_at","")}'
-                        f'</span></div>',
+                        f'<div style="padding:6px 0">{flag} <span class="wl-ticker">'
+                        f'{w.get("name",w["ticker"])}</span>'
+                        f' <span style="font-family:JetBrains Mono,monospace;font-size:10px;color:#2a3347">'
+                        f'{w["ticker"]}</span><br>'
+                        f'<span class="wl-sub">{t("entry_price")}: {entry_s} → {t("current")}: {cur_s}'
+                        f' · {t("added_at")}: {w.get("added_at","")}</span></div>',
                         unsafe_allow_html=True)
-                with c_ret:
+                with cr:
                     st.markdown(
-                        f'<div class="{ret_cls}" style="padding-top:10px">{ret_str}</div>',
+                        f'<div class="{ret_cls}" style="padding-top:10px">{ret_s}</div>',
                         unsafe_allow_html=True)
-                with c_del:
+                with cd:
                     if st.button(t("remove"), key=f"del_{real_idx}"):
                         to_remove = real_idx
                 st.markdown("<hr>", unsafe_allow_html=True)
@@ -1141,35 +1168,11 @@ elif menu == "WatchList":
                 st.session_state.watchlist = wl
                 st.rerun()
 
-            _page_nav(wl_page, wl_pages, "page_watch")
+            _page_nav_html(wl_page, wl_pages, "page_watch")
+
+    st.markdown('</div></div>', unsafe_allow_html=True)
 
 
-# ════════════════════════════════════════════════════════════
-# MOBILE BOTTOM NAV (fixed, shown only on mobile via CSS)
-# ════════════════════════════════════════════════════════════
-_nav_items = [
-    ("MA20",      "📈", "MA20"),
-    ("MA200",     "📊", "MA200"),
-    ("WatchList", "⭐", "Watch"),
-    ("my",        "👤", "Login"),
-]
-
-def _mob_nav_html(current_menu: str, current_page: str) -> str:
-    items_html = ""
-    for nav_key, icon, label in _nav_items:
-        if nav_key == "my":
-            active = "active" if current_page == "my" else ""
-            href   = "?page=my"
-        else:
-            active = "active" if (current_page == "main" and current_menu == nav_key) else ""
-            href   = f"?menu={nav_key}"
-        items_html += (
-            f'<a class="mob-nav-item {active}" href="{href}">'
-            f'<span class="mob-nav-icon">{icon}</span>'
-            f'<span class="mob-nav-label">{label}</span>'
-            f'</a>')
-    return f'<div class="mob-bottom-nav">{items_html}</div>'
-
-st.markdown(
-    _mob_nav_html(st.session_state.menu, st.session_state.page),
-    unsafe_allow_html=True)
+# ── Content wrapper close + mobile bottom nav ────────────────
+st.markdown('</div>', unsafe_allow_html=True)
+st.markdown(_mob_bottom_nav_html(), unsafe_allow_html=True)
