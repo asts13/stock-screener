@@ -1,8 +1,13 @@
 # 비밀 설정
 .streamlit/secrets.toml
 
-# 데이터 캐시 (GitHub Actions가 별도 관리)
-data/
+# 민감 정보 / 대용량 개별 가격 파일
+data/.kis_token.json
+data/kr_prices/
+data/us_prices/
+data/us_universe_cache.parquet
+
+# 스크리닝 결과(result_*.parquet, last_update.json)는 커밋 허용
 
 # Python
 __pycache__/
