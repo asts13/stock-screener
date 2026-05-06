@@ -111,7 +111,10 @@ class KISClient:
             params=params,
             timeout=15,
         )
-        r.raise_for_status()
+        try:
+            r.raise_for_status()
+        except Exception:
+            return pd.DataFrame()
         rows = r.json().get("output2", [])
         return _parse_kr(rows)
 
@@ -122,7 +125,10 @@ class KISClient:
         while True:
             end_str   = end_dt.strftime("%Y%m%d")
             start_str = (end_dt - timedelta(days=150)).strftime("%Y%m%d")
-            chunk = self.fetch_kr_daily(ticker, start_str, end_str)
+            try:
+                chunk = self.fetch_kr_daily(ticker, start_str, end_str)
+            except Exception:
+                break
             if chunk.empty:
                 break
             collected.append(chunk)
@@ -162,7 +168,10 @@ class KISClient:
             params=params,
             timeout=15,
         )
-        r.raise_for_status()
+        try:
+            r.raise_for_status()
+        except Exception:
+            return pd.DataFrame()
         rows = r.json().get("output2", [])
         return _parse_us(rows)
 
@@ -172,7 +181,10 @@ class KISClient:
         collected: list[pd.DataFrame] = []
         while True:
             end_str = end_dt.strftime("%Y%m%d")
-            chunk   = self.fetch_us_daily(ticker, excd, end_str)
+            try:
+                chunk = self.fetch_us_daily(ticker, excd, end_str)
+            except Exception:
+                break
             if chunk.empty:
                 break
             collected.append(chunk)
