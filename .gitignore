@@ -1,6 +1,18 @@
-venv/
+# 비밀 설정
+.streamlit/secrets.toml
+
+# 데이터 캐시 (GitHub Actions가 별도 관리)
+data/
+
+# Python
 __pycache__/
 *.pyc
+*.pyo
 .env
-data/*.parquet
-.streamlit/secrets.toml
+venv/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp

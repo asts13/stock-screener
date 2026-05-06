@@ -1,85 +1,50 @@
-name: 데이터 자동 갱신
+name: Stock Data Refresh (11x daily)
 
 on:
   schedule:
-    # 한국장 마감 직후: 06:35 UTC = 15:35 KST
-    - cron: "35 6 * * 1-5"
-    # 미국장 마감 직후: 21:30 UTC = 06:30 KST
-    - cron: "30 21 * * 1-5"
-    # 3시간마다 전체 갱신: 평일 00/03/06/09/12/15/18/21 UTC
-    - cron: "0 */3 * * 1-5"
-
-  # 수동 실행 (GitHub Actions 탭에서 직접 클릭 가능)
+    - cron: '0 15 * * *'   # 00:00 KST
+    - cron: '30 17 * * *'  # 02:30 KST
+    - cron: '0 20 * * *'   # 05:00 KST
+    - cron: '0 23 * * *'   # 08:00 KST
+    - cron: '0 1 * * *'    # 10:00 KST
+    - cron: '0 3 * * *'    # 12:00 KST
+    - cron: '0 5 * * *'    # 14:00 KST
+    - cron: '30 6 * * *'   # 15:30 KST
+    - cron: '0 9 * * *'    # 18:00 KST
+    - cron: '0 11 * * *'   # 20:00 KST
+    - cron: '0 13 * * *'   # 22:00 KST
   workflow_dispatch:
-    inputs:
-      market:
-        description: "수집할 시장 (all / kr / us)"
-        required: false
-        default: "all"
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write   # 결과 파일 자동 커밋에 필요
-
+    timeout-minutes: 30
     steps:
-      - name: 저장소 체크아웃
-        uses: actions/checkout@v4
-
-      - name: Python 3.12 설정
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
         with:
-          python-version: "3.12"
-          cache: "pip"
+          fetch-depth: 1
 
-      - name: 의존성 설치
-        run: pip install -r requirements.txt
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
 
-      # 어떤 cron이 실행됐는지에 따라 시장 결정
-      # - 06:xx UTC → 한국(kr)
-      # - 21:xx UTC → 미국(us)
-      # - 그 외 3시간 cron → 전체(all)
-      # - 수동(workflow_dispatch) → 입력값 사용
-      - name: 시장 결정
-        id: market
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            MARKET="${{ github.event.inputs.market }}"
-          else
-            HOUR=$(date -u +%H)
-            if [ "$HOUR" = "06" ]; then
-              MARKET="kr"
-            elif [ "$HOUR" = "21" ]; then
-              MARKET="us"
-            else
-              MARKET="all"
-            fi
-          fi
-          echo "market=$MARKET" >> $GITHUB_OUTPUT
-          echo "▶ 수집 시장: $MARKET"
+      - run: pip install -r requirements.txt
 
-      - name: 데이터 수집 (fetch_data.py)
-        run: |
-          echo "▶ fetch_data.py --market ${{ steps.market.outputs.market }}"
-          python fetch_data.py --market ${{ steps.market.outputs.market }}
+      - name: 데이터 갱신
+        env:
+          KIS_APP_KEY:    ${{ secrets.KIS_APP_KEY }}
+          KIS_APP_SECRET: ${{ secrets.KIS_APP_SECRET }}
+        run: python jobs/scheduled_refresh.py
 
-      - name: 시그널 계산 (signals.py)
-        run: |
-          echo "▶ signals.py 실행"
-          python signals.py
-
-      - name: 결과 파일 자동 커밋
+      - name: 결과 커밋
         run: |
           git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/results.json data/universe.json
-          # parquet은 용량이 커서 선택적으로 추가 (있으면 포함)
-          git add data/prices.parquet 2>/dev/null || true
-          if git diff --staged --quiet; then
-            echo "변경사항 없음, 커밋 스킵"
-          else
-            MARKET="${{ steps.market.outputs.market }}"
-            git commit -m "auto: ${MARKET} 데이터 갱신 $(date -u +'%Y-%m-%d %H:%M UTC')"
-            git push
-          fi
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          git diff --quiet && git diff --staged --quiet \
+            || (git commit -m "data: $(date -u +%Y-%m-%dT%H:%M:%SZ)" && git push)
